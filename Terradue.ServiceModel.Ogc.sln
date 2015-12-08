@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terradue.ServiceModel.Ogc", "Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj", "{4A78C588-01FE-439F-8961-AE083A5EE6CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terradue.ServiceModel.Ogc.Test", "Terradue.ServiceModel.Ogc.Test\Terradue.ServiceModel.Ogc.Test.csproj", "{47C85B42-7522-4E46-BC7F-30BE1912F94E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47C85B42-7522-4E46-BC7F-30BE1912F94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C85B42-7522-4E46-BC7F-30BE1912F94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C85B42-7522-4E46-BC7F-30BE1912F94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C85B42-7522-4E46-BC7F-30BE1912F94E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A78C588-01FE-439F-8961-AE083A5EE6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A78C588-01FE-439F-8961-AE083A5EE6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A78C588-01FE-439F-8961-AE083A5EE6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A78C588-01FE-439F-8961-AE083A5EE6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
