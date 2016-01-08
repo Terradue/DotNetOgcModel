@@ -7,7 +7,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,11 +46,34 @@
     <Compile Include="Terradue\ServiceModel\Ogc\W3c\Smil20.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\W3c\Smil20Lang.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\W3c\Xlink.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Gml321\Gml.extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Om\Om.extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Gml311\GmlHelper.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Gml321\GmlHelper.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Gml311\Gml.extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Alt\Alt20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Eop\Eop20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Eop\Eop21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Eop\Gml.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Eop\Om.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sar\Sar20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sar\Sar21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Alt\Alt21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\OgcHelpers.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Atm\Atm20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Atm\Atm21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Opt\Opt20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Opt\Opt21.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Terradue\" />
     <Folder Include="Terradue\ServiceModel\" />
     <Folder Include="Terradue\ServiceModel\Ogc\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Alt\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Eop\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Opt\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Sar\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Atm\" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.W3c.Xlink;
 using Terradue.ServiceModel.Ogc.Gml321;
+using Terradue.ServiceModel.Ogc.Gmd;
 
 
 namespace Terradue.ServiceModel.Ogc.Gco {
@@ -162,7 +163,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public string CharacterString {
             get {
                 return this.characterStringField;
@@ -283,8 +284,8 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("Date", typeof(string), IsNullable=true, Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DateTime", typeof(System.DateTime), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Date", typeof(string), IsNullable=true)]
+        [System.Xml.Serialization.XmlElementAttribute("DateTime", typeof(System.DateTime))]
         public object Item {
             get {
                 return this.itemField;
@@ -316,7 +317,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
         public string Integer {
             get {
                 return this.integerField;
@@ -348,10 +349,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("Angle", typeof(AngleType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Length", typeof(LengthType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Measure", typeof(MeasureType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Scale", typeof(ScaleType), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Angle", typeof(AngleType))]
+        [System.Xml.Serialization.XmlElementAttribute("Length", typeof(LengthType))]
+        [System.Xml.Serialization.XmlElementAttribute("Measure", typeof(MeasureType))]
+        [System.Xml.Serialization.XmlElementAttribute("Scale", typeof(ScaleType))]
         public MeasureType Item {
             get {
                 return this.itemField;
@@ -383,7 +384,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public bool Boolean {
             get {
                 return this.booleanField;
@@ -415,7 +416,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public decimal Decimal {
             get {
                 return this.decimalField;
@@ -447,7 +448,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public double Real {
             get {
                 return this.realField;
@@ -479,7 +480,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public System.DateTime DateTime {
             get {
                 return this.dateTimeField;
@@ -511,7 +512,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public RecordType_Type RecordType {
             get {
                 return this.recordTypeField;
@@ -689,10 +690,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -736,7 +737,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public object Record {
             get {
                 return this.recordField;
@@ -778,7 +779,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public LengthType Distance {
             get {
                 return this.distanceField;
@@ -812,10 +813,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -859,7 +860,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public MemberName_Type MemberName {
             get {
                 return this.memberNameField;
@@ -901,7 +902,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private TypeName_PropertyType attributeTypeField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public CharacterString_PropertyType aName {
             get {
                 return this.aNameField;
@@ -911,7 +912,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public TypeName_PropertyType attributeType {
             get {
                 return this.attributeTypeField;
@@ -935,7 +936,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public TypeName_Type TypeName {
             get {
                 return this.typeNameField;
@@ -975,7 +976,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private CharacterString_PropertyType aNameField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public CharacterString_PropertyType aName {
             get {
                 return this.aNameField;
@@ -999,8 +1000,8 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("LocalName", typeof(CodeType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ScopedName", typeof(CodeType), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("LocalName", typeof(CodeType))]
+        [System.Xml.Serialization.XmlElementAttribute("ScopedName", typeof(CodeType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public CodeType Item {
             get {
@@ -1011,7 +1012,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType10 ItemElementName {
             get {
@@ -1044,7 +1045,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public Binary_Type Binary {
             get {
                 return this.binaryField;
@@ -1139,9 +1140,9 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("Decimal", typeof(decimal), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Integer", typeof(string), DataType="integer", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Real", typeof(double), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Decimal", typeof(decimal))]
+        [System.Xml.Serialization.XmlElementAttribute("Integer", typeof(string), DataType="integer")]
+        [System.Xml.Serialization.XmlElementAttribute("Real", typeof(double))]
         public object Item {
             get {
                 return this.itemField;
@@ -1175,10 +1176,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1222,10 +1223,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1269,10 +1270,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1316,10 +1317,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1363,10 +1364,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1410,10 +1411,10 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("BaseUnit", typeof(BaseUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("ConventionalUnit", typeof(ConventionalUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("DerivedUnit", typeof(DerivedUnitType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("UnitDefinition", typeof(UnitDefinitionType), Namespace="http://www.opengis.net/gml/3.2")]
         public UnitDefinitionType Item {
             get {
                 return this.itemField;
@@ -1455,7 +1456,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public CodeType ScopedName {
             get {
                 return this.scopedNameField;
@@ -1487,7 +1488,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public CodeType LocalName {
             get {
                 return this.localNameField;
@@ -1519,7 +1520,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public ScaleType Scale {
             get {
                 return this.scaleField;
@@ -1551,7 +1552,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public AngleType Angle {
             get {
                 return this.angleField;
@@ -1585,8 +1586,8 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute("Distance", typeof(LengthType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Length", typeof(LengthType), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Distance", typeof(LengthType))]
+        [System.Xml.Serialization.XmlElementAttribute("Length", typeof(LengthType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public LengthType Item {
             get {
@@ -1597,7 +1598,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType9 ItemElementName {
             get {
@@ -1632,7 +1633,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public Multiplicity_Type Multiplicity {
             get {
                 return this.multiplicityField;
@@ -1672,7 +1673,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private MultiplicityRange_PropertyType[] rangeField;
 
-        [System.Xml.Serialization.XmlElementAttribute("range", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("range")]
         public MultiplicityRange_PropertyType[] range {
             get {
                 return this.rangeField;
@@ -1696,7 +1697,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public MultiplicityRange_Type MultiplicityRange {
             get {
                 return this.multiplicityRangeField;
@@ -1738,7 +1739,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private UnlimitedInteger_PropertyType upperField;
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public Integer_PropertyType lower {
             get {
                 return this.lowerField;
@@ -1748,7 +1749,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public UnlimitedInteger_PropertyType upper {
             get {
                 return this.upperField;
@@ -1770,7 +1771,7 @@ namespace Terradue.ServiceModel.Ogc.Gco {
 
         private string nilReasonField;
 
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public UnlimitedInteger_Type UnlimitedInteger {
             get {
                 return this.unlimitedIntegerField;

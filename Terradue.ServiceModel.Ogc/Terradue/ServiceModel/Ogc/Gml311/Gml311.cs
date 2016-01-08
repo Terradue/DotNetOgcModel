@@ -5,6 +5,8 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.W3c.Smil20Lang;
+using System.Xml;
+using System.Xml.Linq;
 
 
 namespace Terradue.ServiceModel.Ogc.Gml311
@@ -15,7 +17,6 @@ namespace Terradue.ServiceModel.Ogc.Gml311
     using System.Collections;
     using System.Xml.Schema;
     using System.ComponentModel;
-
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -3327,7 +3328,7 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
         private string srsDimensionField;
 
-        private double[] textField;
+        private string textField;
 
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string srsName
@@ -3356,15 +3357,15 @@ namespace Terradue.ServiceModel.Ogc.Gml311
         }
 
         [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text
+        public string Text
         {
             get
             {
-                return Array.ConvertAll(this.textField, Convert.ToString);
+                return this.textField;
             }
             set
             {
-                this.textField = Array.ConvertAll(value, Double.Parse);
+                this.textField = value;
             }
         }
     }
@@ -3650,7 +3651,7 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
         private string srsDimensionField;
 
-        private double[] textField;
+        private string textField;
 
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string srsName
@@ -3679,15 +3680,15 @@ namespace Terradue.ServiceModel.Ogc.Gml311
         }
 
         [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text
+        public string Text
         {
             get
             {
-                return Array.ConvertAll(this.textField, Convert.ToString);
+                return this.textField;
             }
             set
             {
-                this.textField = Array.ConvertAll(value, Double.Parse);
+                this.textField = value;
             }
         }
     }
@@ -3994,7 +3995,7 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
         private string countField;
 
-        private double[] textField;
+        private string textField;
 
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string srsName
@@ -4036,15 +4037,15 @@ namespace Terradue.ServiceModel.Ogc.Gml311
         }
 
         [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text
+        public string Text
         {
             get
             {
-                return Array.ConvertAll(this.textField, Convert.ToString);
+                return this.textField;
             }
             set
             {
-                this.textField = Array.ConvertAll(value, Double.Parse);
+                this.textField = value;
             }
         }
     }
@@ -7048,7 +7049,7 @@ namespace Terradue.ServiceModel.Ogc.Gml311
         }
 
         [System.Xml.Serialization.XmlArrayAttribute()]
-        [System.Xml.Serialization.XmlArrayItemAttribute("_Surface", IsNullable = false)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(typeof(PolygonType), ElementName = "Polygon")]
         public AbstractSurfaceType[] surfaceMembers
         {
             get

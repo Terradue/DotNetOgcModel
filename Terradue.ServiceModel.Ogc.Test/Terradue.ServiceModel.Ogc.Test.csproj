@@ -35,14 +35,33 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
+    <Reference Include="XmlDiffPatch">
+      <HintPath>..\packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlDiffPatch.View">
+      <HintPath>..\packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.View.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.8.0.1545\lib\xunit.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlUnit.Xunit">
+      <HintPath>..\packages\XmlUnit.Xunit.0.4\lib\net40\XmlUnit.Xunit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SerializationTest.cs" />
+    <Compile Include="EopSerializationTest.cs" />
+    <Compile Include="SarSerializationTest.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Opt21SerializationTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Samples\GmlTimePeriod.xml" />
+    <None Include="Samples\eop20_example.xml" />
+    <None Include="Samples\sar21_example.xml" />
+    <None Include="Samples\opt21_example.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Samples\" />

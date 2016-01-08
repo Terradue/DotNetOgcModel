@@ -10,7 +10,7 @@ using Terradue.ServiceModel.Ogc.Gss;
 using Terradue.ServiceModel.Ogc.Gsr;
 
 
-namespace Terradue.EarthObservation.EarthObservation.Ogc.Gmd
+namespace Terradue.ServiceModel.Ogc.Gmd
 {
     using System;
     using System.Diagnostics;

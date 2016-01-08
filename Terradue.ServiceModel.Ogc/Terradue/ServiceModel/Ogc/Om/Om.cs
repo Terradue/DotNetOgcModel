@@ -4,8 +4,8 @@
 //    <NameSpace>Terradue.ServiceModel.Ogc.Observation</NameSpace><Collection>Array</Collection><codeType>CSharp</codeType><EnableDataBinding>False</EnableDataBinding><EnableLazyLoading>False</EnableLazyLoading><TrackingChangesEnable>False</TrackingChangesEnable><GenTrackingClasses>False</GenTrackingClasses><HidePrivateFieldInIDE>False</HidePrivateFieldInIDE><EnableSummaryComment>False</EnableSummaryComment><VirtualProp>False</VirtualProp><IncludeSerializeMethod>False</IncludeSerializeMethod><UseBaseClass>False</UseBaseClass><GenBaseClass>False</GenBaseClass><GenerateCloneMethod>False</GenerateCloneMethod><GenerateDataContracts>False</GenerateDataContracts><CodeBaseTag>Net40</CodeBaseTag><SerializeMethodName>Serialize</SerializeMethodName><DeserializeMethodName>Deserialize</DeserializeMethodName><SaveToFileMethodName>SaveToFile</SaveToFileMethodName><LoadFromFileMethodName>LoadFromFile</LoadFromFileMethodName><GenerateXMLAttributes>True</GenerateXMLAttributes><EnableEncoding>False</EnableEncoding><AutomaticProperties>False</AutomaticProperties><GenerateShouldSerialize>False</GenerateShouldSerialize><DisableDebug>False</DisableDebug><PropNameSpecified>Default</PropNameSpecified><Encoder>UTF8</Encoder><CustomUsings></CustomUsings><ExcludeIncludedTypes>True</ExcludeIncludedTypes><EnableInitializeFields>False</EnableInitializeFields>
 //  </auto-generated>
 // ------------------------------------------------------------------------------
-using Terradue.EarthObservation.EarthObservation.Ogc.Gmd;
 using Terradue.ServiceModel.Ogc.Gml321;
+using Terradue.ServiceModel.Ogc.Gmd;
 
 
 namespace Terradue.ServiceModel.Ogc.Om
@@ -28,7 +28,7 @@ namespace Terradue.ServiceModel.Ogc.Om
 
         private ReferenceType typeField;
 
-        private Terradue.EarthObservation.EarthObservation.Ogc.Gmd.MD_Metadata_PropertyType metadataField;
+        private MD_Metadata_PropertyType metadataField;
 
         private ObservationContextPropertyType[] relatedObservationField;
 
@@ -46,9 +46,9 @@ namespace Terradue.ServiceModel.Ogc.Om
 
         private FeaturePropertyType featureOfInterestField;
 
-        private Terradue.EarthObservation.EarthObservation.Ogc.Gmd.DQ_Element_PropertyType[] resultQualityField;
+        private DQ_Element_PropertyType[] resultQualityField;
 
-        private object resultField;
+        private OM_ResultPropertyType resultField;
 
         [System.Xml.Serialization.XmlElementAttribute()]
         public ReferenceType type
@@ -64,7 +64,7 @@ namespace Terradue.ServiceModel.Ogc.Om
         }
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public Terradue.EarthObservation.EarthObservation.Ogc.Gmd.MD_Metadata_PropertyType metadata
+        public MD_Metadata_PropertyType metadata
         {
             get
             {
@@ -128,8 +128,8 @@ namespace Terradue.ServiceModel.Ogc.Om
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
-        public virtual OM_ProcessPropertyType procedure
+        [System.Xml.Serialization.XmlElementAttribute()]
+        public OM_ProcessPropertyType procedure
         {
             get
             {
@@ -154,7 +154,7 @@ namespace Terradue.ServiceModel.Ogc.Om
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public ReferenceType observedProperty
         {
             get
@@ -168,7 +168,7 @@ namespace Terradue.ServiceModel.Ogc.Om
         }
 
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.opengis.net/om/2.0", IsNullable = true)]
-        public virtual FeaturePropertyType featureOfInterest
+        public FeaturePropertyType featureOfInterest
         {
             get
             {
@@ -181,7 +181,7 @@ namespace Terradue.ServiceModel.Ogc.Om
         }
 
         [System.Xml.Serialization.XmlElementAttribute("resultQuality")]
-        public Terradue.EarthObservation.EarthObservation.Ogc.Gmd.DQ_Element_PropertyType[] resultQuality
+        public DQ_Element_PropertyType[] resultQuality
         {
             get
             {
@@ -194,7 +194,7 @@ namespace Terradue.ServiceModel.Ogc.Om
         }
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public virtual object result
+        public OM_ResultPropertyType result
         {
             get
             {
@@ -297,19 +297,6 @@ namespace Terradue.ServiceModel.Ogc.Om
             }
         }
 
-        [XmlIgnore]
-        public TimePeriodType GmlTimePeriod
-        {
-            get
-            {
-                return (TimePeriodType)this.abstractTimeObjectField;
-            }
-            set
-            {
-                this.abstractTimeObjectField = value;
-            }
-        }
-
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string nilReason
         {
@@ -389,6 +376,31 @@ namespace Terradue.ServiceModel.Ogc.Om
                 this.remoteSchemaField = value;
             }
         }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/om/2.0")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/om/2.0", IsNullable = true)]
+    public partial class OM_ResultPropertyType
+    {
+
+        private System.Xml.XmlElement anyField;
+
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlElement Any
+        {
+            get
+            {
+                return this.anyField;
+            }
+            set
+            {
+                this.anyField = value;
+            }
+        }
+
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
