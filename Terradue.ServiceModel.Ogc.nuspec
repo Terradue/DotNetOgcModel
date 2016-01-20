@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Terradue.ServiceModel.Ogc</id>
+    <version>1.0.0</version>
+    <title>Terradue.ServiceModel.Ogc</title>
+    <authors>Terradue</authors>
+    <projectUrl>https://github.com/Terradue/DotNetOgcOmGml</projectUrl>
+    <licenseUrl>https://github.com/Terradue/DotNetOgcOmGml/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Terradue.ServiceModel.Ogc is a library targeting .NET 4.0 to handle all OGC schemas serialization mainly in XML</description>
+    <summary>Ogc schemas library for .Net</summary>
+	<tags>OGC, GML, EOP, XML</tags>
+  </metadata>
+  <files>
+    <file src="Terradue.GeoJson/bin/Terradue.ServiceModel.Ogc.dll" target="lib/net40/Terradue.ServiceModel.Ogc.dll" />
+  </files>
+
+</package>

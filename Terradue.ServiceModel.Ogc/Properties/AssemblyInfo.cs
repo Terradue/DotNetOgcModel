@@ -1,4 +1,38 @@
-﻿using System.Reflection;
+﻿/*                                                            
+* Copyright (C) 2010-2014 Terradue S.r.l.
+* 
+* This file is part of Terradue.ServiceModel.Ogc.
+* 
+* Foobar is free software: you can redistribute it and/or modify it under the terms of the 
+* GNU General Public License as published by the Free Software Foundation, 
+* either version 3 of the License, or (at your option) any later version.
+* 
+* Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+* See the GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License along with Terradue.OpenSearch.
+* If not, see http://www.gnu.org/licenses/.
+*/
+
+/*!
+
+\namespace Terradue.GeoJson
+@{
+    Terradue .NET Ogc Schemas Library. Software to handle all OGC schemas serialization mainly in XML
+
+    \xrefitem sw_version "Versions" "Software Package Version" 1.0.0
+
+    \xrefitem sw_link "Links" "Software Package List" [DotNetGeoJson](https://github.com/Terradue/DotNetOgcOmGml)
+
+    \xrefitem sw_license "License" "Software License" [GPLv3](https://github.com/Terradue/DotNetOgcOmGml/blob/master/LICENSE.txt)
+
+\ingroup Data
+@}
+
+*/
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 // Information about this assembly is defined by the following attributes.
@@ -18,6 +52,7 @@ using System.Runtime.CompilerServices;
 // and "{Major}.{Minor}.{Build}.*" will update just the revision.
 
 [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyInformationalVersion("1.0.0")]
 
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.
