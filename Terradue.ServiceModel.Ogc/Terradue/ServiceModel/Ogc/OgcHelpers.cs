@@ -295,7 +295,7 @@ namespace Terradue.ServiceModel.Ogc {
             return ns;
         }
 
-        public static Object DeserializeEarthObservation(XmlReader reader, string nspace) {
+        public static object DeserializeEarthObservation(XmlReader reader, string nspace) {
 
             XmlSerializer ser = null;
 
@@ -316,7 +316,7 @@ namespace Terradue.ServiceModel.Ogc {
                     ser = Alt20Serializer;
                     break;
                 case ATM20:
-//                    ser = Atm20Serializer;
+                    ser = Atm20Serializer;
                     break;
                 case EOP21:
                 case LMB21:
@@ -333,8 +333,10 @@ namespace Terradue.ServiceModel.Ogc {
                     ser = Alt21Serializer;
                     break;
                 case ATM21:
-//                    ser = Atm21Serializer;
+                    ser = Atm21Serializer;
                     break;
+                default:
+                    throw new NotImplementedException();
             }
 
             object eo = null;
