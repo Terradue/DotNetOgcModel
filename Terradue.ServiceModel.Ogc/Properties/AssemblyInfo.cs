@@ -42,7 +42,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Terradue")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Terradue.ServiceModel.Ogc")]
 [assembly: AssemblyCopyright("Terradue")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
