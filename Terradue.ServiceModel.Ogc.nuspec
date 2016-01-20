@@ -13,7 +13,7 @@
 	<tags>OGC, GML, EOP, XML</tags>
   </metadata>
   <files>
-    <file src="Terradue.GeoJson/bin/Terradue.ServiceModel.Ogc.dll" target="lib/net40/Terradue.ServiceModel.Ogc.dll" />
+    <file src="Terradue.ServiceModel.Ogc/bin/Terradue.ServiceModel.Ogc.dll" target="lib/net40/Terradue.ServiceModel.Ogc.dll" />
   </files>
 
 </package>
