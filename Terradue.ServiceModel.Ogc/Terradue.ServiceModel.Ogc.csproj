@@ -30,6 +30,9 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="NuGet4Mono.Extensions">
+      <HintPath>..\packages\NuGet4Mono.Extensions.0.2.1\lib\net40\NuGet4Mono.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,5 +78,8 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Opt\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Sar\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Atm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
