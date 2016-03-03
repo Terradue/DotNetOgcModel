@@ -1,4 +1,4 @@
-﻿1/*                                                            
+﻿/*                                                            
 * Copyright (C) 2010-2014 Terradue S.r.l.
 * 
 * This file is part of Terradue.ServiceModel.Ogc.
