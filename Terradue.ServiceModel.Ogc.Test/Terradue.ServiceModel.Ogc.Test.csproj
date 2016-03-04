@@ -48,6 +48,7 @@
     <Compile Include="SarSerializationTest.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Opt21SerializationTest.cs" />
+    <Compile Include="LmbSerializationTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -56,6 +57,8 @@
     <None Include="Samples\eop20_example.xml" />
     <None Include="Samples\sar21_example.xml" />
     <None Include="Samples\opt21_example.xml" />
+    <None Include="Samples\S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom" />
+    <None Include="Samples\LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Samples\" />

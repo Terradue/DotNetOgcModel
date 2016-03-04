@@ -28,9 +28,9 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual("archivingdate_1", eop.resultTime.TimeInstant.id);
             Assert.AreEqual("2001-08-22T11:02:47.999", eop.resultTime.TimeInstant.timePosition.Value);
             Assert.AreEqual("eoe_1", eop.procedure.Eop20EarthObservationEquipment.id);
-            Assert.AreEqual("PHR", eop.procedure.Eop20EarthObservationEquipment.platform.Platform.shortName);
-            Assert.AreEqual("1A", eop.procedure.Eop20EarthObservationEquipment.platform.Platform.serialIdentifier);
-            Assert.AreEqual("PHR", eop.procedure.Eop20EarthObservationEquipment.instrument.Instrument.shortName);
+            Assert.AreEqual("PHR", eop.procedure.Eop20EarthObservationEquipment.platform[0].Platform.shortName);
+            Assert.AreEqual("1A", eop.procedure.Eop20EarthObservationEquipment.platform[0].Platform.serialIdentifier);
+            Assert.AreEqual("PHR", eop.procedure.Eop20EarthObservationEquipment.instrument[0].Instrument.shortName);
             Assert.AreEqual("OPTICAL", eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.sensorType);
             Assert.AreEqual("urn:eop:PHR:sensorMode", eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.operationalMode.codeSpace);
             Assert.AreEqual("PX", eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.operationalMode.Text);

@@ -32,17 +32,6 @@ namespace Terradue.ServiceModel.Ogc.Alt20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/alt/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/alt/2.0", IsNullable = true)]
-    public partial class AltEarthObservationEquipmentPropertyType : EarthObservationEquipmentPropertyType
-    {
-
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/alt/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.0", IsNullable = false)]
     public partial class AltFootprintType : FootprintType
@@ -86,15 +75,6 @@ namespace Terradue.ServiceModel.Ogc.Alt20
                 this.auxiliaryInstrumentField = value;
             }
         }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/alt/2.0")]
-    public partial class AltAcquisitionPropertyType : AcquisitionPropertyType
-    {
-
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
@@ -202,29 +182,6 @@ namespace Terradue.ServiceModel.Ogc.Alt20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.0")]
-    public partial class AltProcessingInformationPropertyType : ProcessingInformationPropertyType
-    {
-
-        private ProcessingInformationType processingInformationField;
-
-        [System.Xml.Serialization.XmlElementAttribute(Type = typeof(AltProcessingInformationType))]
-        public ProcessingInformationType ProcessingInformation
-        {
-            get
-            {
-                return this.processingInformationField;
-            }
-            set
-            {
-                this.processingInformationField = value;
-            }
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "ProcessingInformationType", Namespace = "http://www.opengis.net/alt/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("ProcessingInformation", Namespace = "http://www.opengis.net/alt/2.0", IsNullable = false)]
     public partial class AltProcessingInformationType : ProcessingInformationType
@@ -274,32 +231,6 @@ namespace Terradue.ServiceModel.Ogc.Alt20
                 this.samplingRateField = value;
             }
         }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/alt/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/alt/2.0", IsNullable = true)]
-    public partial class AltFootprintPropertyType : FootprintPropertyType
-    {
-
-        private AltFootprintType footprintField;
-
-        [System.Xml.Serialization.XmlElementAttribute(typeof(AltFootprintType))]
-        public AltFootprintType Footprint
-        {
-            get
-            {
-                return this.footprintField;
-            }
-            set
-            {
-                this.footprintField = value;
-            }
-        }
-
-
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]

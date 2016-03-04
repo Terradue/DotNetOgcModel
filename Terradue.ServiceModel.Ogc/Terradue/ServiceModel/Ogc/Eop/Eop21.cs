@@ -984,7 +984,8 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
             this.ownsField = false;
         }
 
-        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute("Sensor", Namespace = "http://www.opengis.net/lmb/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbSensorType))]
+        [System.Xml.Serialization.XmlElementAttribute("Sensor", Namespace = "http://www.opengis.net/eop/2.1", Type = typeof(SensorType))]
         public SensorType Sensor {
             get {
                 return this.sensorField;
@@ -2037,7 +2038,10 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
             owns = false;
         }
 
-        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Eop21.FootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Ssp21.SspFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/alt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Alt21.AltFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbFootprintType))]
         public FootprintType Footprint {
             get {
                 return this.footprintField;
