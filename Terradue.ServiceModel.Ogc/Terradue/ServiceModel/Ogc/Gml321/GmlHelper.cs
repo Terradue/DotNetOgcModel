@@ -20,7 +20,8 @@ namespace Terradue.ServiceModel.Ogc.Gml321
     public static class GmlHelper {
 
         static XmlSerializer multiCurveSerializer;
-        static XmlSerializer nultiSurfaceSerializer;
+        static XmlSerializer multiSurfaceSerializer;
+        static XmlSerializer multiPointSerializer;
 
         public static AbstractGeometryType Deserialize(XmlReader reader){
 
@@ -38,7 +39,11 @@ namespace Terradue.ServiceModel.Ogc.Gml321
                 return (MultiSurfaceType)MultiSurfaceSerializer.Deserialize(reader);
             }
 
-            throw new NotImplementedException();
+            if (node.Name.LocalName == "MultiPoint") {
+                return (MultiPointType)MultiPointSerializer.Deserialize(reader);
+            }
+
+            throw new NotImplementedException(node.Name.LocalName);
         }
 
         public static void Serialize(XmlWriter writer, AbstractGeometryType gmlObject){
@@ -57,7 +62,12 @@ namespace Terradue.ServiceModel.Ogc.Gml321
                 return;
             }
 
-            throw new NotImplementedException();
+            if (gmlObject is MultiPointType) {
+                MultiPointSerializer.Serialize(writer, gmlObject, namespaces);
+                return;
+            }
+
+            throw new NotImplementedException(gmlObject.GetType().ToString());
 
         }
 
@@ -71,9 +81,17 @@ namespace Terradue.ServiceModel.Ogc.Gml321
 
         public static XmlSerializer MultiSurfaceSerializer {
             get {
-                if (nultiSurfaceSerializer == null)
-                    nultiSurfaceSerializer = new XmlSerializer(typeof(MultiSurfaceType));
-                return nultiSurfaceSerializer;
+                if (multiSurfaceSerializer == null)
+                    multiSurfaceSerializer = new XmlSerializer(typeof(MultiSurfaceType));
+                return multiSurfaceSerializer;
+            }
+        }
+
+        public static XmlSerializer MultiPointSerializer {
+            get {
+                if (multiPointSerializer == null)
+                    multiPointSerializer = new XmlSerializer(typeof(MultiPointType));
+                return multiPointSerializer;
             }
         }
     }
