@@ -49,7 +49,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual("1514:56:4564:5646:6548:75648", eop.EopMetaDataProperty.EarthObservationMetaData.productGroupId);
 
             Assert.AreEqual(-14.0, eop.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.acrossTrackIncidenceAngle.Value);
-            Assert.AreEqual(30, ((OptEarthObservationResultType)eop.result.Eop21EarthObservationResult).cloudCoverPercentage.Value);
+            Assert.AreEqual(30, eop.result.Opt21EarthObservationResult.cloudCoverPercentage.Value);
 
             XmlReader xr = eop.CreaterReader();
 
