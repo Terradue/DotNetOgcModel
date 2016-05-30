@@ -100,8 +100,8 @@ namespace Terradue.ServiceModel.Ogc.Ssp20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "EarthObservationResultType", Namespace = "http://www.opengis.net/ssp/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/ssp/2.0")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/ssp/2.0", IsNullable = false)]
     public partial class SspEarthObservationResultType : EarthObservationResultType
     {
 

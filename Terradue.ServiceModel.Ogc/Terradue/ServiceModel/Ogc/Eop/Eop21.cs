@@ -1517,7 +1517,7 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.1", IsNullable = false)]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.1", IsNullable = false)]
     public partial class EarthObservationResultType : AbstractFeatureType {
 
         private BrowseInformationPropertyType[] browseField;

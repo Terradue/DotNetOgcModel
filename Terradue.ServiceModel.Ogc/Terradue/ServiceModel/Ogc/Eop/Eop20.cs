@@ -1194,8 +1194,7 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.0", IsNullable = false)]
-    [System.Xml.Serialization.XmlInclude(typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationResultType))]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.0", IsNullable = false)]
     public partial class EarthObservationResultType : AbstractFeatureType {
 
         private BrowseInformationPropertyType[] browseField;
@@ -1768,8 +1767,8 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.0", IsNullable = true)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.0")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.0", IsNullable = true)]
     public partial class EarthObservationResultPropertyType : OM_ResultPropertyType {
 
         private EarthObservationResultType earthObservationResultField;
