@@ -399,16 +399,16 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
     [System.Xml.Serialization.XmlRootAttribute("EarthObservationEquipment", Namespace = "http://www.opengis.net/eop/2.0", IsNullable = false)]
     public partial class EarthObservationEquipmentType : AbstractFeatureType {
 
-        private PlatformPropertyType platformField;
+        private PlatformPropertyType[] platformField;
 
-        private InstrumentPropertyType instrumentField;
+        private InstrumentPropertyType[] instrumentField;
 
         private SensorPropertyType sensorField;
 
         private AcquisitionPropertyType acquisitionParametersField;
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public PlatformPropertyType platform {
+        public PlatformPropertyType[] platform {
             get {
                 return this.platformField;
             }
@@ -418,7 +418,7 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
         }
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public InstrumentPropertyType instrument {
+        public InstrumentPropertyType[] instrument {
             get {
                 return this.instrumentField;
             }
@@ -649,7 +649,8 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
             this.ownsField = false;
         }
 
-        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute("Sensor", Namespace = "http://www.opengis.net/lmb/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbSensorType))]
+        [System.Xml.Serialization.XmlElementAttribute("Sensor", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(SensorType))]
         public SensorType Sensor {
             get {
                 return this.sensorField;
@@ -1684,7 +1685,10 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
             this.ownsField = false;
         }
 
-        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Eop20.FootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Ssp20.SspFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/alt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Alt20.AltFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbFootprintType))]
         public FootprintType Footprint {
             get {
                 return this.footprintField;

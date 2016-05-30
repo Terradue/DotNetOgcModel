@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 using Terradue.ServiceModel.Ogc.Om;
 using Terradue.ServiceModel.Ogc.Gml321;
 using System.IO;
+using System.Text;
 
 namespace Terradue.ServiceModel.Ogc {
     
@@ -87,6 +88,10 @@ namespace Terradue.ServiceModel.Ogc {
         static XmlSerializer altSerializer20;
         static XmlSerializer atmSerializer;
         static XmlSerializer atmSerializer20;
+        static XmlSerializer sspSerializer;
+        static XmlSerializer sspSerializer20;
+        static XmlSerializer lmbSerializer;
+        static XmlSerializer lmbSerializer20;
 
 
         public static XmlSerializer Eop21Serializer {
@@ -134,6 +139,24 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
+        public static XmlSerializer Ssp21Serializer {
+            get {
+
+                if (sspSerializer == null) sspSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp21.SspEarthObservationType));
+                return sspSerializer;
+
+            }
+        }
+
+        public static XmlSerializer Lmb21Serializer {
+            get {
+
+                if (lmbSerializer == null) lmbSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbEarthObservationType));
+                return lmbSerializer;
+
+            }
+        }
+
         public static XmlSerializer Eop20Serializer {
             get {
 
@@ -175,6 +198,24 @@ namespace Terradue.ServiceModel.Ogc {
 
                 if (atmSerializer20 == null) atmSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationType));
                 return atmSerializer20;
+
+            }
+        }
+
+        public static XmlSerializer Ssp20Serializer {
+            get {
+
+                if (sspSerializer == null) sspSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp20.SspEarthObservationType));
+                return sspSerializer;
+
+            }
+        }
+
+        public static XmlSerializer Lmb20Serializer {
+            get {
+
+                if (lmbSerializer == null) lmbSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbEarthObservationType));
+                return lmbSerializer;
 
             }
         }
@@ -295,14 +336,23 @@ namespace Terradue.ServiceModel.Ogc {
             return ns;
         }
 
-        public static object DeserializeEarthObservation(XmlReader reader, string nspace) {
+        public static object DeserializeEarthObservation(XmlReader reader) {
 
             XmlSerializer ser = null;
+            string nspace = reader.NamespaceURI;
+
+            while (string.IsNullOrEmpty(nspace) && reader.Read()) {
+                nspace = reader.NamespaceURI;
+            }
 
             switch (nspace) {
 
                 case SSP20:
+                    ser = Ssp20Serializer;
+                    break;
                 case LMB20:
+                    ser = Lmb20Serializer;
+                    break;
                 case EOP20:
                     ser = Eop20Serializer;
                     break;
@@ -319,9 +369,13 @@ namespace Terradue.ServiceModel.Ogc {
                     ser = Atm20Serializer;
                     break;
                 case EOP21:
-                case LMB21:
-                case SSP21:
                     ser = Eop21Serializer;
+                    break;
+                case LMB21:
+                    ser = Lmb21Serializer;
+                    break;
+                case SSP21:
+                    ser = Ssp21Serializer;
                     break;
                 case SAR21:
                     ser = Sar21Serializer;
@@ -336,7 +390,7 @@ namespace Terradue.ServiceModel.Ogc {
                     ser = Atm21Serializer;
                     break;
                 default:
-                    throw new NotImplementedException();
+                    throw new NotImplementedException("The namespace URI " + nspace + " is not implemented");
             }
 
             object eo = null;

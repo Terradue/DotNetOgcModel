@@ -31,37 +31,6 @@ namespace Terradue.ServiceModel.Ogc.Sar20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.0", IsNullable = true)]
-    public partial class SarEarthObservationEquipmentPropertyType : EarthObservationEquipmentPropertyType
-    {
-
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationEquipment", Namespace = "http://www.opengis.net/eop/2.0", IsNullable = false)]
-    public partial class SarEarthObservationEquipmentType : EarthObservationEquipmentType
-    {
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "AcquisitionPropertyType", Namespace = "http://www.opengis.net/sar/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("AcquisitionPropertyType", Namespace = "http://www.opengis.net/sar/2.0", IsNullable = true)]
-    public partial class SarAcquisitionPropertyType : AcquisitionPropertyType 
-    {
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "AcquisitionType", Namespace = "http://www.opengis.net/sar/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("Acquisition", Namespace = "http://www.opengis.net/sar/2.0", IsNullable = false)]
     public partial class SarAcquisitionType : AcquisitionType
@@ -173,78 +142,5 @@ namespace Terradue.ServiceModel.Ogc.Sar20
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/sar/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/sar/2.0", IsNullable = true)]
-    public partial class EarthObservationPropertyType
-    {
-
-        private SarEarthObservationType earthObservationField;
-
-        private string nilReasonField;
-
-        private string remoteSchemaField;
-
-        private bool ownsField;
-
-        public EarthObservationPropertyType()
-        {
-            this.ownsField = false;
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute()]
-        public SarEarthObservationType EarthObservation
-        {
-            get
-            {
-                return this.earthObservationField;
-            }
-            set
-            {
-                this.earthObservationField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string nilReason
-        {
-            get
-            {
-                return this.nilReasonField;
-            }
-            set
-            {
-                this.nilReasonField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.opengis.net/gml/3.2", DataType = "anyURI")]
-        public string remoteSchema
-        {
-            get
-            {
-                return this.remoteSchemaField;
-            }
-            set
-            {
-                this.remoteSchemaField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool owns
-        {
-            get
-            {
-                return this.ownsField;
-            }
-            set
-            {
-                this.ownsField = value;
-            }
-        }
-    }
+  
 }

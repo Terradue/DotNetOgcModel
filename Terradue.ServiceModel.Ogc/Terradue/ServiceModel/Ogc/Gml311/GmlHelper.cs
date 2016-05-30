@@ -23,6 +23,7 @@ namespace Terradue.ServiceModel.Ogc.Gml311
         static XmlSerializer multiCurveSerializer;
         static XmlSerializer multiLineStringSerializer;
         static XmlSerializer nultiSurfaceSerializer;
+        static XmlSerializer multiPointSerializer;
 
         public static AbstractGeometryType Deserialize(XmlReader reader){
 
@@ -46,6 +47,10 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
             if (node.Name.LocalName == "MultiSurface") {
                 return (MultiSurfaceType)MultiSurfaceSerializer.Deserialize(reader);
+            }
+
+            if (node.Name.LocalName == "MultiPoint") {
+                return (MultiPointType)MultiPointSerializer.Deserialize(reader);
             }
 
             throw new NotImplementedException();
@@ -74,6 +79,11 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
             if (gmlObject is MultiSurfaceType) {
                 MultiSurfaceSerializer.Serialize(writer, gmlObject, namespaces);
+                return;
+            }
+
+            if (gmlObject is MultiPointType) {
+                MultiPointSerializer.Serialize(writer, gmlObject, namespaces);
                 return;
             }
 
@@ -110,6 +120,14 @@ namespace Terradue.ServiceModel.Ogc.Gml311
                 if (nultiSurfaceSerializer == null)
                     nultiSurfaceSerializer = new XmlSerializer(typeof(MultiSurfaceType));
                 return nultiSurfaceSerializer;
+            }
+        }
+
+        public static XmlSerializer MultiPointSerializer {
+            get {
+                if (multiPointSerializer == null)
+                    multiPointSerializer = new XmlSerializer(typeof(MultiPointType));
+                return multiPointSerializer;
             }
         }
     }

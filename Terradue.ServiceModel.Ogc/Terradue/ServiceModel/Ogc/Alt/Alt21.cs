@@ -31,17 +31,6 @@ namespace Terradue.ServiceModel.Ogc.Alt21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.1", IsNullable = true)]
-    public partial class AltEarthObservationEquipmentPropertyType : EarthObservationEquipmentPropertyType
-    {
-
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/alt/2.1")]
     [System.Xml.Serialization.XmlRootAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.1", IsNullable = false)]
     public partial class AltFootprintType : FootprintType
@@ -83,30 +72,6 @@ namespace Terradue.ServiceModel.Ogc.Alt21
             set
             {
                 this.auxiliaryInstrumentField = value;
-            }
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    public partial class AltAcquisitionPropertyType : AcquisitionPropertyType
-    {
-
-
-        private AcquisitionType acquisitionField;
-
-        [System.Xml.Serialization.XmlElementAttribute(Type=typeof(AltAcquisitionType))]
-        public AcquisitionType Acquisition
-        {
-            get
-            {
-                return this.acquisitionField;
-            }
-            set
-            {
-                this.acquisitionField = value;
             }
         }
     }
@@ -183,197 +148,6 @@ namespace Terradue.ServiceModel.Ogc.Alt21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    public partial class AltEarthObservationMetaDataPropertyType : EarthObservationMetaDataPropertyType
-    {
-
-        private EarthObservationMetaDataType earthObservationMetaDataField;
-
-        [System.Xml.Serialization.XmlElementAttribute(Type=typeof(AltEarthObservationMetaDataType))]
-        public EarthObservationMetaDataType EarthObservationMetaData
-        {
-            get
-            {
-                return this.earthObservationMetaDataField;
-            }
-            set
-            {
-                this.earthObservationMetaDataField = value;
-            }
-        }
-    }
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EarthObservationMetaDataType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    public partial class AltEarthObservationMetaDataType : EarthObservationMetaDataType
-    {
-
-
-        private EarthObservationPropertyType[] composedOfField;
-
-        private EarthObservationPropertyType[] subsetOfField;
-
-        private EarthObservationPropertyType[] linkedWithField;
-
-        private ProcessingInformationPropertyType[] processingField;
-
-
-        [System.Xml.Serialization.XmlElementAttribute("composedOf")]
-        public EarthObservationPropertyType[] composedOf
-        {
-            get
-            {
-                return this.composedOfField;
-            }
-            set
-            {
-                this.composedOfField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute("subsetOf")]
-        public EarthObservationPropertyType[] subsetOf
-        {
-            get
-            {
-                return this.subsetOfField;
-            }
-            set
-            {
-                this.subsetOfField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute("linkedWith")]
-        public EarthObservationPropertyType[] linkedWith
-        {
-            get
-            {
-                return this.linkedWithField;
-            }
-            set
-            {
-                this.linkedWithField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute("processing", typeof(AltProcessingInformationPropertyType))]
-        public ProcessingInformationPropertyType[] processing
-        {
-            get
-            {
-                return this.processingField;
-            }
-            set
-            {
-                this.processingField = value;
-            }
-        }
-    }
-/*
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    public partial class EarthObservationPropertyType
-    {
-
-        private EarthObservationType earthObservationField;
-
-        private string nilReasonField;
-
-        private string remoteSchemaField;
-
-        private bool ownsField;
-
-        public EarthObservationPropertyType()
-        {
-            this.ownsField = false;
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute()]
-        public EarthObservationType EarthObservation
-        {
-            get
-            {
-                return this.earthObservationField;
-            }
-            set
-            {
-                this.earthObservationField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string nilReason
-        {
-            get
-            {
-                return this.nilReasonField;
-            }
-            set
-            {
-                this.nilReasonField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.opengis.net/gml/3.2", DataType = "anyURI")]
-        public string remoteSchema
-        {
-            get
-            {
-                return this.remoteSchemaField;
-            }
-            set
-            {
-                this.remoteSchemaField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool owns
-        {
-            get
-            {
-                return this.ownsField;
-            }
-            set
-            {
-                this.ownsField = value;
-            }
-        }
-    }
-*/
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    public partial class AltProcessingInformationPropertyType : ProcessingInformationPropertyType
-    {
-
-        private ProcessingInformationType processingInformationField;
-
-        [System.Xml.Serialization.XmlElementAttribute(Type = typeof(AltProcessingInformationType))]
-        public ProcessingInformationType ProcessingInformation
-        {
-            get
-            {
-                return this.processingInformationField;
-            }
-            set
-            {
-                this.processingInformationField = value;
-            }
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "ProcessingInformationType", Namespace = "http://www.opengis.net/alt/2.1")]
     [System.Xml.Serialization.XmlRootAttribute("ProcessingInformation", Namespace = "http://www.opengis.net/alt/2.1", IsNullable = false)]
     public partial class AltProcessingInformationType : ProcessingInformationType
@@ -423,32 +197,6 @@ namespace Terradue.ServiceModel.Ogc.Alt21
                 this.samplingRateField = value;
             }
         }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/alt/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/alt/2.1", IsNullable = true)]
-    public partial class AltFootprintPropertyType : FootprintPropertyType
-    {
-
-        private AltFootprintType footprintField;
-
-        [System.Xml.Serialization.XmlElementAttribute(typeof(AltFootprintType))]
-        public AltFootprintType Footprint
-        {
-            get
-            {
-                return this.footprintField;
-            }
-            set
-            {
-                this.footprintField = value;
-            }
-        }
-
-
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]

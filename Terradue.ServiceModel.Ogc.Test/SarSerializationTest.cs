@@ -36,7 +36,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual("NA", eop.procedure.Eop21EarthObservationEquipment.sensor.Sensor.operationalMode.Text);
             Assert.AreEqual("WS", eop.procedure.Eop21EarthObservationEquipment.sensor.Sensor.swathIdentifier.Text);
             Assert.AreEqual(OrbitDirectionValueType.ASCENDING, eop.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirection);
-            Assert.AreEqual("S", ((SarAcquisitionType)eop.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition).polarisationMode);
+            Assert.AreEqual("S", eop.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition.polarisationMode);
 
             Assert.AreEqual("EN-021126221755-53642-SV.ASA_WS__0P", eop.EopMetaDataProperty.EarthObservationMetaData.identifier);
 
@@ -57,6 +57,17 @@ namespace Terradue.ServiceModel.Ogc.Test {
             //Assert.True(Util.IsXmlEqual(XmlReader.Create(fs),xr, xw, true, true, true, true, true, true, true, true), "Xml differences {0}", sw);
 
             fs.Close();
+
+        }
+
+        [TestCase]
+        public void DeserializeSar(){
+
+            FileInfo s1 = new FileInfo("../Samples/S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom");
+
+            SarEarthObservationType sarEo = (SarEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
+
+            Assert.AreEqual("S1A", sarEo.procedure.Eop21EarthObservationEquipment.platform.Platform.shortName);
 
         }
 

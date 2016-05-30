@@ -31,7 +31,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="NuGet4Mono.Extensions">
-      <HintPath>..\packages\NuGet4Mono.Extensions.0.2.1\lib\net40\NuGet4Mono.Extensions.dll</HintPath>
+      <HintPath>..\packages\NuGet4Mono.Extensions.0.3.0\lib\net40\NuGet4Mono.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +67,22 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Atm\Atm21.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Opt\Opt20.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Opt\Opt21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sar\Eop21.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Alt\Om.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Atm\Om.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sar\Eop20.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Alt\Eop20.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Alt\Eop21.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ssp\Ssp20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ssp\Ssp21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ssp\Eop20.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ssp\Eop21.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Eop20.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Eop21.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Lmb21.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Lmb20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Opt\Eop20.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Opt\Eop21.Extra.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -78,6 +94,8 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Opt\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Sar\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Atm\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Lmb\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Ssp\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

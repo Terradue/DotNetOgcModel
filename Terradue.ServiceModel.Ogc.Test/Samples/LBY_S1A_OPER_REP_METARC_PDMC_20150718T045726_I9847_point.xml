@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lmb:EarthObservation xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:eop="http://www.opengis.net/eop/2.1" xmlns:lmb="http://www.opengis.net/lmb/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="http://www.opengis.net/om/2.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="EarthObservation.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+	<om:phenomenonTime>
+		<gml:TimePeriod gml:id="TimePeriod.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+			<gml:beginPosition>2015-07-18T02:44:58.47Z</gml:beginPosition>
+			<gml:endPosition>2015-07-18T02:45:50.18Z</gml:endPosition>
+		</gml:TimePeriod>
+	</om:phenomenonTime>
+	<om:resultTime>
+		<gml:TimeInstant gml:id="TimeInstant.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+			<gml:timePosition>2015-07-18T04:47:43.54Z</gml:timePosition>
+		</gml:TimeInstant>
+	</om:resultTime>
+	<om:procedure>
+		<eop:EarthObservationEquipment gml:id="EarthObservationEquipment.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+			<eop:platform>
+				<eop:Platform>
+					<eop:shortName>Sentinel-1</eop:shortName>
+				</eop:Platform>
+			</eop:platform>
+			<eop:instrument>
+				<eop:Instrument>
+					<eop:shortName>SAR</eop:shortName>
+				</eop:Instrument>
+			</eop:instrument>
+			<eop:sensor>
+				<lmb:Sensor>
+					<eop:sensorType>ALTIMETRIC</eop:sensorType>
+					<eop:operationalMode codeSpace="urn:eop:SEN1:sensorMode">EW_DP</eop:operationalMode>
+					<eop:swathIdentifier>EW</eop:swathIdentifier>
+				</lmb:Sensor>
+			</eop:sensor>
+		</eop:EarthObservationEquipment>
+	</om:procedure>
+	<om:observedProperty xsi:nil="true" nilReason="inapplicable" />
+	<om:featureOfInterest>
+		<lmb:Footprint gml:id="Footprint.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+			<eop:multiExtentOf>
+				<gml:MultiSurface gml:id="MultiSurface.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE" srsName="EPSG:4326" />
+			</eop:multiExtentOf>
+			<lmb:occultationPoints>
+				<gml:MultiPoint gml:id="ENVISAT-1-03010100122381-1433606.RA2_MW__1P_6" srsName="EPSG:4326">
+					<gml:pointMember>
+						<gml:Point gml:id="ENVISAT-1-03010100122381-1433606.RA2_MW__1P_7" srsName="EPSG:4326">
+							<gml:coordinates>10, 10</gml:coordinates>
+						</gml:Point>
+					</gml:pointMember>
+					<gml:pointMember>
+						<gml:Point gml:id="ENVISAT-1-03010100122381-1433606.RA2_MW__1P_8" srsName="EPSG:4326">
+							<gml:coordinates>20, 20</gml:coordinates>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</lmb:occultationPoints>
+		</lmb:Footprint>
+	</om:featureOfInterest>
+	<om:result>
+		<eop:EarthObservationResult gml:id="EarthObservationResult.S1A_EW_GRDM_1SDV_20150718T024458_20150718T024550_006859_009400_2D59.SAFE">
+			<eop:product>
+				<eop:ProductInformation>
+					<eop:fileName>
+						<ows:ServiceReference xlink:href="https://s1-pdmcdmz-oda-v-20.sentinel1.eo.esa.int/odabroker/rest/ngEO//S1A_EW_RAW__0SDV_20150718T024454_20150718T024549_006859_009400">
+							<ows:RequestMessage />
+						</ows:ServiceReference>
+					</eop:fileName>
+					<eop:size uom="Bytes">376432552</eop:size>
+					<eop:timeliness>Fast-24h</eop:timeliness>
+				</eop:ProductInformation>
+			</eop:product>
+		</eop:EarthObservationResult>
+	</om:result>
+	<eop:metaDataProperty>
+		<eop:EarthObservationMetaData>
+			<eop:identifier>S1A_EW_RAW__0SDV_20150718T024454_20150718T024549_006859_009400</eop:identifier>
+			<eop:acquisitionType>NOMINAL</eop:acquisitionType>
+			<eop:productType>N/A</eop:productType>
+			<eop:status>ARCHIVED</eop:status>
+			<eop:vendorSpecific>
+				<eop:SpecificInformation>
+					<eop:localAttribute>lby</eop:localAttribute>
+					<eop:localValue>val_lby</eop:localValue>
+				</eop:SpecificInformation>
+			</eop:vendorSpecific>
+			<eop:vendorSpecific>
+				<eop:SpecificInformation>
+					<eop:localAttribute>toto</eop:localAttribute>
+					<eop:localValue>val_toto</eop:localValue>
+				</eop:SpecificInformation>
+			</eop:vendorSpecific>
+		</eop:EarthObservationMetaData>
+	</eop:metaDataProperty>
+</lmb:EarthObservation>
