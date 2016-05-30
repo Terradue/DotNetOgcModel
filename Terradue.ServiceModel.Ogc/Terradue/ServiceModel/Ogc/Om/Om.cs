@@ -193,7 +193,9 @@ namespace Terradue.ServiceModel.Ogc.Om
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute("result", Namespace = "http://www.opengis.net/om/2.0", Type = typeof(OM_ResultPropertyType))]
+        [System.Xml.Serialization.XmlElementAttribute("result", Namespace = "http://www.opengis.net/opt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Opt21.OptEarthObservationResultPropertyType))]
+        [System.Xml.Serialization.XmlElementAttribute("result", Namespace = "http://www.opengis.net/opt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationResultPropertyType))]
         public OM_ResultPropertyType result
         {
             get

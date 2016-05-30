@@ -28,8 +28,6 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
 
         private EarthObservationMetaDataPropertyType metaDataProperty1Field;
 
-        private object resultField;
-
         private OM_ProcessPropertyType procedureField;
 
         private FeaturePropertyType featureOfInterestField;
@@ -1685,10 +1683,10 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
             this.ownsField = false;
         }
 
-        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Eop20.FootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Ssp20.SspFootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/alt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Alt20.AltFootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Eop20.FootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/opt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Ssp20.SspFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Alt20.AltFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/ssp/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbFootprintType))]
         public FootprintType Footprint {
             get {
                 return this.footprintField;
@@ -1772,7 +1770,7 @@ namespace Terradue.ServiceModel.Ogc.Eop20 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName = "EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.0", IsNullable = true)]
-    public partial class EarthObservationResultPropertyType {
+    public partial class EarthObservationResultPropertyType : OM_ResultPropertyType {
 
         private EarthObservationResultType earthObservationResultField;
 

@@ -67,6 +67,7 @@
     <None Include="Samples\MultiCurveWithLinearString.gml" />
     <None Include="Samples\MultiPolygon.xml" />
     <None Include="Samples\MultiSurface311.gml" />
+    <None Include="Samples\S2withType.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Samples\" />

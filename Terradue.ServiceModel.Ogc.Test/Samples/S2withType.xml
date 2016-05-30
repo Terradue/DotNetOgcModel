@@ -1,0 +1,89 @@
+﻿<opt:EarthObservation gml:id="ID-24592" xmlns:eop="http://www.opengis.net/eop/2.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:opt="http://www.opengis.net/opt/2.1" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:rep="http://ngeo.eo.esa.int/ngEO/metadataReport/1.0" xmlns:xlin="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <om:phenomenonTime>
+      <gml:TimePeriod gml:id="ID-24593">
+         <gml:beginPosition>2015-06-28T08:40:08Z</gml:beginPosition>
+         <gml:endPosition>2015-06-28T08:40:08Z</gml:endPosition>
+      </gml:TimePeriod>
+   </om:phenomenonTime>
+   <om:resultTime>
+      <gml:TimeInstant gml:id="ID-24594">
+         <gml:timePosition>2015-06-28T08:40:08Z</gml:timePosition>
+      </gml:TimeInstant>
+   </om:resultTime>
+   <om:procedure>
+      <eop:EarthObservationEquipment gml:id="ID-24595">
+         <eop:platform>
+            <eop:Platform>
+               <eop:shortName>Sentinel-2</eop:shortName>
+               <eop:serialIdentifier>A</eop:serialIdentifier>
+            </eop:Platform>
+         </eop:platform>
+         <eop:instrument>
+            <eop:Instrument>
+               <eop:shortName>MSI</eop:shortName>
+            </eop:Instrument>
+         </eop:instrument>
+         <eop:sensor>
+            <eop:Sensor>
+               <eop:sensorType>OPTICAL</eop:sensorType>
+               <eop:operationalMode>IM</eop:operationalMode>
+            </eop:Sensor>
+         </eop:sensor>
+         <eop:acquisitionParameters>
+            <eop:Acquisition>
+               <eop:orbitNumber>1536</eop:orbitNumber>
+               <eop:orbitDirection>DESCENDING</eop:orbitDirection>
+               <eop:illuminationAzimuthAngle uom="deg">0</eop:illuminationAzimuthAngle>
+               <eop:illuminationZenithAngle uom="deg">0</eop:illuminationZenithAngle>
+               <eop:illuminationElevationAngle uom="deg">0</eop:illuminationElevationAngle>
+            </eop:Acquisition>
+         </eop:acquisitionParameters>
+      </eop:EarthObservationEquipment>
+   </om:procedure>
+   <om:observedProperty nilReason="inapplicable" xsi:nil="true"/>
+   <om:featureOfInterest>
+      <eop:Footprint gml:id="ID-24596">
+         <eop:multiExtentOf>
+            <gml:MultiSurface gml:id="ID-24597" srsName="EPSG:4326">
+               <gml:surfaceMembers>
+                  <gml:Polygon gml:id="ID-24598">
+                     <gml:exterior>
+                        <gml:LinearRing>
+                           <gml:posList>22.595602243857734 25.053858756677794 21.604189969283073 25.06741223721312 21.61313089977026 26.127934477064695 22.604996781112817 26.12181483720572 22.595602243857734 25.053858756677794</gml:posList>
+                        </gml:LinearRing>
+                     </gml:exterior>
+                  </gml:Polygon>
+               </gml:surfaceMembers>
+            </gml:MultiSurface>
+         </eop:multiExtentOf>
+      </eop:Footprint>
+   </om:featureOfInterest>
+   <om:result xsi:type="opt:EarthObservationResultPropertyType">
+      <opt:EarthObservationResult gml:id="ID-24599">
+         <eop:product>
+            <eop:ProductInformation>
+               <eop:fileName>
+                  <ows:ServiceReference xlin:href="http://ngeo.eo.esa.int/Sentinel-2/L1C/S2A_OPER_REP_METARC_UPA__20150628T134008_20150628T084008_20150628T084008_L1C_17833.ZIP">
+                     <ows:RequestMessage/>
+                  </ows:ServiceReference>
+               </eop:fileName>
+               <eop:version>1.0</eop:version>
+               <eop:size uom="Bytes">400871</eop:size>
+            </eop:ProductInformation>
+         </eop:product>
+         <opt:cloudCoverPercentage uom="%">6.29</opt:cloudCoverPercentage>
+      </opt:EarthObservationResult>
+   </om:result>
+   <eop:metaDataProperty>
+      <eop:EarthObservationMetaData>
+         <eop:identifier>S2A_OPER_REP_METARC_UPA__20150628T134008_20150628T084008_20150628T084008_L1C_17833</eop:identifier>
+         <eop:parentIdentifier>S2MSI1C</eop:parentIdentifier>
+         <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+         <eop:acquisitionSubType>INS-NOBS</eop:acquisitionSubType>
+         <eop:productType>S2MSI1C</eop:productType>
+         <eop:status>ARCHIVED</eop:status>
+         <eop:statusSubType>ON-LINE</eop:statusSubType>
+         <eop:productGroupId>GS2A_20150628T084008_001536_N01.01</eop:productGroupId>
+      </eop:EarthObservationMetaData>
+   </eop:metaDataProperty>
+</opt:EarthObservation>

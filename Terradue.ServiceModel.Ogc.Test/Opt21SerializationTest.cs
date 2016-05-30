@@ -69,6 +69,18 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
         }
 
+        [Test()]
+        public void OptWithTypeTestCase() {
+
+            FileStream fs = new FileStream("../Samples/S2withType.xml", FileMode.Open);
+
+            var eop = (EarthObservationType)OgcHelpers.Opt21Serializer.Deserialize(XmlReader.Create(fs));
+
+            Assert.AreEqual(6.29, eop.result.Opt21EarthObservationResult.cloudCoverPercentage.Value);
+
+            fs.Close();
+        }
+
 
     }
 }

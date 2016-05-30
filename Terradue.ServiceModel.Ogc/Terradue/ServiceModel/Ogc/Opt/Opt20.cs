@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.Ogc.Eop20;
 using Terradue.ServiceModel.Ogc.Gml321;
+using Terradue.ServiceModel.Ogc.Om;
 
 namespace Terradue.ServiceModel.Ogc.Opt20
 {
@@ -128,76 +129,10 @@ namespace Terradue.ServiceModel.Ogc.Opt20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.0")]
+    [System.Xml.Serialization.XmlTypeAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.0", IsNullable = true)]
-    public partial class OptEarthObservationResultPropertyType
+    public partial class OptEarthObservationResultPropertyType : OM_ResultPropertyType
     {
-
-        private OptEarthObservationResultType earthObservationResultField;
-
-        private string nilReasonField;
-
-        private string remoteSchemaField;
-
-        private bool ownsField;
-
-        public OptEarthObservationResultPropertyType()
-        {
-            this.ownsField = false;
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute()]
-        public OptEarthObservationResultType EarthObservationResult
-        {
-            get
-            {
-                return this.earthObservationResultField;
-            }
-            set
-            {
-                this.earthObservationResultField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string nilReason
-        {
-            get
-            {
-                return this.nilReasonField;
-            }
-            set
-            {
-                this.nilReasonField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.opengis.net/gml/3.2", DataType = "anyURI")]
-        public string remoteSchema
-        {
-            get
-            {
-                return this.remoteSchemaField;
-            }
-            set
-            {
-                this.remoteSchemaField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool owns
-        {
-            get
-            {
-                return this.ownsField;
-            }
-            set
-            {
-                this.ownsField = value;
-            }
-        }
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
