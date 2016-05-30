@@ -83,6 +83,7 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Lmb20.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Opt\Eop20.Extra.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Opt\Eop21.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Opt\Om.Extra.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
