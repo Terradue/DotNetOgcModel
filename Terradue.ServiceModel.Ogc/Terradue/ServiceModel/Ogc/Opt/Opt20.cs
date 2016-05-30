@@ -30,8 +30,8 @@ namespace Terradue.ServiceModel.Ogc.Opt20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "EarthObservationResultType", Namespace = "http://www.opengis.net/opt/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/opt/2.0")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/opt/2.0", IsNullable = false)]
     public partial class OptEarthObservationResultType : EarthObservationResultType
     {
 
@@ -39,13 +39,13 @@ namespace Terradue.ServiceModel.Ogc.Opt20
 
         private MeasureType cloudCoverPercentageAssessmentConfidenceField;
 
-        private EarthObservationResultPropertyType cloudCoverPercentageQuotationModeField;
+        private string cloudCoverPercentageQuotationModeField;
 
         private MeasureType snowCoverPercentageField;
 
         private MeasureType snowCoverPercentageAssessmentConfidenceField;
 
-        private EarthObservationResultPropertyType snowCoverPercentageQuotationModeField;
+        private string snowCoverPercentageQuotationModeField;
 
         [System.Xml.Serialization.XmlElementAttribute()]
         public MeasureType cloudCoverPercentage
@@ -74,7 +74,7 @@ namespace Terradue.ServiceModel.Ogc.Opt20
         }
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public EarthObservationResultPropertyType cloudCoverPercentageQuotationMode
+        public string cloudCoverPercentageQuotationMode
         {
             get
             {
@@ -113,7 +113,7 @@ namespace Terradue.ServiceModel.Ogc.Opt20
         }
 
         [System.Xml.Serialization.XmlElementAttribute()]
-        public EarthObservationResultPropertyType snowCoverPercentageQuotationMode
+        public string snowCoverPercentageQuotationMode
         {
             get
             {
