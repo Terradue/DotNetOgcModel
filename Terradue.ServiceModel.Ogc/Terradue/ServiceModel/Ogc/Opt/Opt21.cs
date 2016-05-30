@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.Ogc.Eop21;
 using Terradue.ServiceModel.Ogc.Gml321;
+using Terradue.ServiceModel.Ogc.Om;
 
 
 namespace Terradue.ServiceModel.Ogc.Opt21
@@ -131,10 +132,12 @@ namespace Terradue.ServiceModel.Ogc.Opt21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/opt/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/opt/2.1", IsNullable = true)]
-    public partial class OptEarthObservationResultPropertyType : EarthObservationResultPropertyType
+    [System.Xml.Serialization.XmlTypeAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.1")]
+    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.1", IsNullable = true)]
+    public partial class OptEarthObservationResultPropertyType : OM_ResultPropertyType
     {
+
+
 
     }
 
