@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EarthObservation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.opengis.net/sar/2.1">
+  <procedure xmlns="http://www.opengis.net/om/2.0">
+    <EarthObservationEquipment xmlns="http://www.opengis.net/eop/2.1">
+      <acquisitionParameters>
+        <Acquisition xmlns:q1="http://www.opengis.net/sar/2.1" xsi:type="q1:SarAcquisitionType">
+          <orbitDirection>DESCENDING</orbitDirection>
+          <q1:polarisationChannels>HH</q1:polarisationChannels>
+        </Acquisition>
+      </acquisitionParameters>
+    </EarthObservationEquipment>
+  </procedure>
+  <featureOfInterest xmlns="http://www.opengis.net/om/2.0">
+    <Footprint xmlns="http://www.opengis.net/eop/2.1">
+      <multiExtentOf>
+        <MultiSurface d5p1:id="1506130" xmlns:d5p1="http://www.opengis.net/gml/3.2" xmlns="http://www.opengis.net/gml/3.2">
+          <surfaceMembers>
+            <Polygon d7p1:id="1506131" xmlns:d7p1="http://www.opengis.net/gml/3.2">
+              <exterior>
+                <LinearRing>
+                  <posList>-34.99 151.36 -35.16 150.7 -33.25 150.01 -33.09 150.66 -34.99 151.36</posList>
+                </LinearRing>
+              </exterior>
+            </Polygon>
+          </surfaceMembers>
+        </MultiSurface>
+      </multiExtentOf>
+    </Footprint>
+  </featureOfInterest>
+</EarthObservation>

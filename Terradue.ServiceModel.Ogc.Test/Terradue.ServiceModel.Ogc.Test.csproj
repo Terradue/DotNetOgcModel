@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Samples\" />
+    <Folder Include="out\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">
