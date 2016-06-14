@@ -21,22 +21,6 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
 
     }
 
-    public partial class EarthObservationResultPropertyType {
-
-        [XmlIgnore]
-        public SspEarthObservationResultType SspEarthObservationResult {
-            get {
-                if (EarthObservationResult is SspEarthObservationResultType)
-                    return (SspEarthObservationResultType)EarthObservationResult;
-                return null;
-            }
-            set {
-                EarthObservationResult = value;
-            }
-        }
-
-    }
-
     public partial class EarthObservationMetaDataPropertyType {
 
         [XmlIgnore]

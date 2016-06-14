@@ -68,9 +68,11 @@
     <None Include="Samples\MultiPolygon.xml" />
     <None Include="Samples\MultiSurface311.gml" />
     <None Include="Samples\S2withType.xml" />
+    <None Include="Samples\EopwithType.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Samples\" />
+    <Folder Include="out\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">

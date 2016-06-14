@@ -79,7 +79,7 @@ namespace Terradue.ServiceModel.Ogc.Alt21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "AcquisitionType", Namespace = "http://www.opengis.net/alt/2.1")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "Acquisition", Namespace = "http://www.opengis.net/alt/2.1")]
     [System.Xml.Serialization.XmlRootAttribute("Acquisition", Namespace = "http://www.opengis.net/alt/2.1", IsNullable = false)]
     public partial class AltAcquisitionType : AcquisitionType
     {

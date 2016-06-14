@@ -131,7 +131,7 @@ namespace Terradue.ServiceModel.Ogc.Opt20
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/opt/2.0", IsNullable = true)]
-    public partial class OptEarthObservationResultPropertyType : OM_ResultPropertyType
+	public partial class OptEarthObservationResultPropertyType : EarthObservationResultPropertyType
     {
     }
 
