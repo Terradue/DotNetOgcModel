@@ -33,8 +33,8 @@ namespace Terradue.ServiceModel.Ogc.Sar21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "AcquisitionType", Namespace = "http://www.opengis.net/sar/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute("Acquisition", Namespace = "http://www.opengis.net/sar/2.1", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute("Acquisition", Namespace = "http://www.opengis.net/sar/2.1")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/sar/2.1", IsNullable = false)]
     public partial class SarAcquisitionType : AcquisitionType
     {
 

@@ -2091,11 +2091,9 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.1", IsNullable = true)]
+    [System.Xml.Serialization.XmlTypeAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.1")]
+    [System.Xml.Serialization.XmlRootAttribute("EarthObservationResultPropertyType", Namespace = "http://www.opengis.net/eop/2.1", IsNullable = true)]
     public partial class EarthObservationResultPropertyType : OM_ResultPropertyType {
-
-        private EarthObservationResultType earthObservationResultField;
 
         private string nilReasonField;
 
@@ -2105,16 +2103,6 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
 
         public EarthObservationResultPropertyType() {
             this.ownsField = false;
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute()]
-        public EarthObservationResultType EarthObservationResult {
-            get {
-                return this.earthObservationResultField;
-            }
-            set {
-                this.earthObservationResultField = value;
-            }
         }
 
         [System.Xml.Serialization.XmlAttributeAttribute()]

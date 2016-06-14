@@ -3,7 +3,6 @@ using System;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using Terradue.ServiceModel.Ogc.Eop20;
 using System.Xml.Linq;
 using Microsoft.XmlDiffPatch;
 using Terradue.ServiceModel.Ogc.Swe;
@@ -19,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             FileStream fs = new FileStream("../Samples/eop20_example.xml", FileMode.Open);
 
-            var eop = (EarthObservationType)OgcHelpers.Eop20Serializer.Deserialize(XmlReader.Create(fs));
+            var eop = (Eop20.EarthObservationType)OgcHelpers.Eop20Serializer.Deserialize(XmlReader.Create(fs));
 
             fs.Close();
 
@@ -36,7 +35,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual("PX", eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.operationalMode.Text);
             Assert.AreEqual("m", eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.resolution.uom);
             Assert.AreEqual(0.7, eop.procedure.Eop20EarthObservationEquipment.sensor.Sensor.resolution.Value);
-            Assert.AreEqual(OrbitDirectionValueType.ASCENDING, eop.procedure.Eop20EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirection);
+            Assert.AreEqual(Eop20.OrbitDirectionValueType.ASCENDING, eop.procedure.Eop20EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirection);
             Assert.AreEqual("2.1025 43.516667 2.861667 43.381667 2.65 42.862778 1.896944 42.996389 2.1025 43.516667", ((Terradue.ServiceModel.Ogc.Gml321.DirectPositionListType)((Terradue.ServiceModel.Ogc.Gml321.LinearRingType)((Terradue.ServiceModel.Ogc.Gml321.PolygonType)eop.featureOfInterest.Eop20Footprint.multiExtentOf.MultiSurface.surfaceMembers.Items[0]).exterior.Item).Items[0]).Text);
             Assert.AreEqual("2.374167 43.190833", ((Terradue.ServiceModel.Ogc.Gml321.DirectPositionType)eop.featureOfInterest.Eop20Footprint.centerOf.Point.Item).Text);
 
@@ -63,6 +62,18 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
         }
 
+		[Test()]
+		public void EopWithTypeTestCase()
+		{
+
+			FileStream fs = new FileStream("../Samples/EopwithType.xml", FileMode.Open);
+
+			var eop = (Eop21.EarthObservationType)OgcHelpers.Eop21Serializer.Deserialize(XmlReader.Create(fs));
+
+			Assert.AreEqual("ID-2242", eop.result.Eop21EarthObservationResult.id);
+
+			fs.Close();
+		}
 
     }
 }

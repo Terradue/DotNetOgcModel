@@ -29,7 +29,9 @@ namespace Terradue.ServiceModel.Ogc.Om {
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Eop21.EarthObservationResultType))]
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Opt21.OptEarthObservationResultType))]
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/atm/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Atm21.AtmEarthObservationResultType))]
-        public virtual Terradue.ServiceModel.Ogc.Eop21.EarthObservationResultType Eop21EarthObservationResult {
+		[System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Ssp21.SspEarthObservationResultType))]
+
+		public virtual Terradue.ServiceModel.Ogc.Eop21.EarthObservationResultType Eop21EarthObservationResult {
             get {
                 return this.eop21EarthObservationResultField;
             }
@@ -41,6 +43,7 @@ namespace Terradue.ServiceModel.Ogc.Om {
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Eop20.EarthObservationResultType))]
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/opt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationResultType))]
         [System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/atm/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationResultType))]
+		[System.Xml.Serialization.XmlElementAttribute("EarthObservationResult", Namespace = "http://www.opengis.net/ssp/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Ssp20.SspEarthObservationResultType))]
         public virtual Terradue.ServiceModel.Ogc.Eop20.EarthObservationResultType Eop20EarthObservationResult {
             get {
                 return this.eop20EarthObservationResultField;

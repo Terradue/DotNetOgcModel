@@ -35,9 +35,9 @@ namespace Terradue.ServiceModel.Ogc.Test {
             sarEO.procedure = new Terradue.ServiceModel.Ogc.Om.OM_ProcessPropertyType();
             sarEO.procedure.Eop21EarthObservationEquipment = new Terradue.ServiceModel.Ogc.Eop21.EarthObservationEquipmentType();
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters = new Terradue.ServiceModel.Ogc.Eop21.AcquisitionPropertyType();
-            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition = new Terradue.ServiceModel.Ogc.Sar21.SarAcquisitionType();
-            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition.orbitDirection = Terradue.ServiceModel.Ogc.Eop21.OrbitDirectionValueType.DESCENDING;
-            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition.orbitDirectionSpecified = true;
+            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition = new Terradue.ServiceModel.Ogc.Sar21.SarAcquisitionType();
+            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirection = Terradue.ServiceModel.Ogc.Eop21.OrbitDirectionValueType.DESCENDING;
+            sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirectionSpecified = true;
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition.polarisationChannels = "HH";
 
             var msfs = new FileStream("../Samples/Multisurface32.gml", FileMode.Open);

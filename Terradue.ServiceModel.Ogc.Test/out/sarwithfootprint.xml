@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<EarthObservation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.opengis.net/sar/2.1">
+<?xml version="1.0"?>
+<EarthObservation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/sar/2.1">
   <procedure xmlns="http://www.opengis.net/om/2.0">
     <EarthObservationEquipment xmlns="http://www.opengis.net/eop/2.1">
       <acquisitionParameters>
-        <Acquisition xmlns:q1="http://www.opengis.net/sar/2.1" xsi:type="q1:SarAcquisitionType">
-          <orbitDirection>DESCENDING</orbitDirection>
-          <q1:polarisationChannels>HH</q1:polarisationChannels>
+        <Acquisition xmlns="http://www.opengis.net/sar/2.1">
+          <orbitDirection xmlns="http://www.opengis.net/eop/2.1">DESCENDING</orbitDirection>
+          <polarisationChannels>HH</polarisationChannels>
         </Acquisition>
       </acquisitionParameters>
     </EarthObservationEquipment>
@@ -14,15 +14,15 @@
     <Footprint xmlns="http://www.opengis.net/eop/2.1">
       <multiExtentOf>
         <MultiSurface d5p1:id="1506130" xmlns:d5p1="http://www.opengis.net/gml/3.2" xmlns="http://www.opengis.net/gml/3.2">
-          <surfaceMembers>
-            <Polygon d7p1:id="1506131" xmlns:d7p1="http://www.opengis.net/gml/3.2">
-              <exterior>
-                <LinearRing>
-                  <posList>-34.99 151.36 -35.16 150.7 -33.25 150.01 -33.09 150.66 -34.99 151.36</posList>
-                </LinearRing>
-              </exterior>
-            </Polygon>
-          </surfaceMembers>
+          <d5p1:surfaceMembers>
+            <d5p1:Polygon d5p1:id="1506131">
+              <d5p1:exterior>
+                <d5p1:LinearRing>
+                  <d5p1:posList>-34.99 151.36 -35.16 150.7 -33.25 150.01 -33.09 150.66 -34.99 151.36</d5p1:posList>
+                </d5p1:LinearRing>
+              </d5p1:exterior>
+            </d5p1:Polygon>
+          </d5p1:surfaceMembers>
         </MultiSurface>
       </multiExtentOf>
     </Footprint>
