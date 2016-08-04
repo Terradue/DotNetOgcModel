@@ -22,6 +22,10 @@ namespace Terradue.ServiceModel.Ogc.Gml321
         static XmlSerializer multiCurveSerializer;
         static XmlSerializer multiSurfaceSerializer;
         static XmlSerializer multiPointSerializer;
+        static XmlSerializer linearRingSerializer;
+        static XmlSerializer polygonSerializer;
+        static XmlSerializer lineStringSerializer;
+        static XmlSerializer pointSerializer;
 
         public static AbstractGeometryType Deserialize(XmlReader reader){
 
@@ -41,6 +45,26 @@ namespace Terradue.ServiceModel.Ogc.Gml321
 
             if (node.Name.LocalName == "MultiPoint") {
                 return (MultiPointType)MultiPointSerializer.Deserialize(reader);
+            }
+
+            if (node.Name.LocalName == "MultiPoint")
+            {
+                return (MultiPointType)MultiPointSerializer.Deserialize(reader);
+            }
+
+            if (node.Name.LocalName == "Polygon")
+            {
+                return (PolygonType)PolygonSerializer.Deserialize(reader);
+            }
+
+            if (node.Name.LocalName == "LineString")
+            {
+                return (LineStringType)LineStringSerializer.Deserialize(reader);
+            }
+
+            if (node.Name.LocalName == "Point")
+            {
+                return (PointType)PointSerializer.Deserialize(reader);
             }
 
             throw new NotImplementedException(node.Name.LocalName);
@@ -64,6 +88,24 @@ namespace Terradue.ServiceModel.Ogc.Gml321
 
             if (gmlObject is MultiPointType) {
                 MultiPointSerializer.Serialize(writer, gmlObject, namespaces);
+                return;
+            }
+
+            if (gmlObject is LineStringType)
+            {
+                LineStringSerializer.Serialize(writer, gmlObject, namespaces);
+                return;
+            }
+
+            if (gmlObject is PolygonType)
+            {
+                PolygonSerializer.Serialize(writer, gmlObject, namespaces);
+                return;
+            }
+
+            if (gmlObject is PointType)
+            {
+                PointSerializer.Serialize(writer, gmlObject, namespaces);
                 return;
             }
 
@@ -92,6 +134,46 @@ namespace Terradue.ServiceModel.Ogc.Gml321
                 if (multiPointSerializer == null)
                     multiPointSerializer = new XmlSerializer(typeof(MultiPointType));
                 return multiPointSerializer;
+            }
+        }
+
+        public static XmlSerializer LinearRingSerializer
+        {
+            get
+            {
+                if (linearRingSerializer == null)
+                    linearRingSerializer = new XmlSerializer(typeof(LinearRingType));
+                return linearRingSerializer;
+            }
+        }
+
+        public static XmlSerializer PolygonSerializer
+        {
+            get
+            {
+                if (polygonSerializer == null)
+                    polygonSerializer = new XmlSerializer(typeof(PolygonType));
+                return polygonSerializer;
+            }
+        }
+
+        public static XmlSerializer LineStringSerializer
+        {
+            get
+            {
+                if (lineStringSerializer == null)
+                    lineStringSerializer = new XmlSerializer(typeof(LineStringType));
+                return lineStringSerializer;
+            }
+        }
+
+        public static XmlSerializer PointSerializer
+        {
+            get
+            {
+                if (pointSerializer == null)
+                    pointSerializer = new XmlSerializer(typeof(PointType));
+                return pointSerializer;
             }
         }
     }
