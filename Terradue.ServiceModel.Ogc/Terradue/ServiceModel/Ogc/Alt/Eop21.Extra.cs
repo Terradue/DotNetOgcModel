@@ -3,52 +3,46 @@ using Terradue.ServiceModel.Ogc.Alt21;
 using System.Xml.Serialization;
 
 
-namespace Terradue.ServiceModel.Ogc.Eop21 {
+namespace Terradue.ServiceModel.Ogc.Eop21
+{
     
-    public partial class FootprintPropertyType {
-
+    public partial class ProcessingInformationPropertyType
+    {
         [XmlIgnore]
-        public AltFootprintType AltFootprint {
-            get {
-                if (Footprint is AltFootprintType)
-                    return (AltFootprintType)Footprint;
-                return null;
-            }
-            set {
-                Footprint = value;
-            }
-        }
-
-    }
-
-    public partial class ProcessingInformationPropertyType {
-        [XmlIgnore]
-        public AltProcessingInformationType AltProcessingInformation {
-            get {
+        public AltProcessingInformationType AltProcessingInformation
+        {
+            get
+            {
                 if (ProcessingInformation is AltProcessingInformationType)
                     return (AltProcessingInformationType)ProcessingInformation;
                 return null;
             }
-            set {
+            set
+            {
                 ProcessingInformation = value;
             }
         }
 
     }
 
-    public partial class AcquisitionPropertyType {
+    public partial class AcquisitionPropertyType
+    {
         [XmlIgnore]
-        public AltAcquisitionType AltAcquisition {
-            get {
+        public AltAcquisitionType AltAcquisition
+        {
+            get
+            {
                 if (Acquisition is AltAcquisitionType)
                     return (AltAcquisitionType)Acquisition;
                 return null;
             }
-            set {
+            set
+            {
                 Acquisition = value;
             }
         }
 
     }
 }
+
 
