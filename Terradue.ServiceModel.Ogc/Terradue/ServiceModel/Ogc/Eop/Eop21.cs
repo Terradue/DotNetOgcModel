@@ -2028,34 +2028,6 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.1", IsNullable = true)]
-    public partial class FootprintPropertyType : FeaturePropertyType {
-
-        private FootprintType footprintField;
-
-        public FootprintPropertyType() {
-            owns = false;
-        }
-
-        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/eop/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Eop21.FootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/opt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Ssp21.SspFootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Alt21.AltFootprintType))]
-        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/ssp/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbFootprintType))]
-        public FootprintType Footprint {
-            get {
-                return this.footprintField;
-            }
-            set {
-                this.footprintField = value;
-            }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/eop/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/eop/2.1", IsNullable = true)]
     public partial class EarthObservationEquipmentPropertyType : OM_ProcessPropertyType {
 
         private EarthObservationEquipmentType earthObservationEquipmentField;

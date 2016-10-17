@@ -26,6 +26,8 @@ namespace Terradue.ServiceModel.Ogc.Gml321 {
 
         [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/eop/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Eop20.FootprintType))]
         [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Alt20.AltFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/ssp/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Ssp20.SspFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/lmb/2.0", Type = typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbFootprintType))]
         public Terradue.ServiceModel.Ogc.Eop20.FootprintType Eop20Footprint {
             get {
                 return this.eop20footprintField;
@@ -37,6 +39,8 @@ namespace Terradue.ServiceModel.Ogc.Gml321 {
 
         [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/eop/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Eop21.FootprintType))]
         [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/alt/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Alt21.AltFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/ssp/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Ssp21.SspFootprintType))]
+        [System.Xml.Serialization.XmlElementAttribute("Footprint", Namespace = "http://www.opengis.net/lmb/2.1", Type = typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbFootprintType))]
         public Terradue.ServiceModel.Ogc.Eop21.FootprintType Eop21Footprint {
             get {
                 return this.eop21footprintField;

@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/Terradue/DotNetOgcOmGml/tree/HEAD)
-
-[Full Changelog](https://github.com/Terradue/DotNetOgcOmGml/compare/1.1.4...HEAD)
+## [1.1.5](https://github.com/Terradue/DotNetOgcOmGml/tree/1.1.5) (2016-08-04)
+[Full Changelog](https://github.com/Terradue/DotNetOgcOmGml/compare/1.1.4...1.1.5)
 
 **Implemented enhancements:**
 

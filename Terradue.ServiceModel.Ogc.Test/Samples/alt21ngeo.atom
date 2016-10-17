@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alt:EarthObservation xmlns:alt="http://www.opengis.net/alt/2.1" xmlns:eop="http://www.opengis.net/eop/2.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:rep="http://ngeo.eo.esa.int/ngEO/metadataReport/1.0" xmlns:sar="http://www.opengis.net/sar/2.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="ID-96607">
+	<om:phenomenonTime>
+		<gml:TimePeriod gml:id="ID-96608">
+			<gml:beginPosition>2018-07-18T02:44:58.47Z</gml:beginPosition>
+			<gml:endPosition>2018-07-18T02:45:50.18Z</gml:endPosition>
+		</gml:TimePeriod>
+	</om:phenomenonTime>
+	<om:resultTime>
+		<gml:TimeInstant gml:id="ID-96609">
+			<gml:timePosition>2018-07-18T04:47:43.54Z</gml:timePosition>
+		</gml:TimeInstant>
+	</om:resultTime>
+	<om:procedure>
+		<eop:EarthObservationEquipment gml:id="ID-96610">
+			<eop:platform>
+				<eop:Platform>
+					<eop:shortName>Sentinel-1</eop:shortName>
+				</eop:Platform>
+			</eop:platform>
+			<eop:instrument>
+				<eop:Instrument>
+					<eop:shortName>SAR</eop:shortName>
+				</eop:Instrument>
+			</eop:instrument>
+			<eop:sensor>
+				<eop:Sensor>
+					<eop:sensorType>ALTIMETRIC</eop:sensorType>
+					<eop:operationalMode codeSpace="urn:eop:SEN1:sensorMode">EW_DP</eop:operationalMode>
+					<eop:swathIdentifier>EW</eop:swathIdentifier>
+				</eop:Sensor>
+			</eop:sensor>
+		</eop:EarthObservationEquipment>
+	</om:procedure>
+	<om:observedProperty nilReason="inapplicable" xsi:nil="true" />
+	<om:featureOfInterest>
+		<alt:Footprint gml:id="ID-96611">
+			<eop:multiExtentOf>
+				<gml:MultiSurface gml:id="ID-96612" srsName="EPSG:4326" />
+			</eop:multiExtentOf>
+			<alt:nominalTrack>
+				<gml:MultiCurve gml:id="ID-96613">
+					<gml:curveMember>
+						<gml:LineString gml:id="ID-96614">
+							<gml:posList>79.89 178.16 80.75 -172.11 81.48 -149.51 81.49 -149.51 81.44 -141.83 80.36 -119.94 78.26 -104.04 75.58 -93.33 72.58 -85.99 69.4 -80.73 66.12 -76.77 62.76 -73.67 59.36 -71.15 55.93 -69.05 52.46 -67.25 48.98 -65.68 45.49 -64.28 41.98 -63.01 38.46 -61.85 34.93 -60.77 31.4 -59.76 27.85 -58.81 24.31 -57.9 20.76 -57.03 17.2 -56.18 13.65 -55.36 10.09 -54.55 6.53 -53.76 2.97 -52.97 -0.59 -52.19 -4.15 -51.41 -7.71 -50.62 -11.27 -49.82 -14.82 -49.01 -18.38 -48.18 -21.92 -47.33 -25.47 -46.44 -29 -45.52 -32.53 -44.55 -36.06 -43.53 -39.57 -42.43 -43.08 -41.24 -46.57 -39.94 -50.05 -38.49 -53.51 -36.86 -56.95 -34.99 -60.37 -32.79 -63.74 -30.13 -67.07 -26.83 -70.31 -22.58 -73.43 -16.85 -76.35 -8.78 -78.89 3.09 -80.76 20.56 -81.48 43.06 -81.49 43.08 -81.44 50.72 -80.37 72.53 -78.28 88.41 -75.62 99.12 -72.64 106.47 -69.48 111.75 -66.21 115.72 -62.87 118.83 -59.49 121.35 -56.07 123.46 -52.62 125.26 -49.15 126.84 -45.67 128.25 -42.17 129.52 -38.66 130.68 -35.15 131.76 -31.62 132.77 -28.09 133.72 -24.55 134.64 -21 135.51 -17.46 136.36 -13.9 137.18 -10.35 137.99 -6.79 138.78 -3.23 139.57 0.33 140.35 3.89 141.13 7.45 141.92 11.01 142.72 14.57 143.53 18.12 144.36 21.68 145.21 25.23 146.09 28.77 147.01 32.31 147.98 35.84 149 39.37 150.1 42.89 151.29 46.39 152.58 49.89 154.03 53.36 155.65 56.82 157.52 60.25 159.72 63.64 162.36 66.98 165.66 70.24 169.9 73.38 175.61 76.31 -176.33 78.87 -164.46 80.75 -146.96 81.48 -124.36 81.49 -124.36 81.22 -108.84 80.01 -91.27</gml:posList>
+						</gml:LineString>
+					</gml:curveMember>
+				</gml:MultiCurve>
+			</alt:nominalTrack>
+		</alt:Footprint>
+	</om:featureOfInterest>
+	<om:result>
+		<eop:EarthObservationResult gml:id="ID-96615">
+			<eop:product>
+				<eop:ProductInformation>
+					<eop:fileName>
+						<ows:ServiceReference xlink:href="https://s1-pdmcdmz-oda-v-20.sentinel1.eo.esa.int/odabroker/rest/ngEO//S1A_EW_RAW__0SDV_20180718T024454_20180718T024549_006859_009400">
+							<ows:RequestMessage />
+						</ows:ServiceReference>
+					</eop:fileName>
+					<eop:size uom="Bytes">376432552</eop:size>
+					<eop:timeliness>Fast-24h</eop:timeliness>
+				</eop:ProductInformation>
+			</eop:product>
+		</eop:EarthObservationResult>
+	</om:result>
+	<eop:metaDataProperty>
+		<eop:EarthObservationMetaData>
+			<eop:identifier>S1A_EW_RAW__0SDV_20180718T024454_20180718T024549_006859_009400_2</eop:identifier>
+			<eop:acquisitionType>NOMINAL</eop:acquisitionType>
+			<eop:productType>N/A</eop:productType>
+			<eop:status>ARCHIVED</eop:status>
+			<eop:vendorSpecific>
+				<eop:SpecificInformation>
+					<eop:localAttribute>lby</eop:localAttribute>
+					<eop:localValue>val_lby</eop:localValue>
+				</eop:SpecificInformation>
+			</eop:vendorSpecific>
+			<eop:vendorSpecific>
+				<eop:SpecificInformation>
+					<eop:localAttribute>toto</eop:localAttribute>
+					<eop:localValue>val_toto</eop:localValue>
+				</eop:SpecificInformation>
+			</eop:vendorSpecific>
+			<eop:vendorSpecific>
+				<eop:SpecificInformation>
+					<eop:localAttribute>nativeDatasetId</eop:localAttribute>
+					<eop:localValue>S1_SAR_EW_DP</eop:localValue>
+				</eop:SpecificInformation>
+			</eop:vendorSpecific>
+		</eop:EarthObservationMetaData>
+	</eop:metaDataProperty>
+</alt:EarthObservation>

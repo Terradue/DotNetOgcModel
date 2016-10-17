@@ -51,6 +51,7 @@
     <Compile Include="LmbSerializationTest.cs" />
     <Compile Include="GmlTest32.cs" />
     <Compile Include="GmlTest.cs" />
+    <Compile Include="AltSerializationTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

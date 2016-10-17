@@ -4,22 +4,7 @@ using System.Xml.Serialization;
 
 
 namespace Terradue.ServiceModel.Ogc.Eop20 {
-    
-    public partial class FootprintPropertyType {
 
-        [XmlIgnore]
-        public SspFootprintType SspFootprint {
-            get {
-                if (Footprint is SspFootprintType)
-                    return (SspFootprintType)Footprint;
-                return null;
-            }
-            set {
-                Footprint = value;
-            }
-        }
-
-    }
 
 
     public partial class EarthObservationMetaDataPropertyType {

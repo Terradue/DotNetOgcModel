@@ -5,21 +5,6 @@ using System.Xml.Serialization;
 
 namespace Terradue.ServiceModel.Ogc.Eop20 {
     
-    public partial class FootprintPropertyType {
-
-        [XmlIgnore]
-        public AltFootprintType AltFootprint {
-            get {
-                if (Footprint is AltFootprintType)
-                    return (AltFootprintType)Footprint;
-                return null;
-            }
-            set {
-                Footprint = value;
-            }
-        }
-
-    }
 
     public partial class ProcessingInformationPropertyType {
         [XmlIgnore]

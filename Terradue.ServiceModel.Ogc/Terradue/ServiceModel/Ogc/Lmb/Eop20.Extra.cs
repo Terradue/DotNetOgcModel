@@ -5,22 +5,7 @@ using System.Xml.Serialization;
 
 namespace Terradue.ServiceModel.Ogc.Eop20 {
     
-    public partial class FootprintPropertyType {
-
-        [XmlIgnore]
-        public LmbFootprintType LmbFootprint {
-            get {
-                if (Footprint is LmbFootprintType)
-                    return (LmbFootprintType)Footprint;
-                return null;
-            }
-            set {
-                Footprint = value;
-            }
-        }
-
-    }
-
+  
     public partial class SensorPropertyType {
 
         [XmlIgnore]
