@@ -96,7 +96,7 @@ namespace Terradue.ServiceModel.Ogc.Lmb21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/lmb/2.1")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "SensorType", Namespace = "http://www.opengis.net/lmb/2.1")]
     [System.Xml.Serialization.XmlRootAttribute("Sensor", Namespace = "http://www.opengis.net/lmb/2.1", IsNullable = false)]
     public partial class LmbSensorType : SensorType
     {
