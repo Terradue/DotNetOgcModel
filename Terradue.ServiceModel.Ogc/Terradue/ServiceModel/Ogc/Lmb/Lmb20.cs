@@ -42,8 +42,8 @@ namespace Terradue.ServiceModel.Ogc.Lmb20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/lmb/2.1")]
-    [System.Xml.Serialization.XmlRootAttribute("Footprint", Namespace = "http://www.opengis.net/lmb/2.1", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/lmb/2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Footprint", Namespace = "http://www.opengis.net/lmb/2.0", IsNullable = false)]
     public partial class LmbFootprintType : Terradue.ServiceModel.Ogc.Alt20.AltFootprintType
     {
 
@@ -96,7 +96,7 @@ namespace Terradue.ServiceModel.Ogc.Lmb20
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "FootprintType", Namespace = "http://www.opengis.net/lmb/2.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "SensorType", Namespace = "http://www.opengis.net/lmb/2.0")]
     [System.Xml.Serialization.XmlRootAttribute("Sensor", Namespace = "http://www.opengis.net/lmb/2.0", IsNullable = false)]
     public partial class LmbSensorType : SensorType
     {
