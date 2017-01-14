@@ -7,6 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,10 @@
     <Reference Include="NuGet4Mono.Extensions">
       <HintPath>..\packages\NuGet4Mono.Extensions.0.3.0\lib\net40\NuGet4Mono.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -44,7 +49,7 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Gss\Gss.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Gts\Gts.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Om\Om.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Ows\Ows.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows20\Ows20.Data.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Swe\Swe.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\W3c\Smil20.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\W3c\Smil20Lang.cs" />
@@ -86,6 +91,81 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Alt\Gml.Extra.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Ssp\Gml.Extra.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Lmb\Gml.Extra.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\AbstractReferenceBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\AddressType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\AllowedValues.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\AnyValue.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\BasicIdentificationType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\BoundingBoxType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\CapabilitiesBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\CodeType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ContactType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ContentsBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\DatasetDescriptionSummaryBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\Dcp.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\DescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\DomainMetadataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\DomainType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ExceptionCode.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ExceptionsReport.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ExceptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\GetCapabilitiesType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\GetResourceByIdType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\Http.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\HttpRequestType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\IdentificationType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\KeywordsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\LanguageStringType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ManifestType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\MetadataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\NoValues.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\OnlineResourceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\Operation.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\OperationsMetadata.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\RangeType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\RangeTypeRangeClosure.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ReferenceGroupType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ReferenceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\RequestMethodType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ResponsiblePartySubsetType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ResponsiblePartyType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ServiceIdentification.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ServiceProvider.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ServiceReferenceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\TelephoneType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\UnNamedDomainType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ValuesReference.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\ValueType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Ows11\WGS84BoundingBoxType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\InvalidParameterValueException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\InvalidUpdateSequenceException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\MissingParameterValueException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\NoApplicableCodeException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\OgcException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\OperationNotSupportedException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\OptionNotSupportedException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Exceptions\VersionNegotiationException.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\OwsHttpRequestHandler.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\OwsRequestBase.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\ConfigurationCollection.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\DefaultValueElement.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\IConfigurationElement.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\ManagerElement.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\ResponseFormatterElement.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\ServiceConfiguration.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Configuration\ServiceOperationElement.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\BaseOperation.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\OperationResult.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\OutputFormat.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\BaseUrnResolver.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\Extenstions.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\ReadOnlyDictionary.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnAuthority.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnBranchType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnObjectType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnSpecificationStatus.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnSpecificationType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\WebService\Common\UrnString.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -99,6 +179,7 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Atm\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Lmb\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Ssp\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\WebService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

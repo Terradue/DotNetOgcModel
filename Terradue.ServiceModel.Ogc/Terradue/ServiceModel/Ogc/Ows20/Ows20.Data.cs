@@ -7,7 +7,7 @@
 using Terradue.ServiceModel.W3c.Xlink;
 
 
-namespace Terradue.ServiceModel.Ogc.Ows
+namespace Terradue.ServiceModel.Ogc.Ows20.Data
 {
     using System;
     using System.Diagnostics;

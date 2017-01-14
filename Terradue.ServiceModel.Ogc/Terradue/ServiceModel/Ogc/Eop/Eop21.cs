@@ -7,7 +7,7 @@
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.Ogc.Om;
 using Terradue.ServiceModel.Ogc.Gml321;
-using Terradue.ServiceModel.Ogc.Ows;
+using Terradue.ServiceModel.Ogc.Ows20;
 using Terradue.ServiceModel.Ogc.Swe;
 
 
@@ -18,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Eop21 {
     using System.Collections;
     using System.Xml.Schema;
     using System.ComponentModel;
-
+    using Terradue.ServiceModel.Ogc.Ows20.Data;
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]

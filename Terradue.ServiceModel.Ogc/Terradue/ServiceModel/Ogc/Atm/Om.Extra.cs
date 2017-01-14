@@ -7,7 +7,7 @@
 // ------------------------------------------------------------------------------
 using Terradue.ServiceModel.Ogc.Om;
 using Terradue.ServiceModel.Ogc.Gml321;
-using Terradue.ServiceModel.Ogc.Ows;
+using Terradue.ServiceModel.Ogc.Ows20;
 using Terradue.ServiceModel.Ogc.Swe;
 
 
