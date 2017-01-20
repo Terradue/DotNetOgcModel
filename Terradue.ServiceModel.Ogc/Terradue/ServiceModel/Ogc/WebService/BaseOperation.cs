@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.Web;
 using Terradue.ServiceModel.Ogc.Ows11;
 using Terradue.ServiceModel.Ogc.WebService.Configuration;
 
@@ -51,7 +52,7 @@ namespace Terradue.ServiceModel.Ogc.WebService
             this.ConnectionString = string.Format(CultureInfo.InvariantCulture, "name={0}", this.Configuration.ConnectionString);
 
             //  Set service base uri
-            this.ServiceBaseUri = WebOperationContext.Current.IncomingRequest.UriTemplateMatch.BaseUri;
+            this.ServiceBaseUri = new Uri(HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority));
         }
 
         /// <summary>

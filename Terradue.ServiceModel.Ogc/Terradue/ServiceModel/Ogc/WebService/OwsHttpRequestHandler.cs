@@ -18,6 +18,8 @@ using System.Xml.Serialization;
 using System.Xml.Linq;
 using Terradue.ServiceModel.Ogc.WebService.Configuration;
 using Terradue.ServiceModel.Ogc.WebService.Common;
+using System.Web.Http;
+using Terradue.ServiceModel.Ogc.Exceptions;
 
 namespace Terradue.ServiceModel.Ogc.WebService
 {
@@ -32,14 +34,14 @@ namespace Terradue.ServiceModel.Ogc.WebService
         /// </summary>
         /// <param name="messageRequest">Message with request details</param>
         /// <returns>Response to the request.</returns>
-        private static HttpResponseMessage ProccessRequest(HttpRequestMessage messageRequest)
+        private static IHttpActionResult ProccessRequest(HttpRequestMessage messageRequest)
         {
-            HttpResponseMessage resultMessage = null;
+            OperationResult result = null;
 
             try
             {
                 XDocument doc = null;
-                OperationResult result = null;
+
 
                 if (messageRequest != null)
                 {
@@ -108,11 +110,6 @@ namespace Terradue.ServiceModel.Ogc.WebService
                     //  Hanle request and return results back
                     result = requestHandler.ProcessRequest(request);
 
-                    //  Add result to cache
-                    if (operation.CacheEnabled)
-                    {
-                        HttpContext.Current.Cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, TimeSpan.FromMinutes(operation.CacheTimeout), CacheItemPriority.Normal, null);
-                    }
                 }
 
                 //  Performs special service operation if specified
@@ -121,28 +118,25 @@ namespace Terradue.ServiceModel.Ogc.WebService
                      select k).Count() > 0)
                     result = HandleCustomAction(result, queryParameters);
 
-                resultMessage = result.GetResultMessage();
             }
             catch (OgcException exp)
             {
                 //  Handle OGC specific errors
-                var result = new OperationResult()
+                result = new OperationResult(messageRequest)
                 {
                     ResultObject = exp.ExceptionReport,
                 };
-                resultMessage = result.GetResultMessage();
             }
             catch (System.Exception exp)
             {
                 //  Handle all other .NET errors
-                var result = new OperationResult()
+                result = new OperationResult(messageRequest)
                 {
                     ResultObject = new NoApplicableCodeException("Application error.", exp).ExceptionReport,
                 };
-                resultMessage = result.GetResultMessage();
             }
 
-            return resultMessage;
+            return result;
         }
 
         /// <summary>
@@ -172,7 +166,7 @@ namespace Terradue.ServiceModel.Ogc.WebService
             //  Get version if possible
             if (xmlDocument != null)
             {
-                requestVersion = xmlDocument.GetAttribute("version");
+                requestVersion = xmlDocument.Root.Attribute("version").Value;
             }
             else
             {
@@ -222,33 +216,9 @@ namespace Terradue.ServiceModel.Ogc.WebService
         {
             if (queryParameters.AllKeys.Contains("$$validate"))
             {
-                Renci.Data.Interop.OpenGIS.Ows.ExceptionReport report = new Renci.Data.Interop.OpenGIS.Ows.ExceptionReport();
+                Terradue.ServiceModel.Ogc.Ows11.ExceptionReport report = new Terradue.ServiceModel.Ogc.Ows11.ExceptionReport();
 
-                var errors = ValidateXml(result.GetResultMessage());
-
-                var exception = new Renci.Data.Interop.OpenGIS.Ows.ExceptionType
-                {
-                    ExceptionCode = Renci.Data.Interop.OpenGIS.Ows.ExceptionCode.NoApplicableCode,
-                };
-
-                report.Exceptions.Add(exception);
-
-                if (errors.Count > 0)
-                {
-                    foreach (var error in errors)
-                    {
-                        exception.ExceptionText.Add(error);
-                    }
-                }
-                else
-                {
-                    exception.ExceptionText.Add(string.Format(CultureInfo.InvariantCulture, "Result XML has been successfully validated."));
-                }
-
-                result = new OperationResult()
-                {
-                    ResultObject = report,
-                };
+                throw new NotImplementedException();
             }
             return result;
         }

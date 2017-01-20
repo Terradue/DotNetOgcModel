@@ -1,5 +1,5 @@
 
-using Terradue.ServiceModel.W3c.Xlink;
+using Terradue.ServiceModel.Ogc.Xlink;
 
 namespace Terradue.ServiceModel.Ogc.Ows11
 {
@@ -10,7 +10,7 @@ namespace Terradue.ServiceModel.Ogc.Ows11
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/ows/1.1")]
-    public class OnlineResourceType
+    public class OnlineResourceType : ISimpleLink
     {
         /// <remarks/>
         public OnlineResourceType()
@@ -48,7 +48,7 @@ namespace Terradue.ServiceModel.Ogc.Ows11
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("show", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
-        public showType Show { get; set; }
+        public MetadataTypeShow Show { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -56,7 +56,7 @@ namespace Terradue.ServiceModel.Ogc.Ows11
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("actuate", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
-        public actuateType Actuate { get; set; }
+        public MetadataTypeActuate Actuate { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]

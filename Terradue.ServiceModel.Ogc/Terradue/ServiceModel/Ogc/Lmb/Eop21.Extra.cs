@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terradue.ServiceModel.Ogc.Lmb21;
 using System.Xml.Serialization;
 

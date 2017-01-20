@@ -1,10 +1,20 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Web.Http;
 using System.Xml;
 using System.Xml.Serialization;
+using CsvHelper;
+using Terradue.ServiceModel.Ogc.Common;
+using Terradue.ServiceModel.Ogc.Exceptions;
+using Terradue.ServiceModel.Ogc.WebService.Common;
 
 namespace Terradue.ServiceModel.Ogc.WebService
 {
@@ -14,13 +24,16 @@ namespace Terradue.ServiceModel.Ogc.WebService
     /// <remarks>
     /// This class is responsible to create object of type <see cref="Message"/> that will be used to return results from the service.
     /// </remarks>
-    public class OperationResult
+    public class OperationResult : IHttpActionResult
     {
+        readonly HttpRequestMessage _request;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OperationResult"/> class.
         /// </summary>
-        public OperationResult()
+        public OperationResult(HttpRequestMessage request)
         {
+            this._request = request;
             this.OutputFormat = OutputFormat.TextXml;
         }
 
@@ -38,8 +51,10 @@ namespace Terradue.ServiceModel.Ogc.WebService
         /// Gets message object to be returned by the service as the result of the operation
         /// </summary>
         /// <returns></returns>
-        public Stream GetResultMessage()
+        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
         {
+
+            HttpResponseMessage result = null;
 
             switch (this.OutputFormat)
             {
@@ -49,46 +64,39 @@ namespace Terradue.ServiceModel.Ogc.WebService
                 case OutputFormat.TextXml:
                 case OutputFormat.ApplicationXmlWaterMl2:
                     {
-                        //  Serialize result object
-                        XmlSerializer serializer = this.ResultObject.GetType().GetSerializer();
 
-                        StringBuilder sb = new StringBuilder();
-                        using (StringWriter sw = new StringWriter(sb, CultureInfo.InvariantCulture))
+                        result = new HttpResponseMessage()
                         {
-                            serializer.Serialize(sw, this.ResultObject);
-                        }
-
-                        XmlDocument xmlDoc = new XmlDocument();
-                        xmlDoc.LoadXml(sb.ToString());
-
-                        result = Message.CreateMessage(MessageVersion.None, null, xmlDoc.DocumentElement);
-                        result.Properties[WebBodyFormatMessageProperty.Name] = new WebBodyFormatMessageProperty(WebContentFormat.Xml);
-                        WebOperationContext.Current.OutgoingResponse.ContentType = this.OutputFormat.ToStringValue();
+                            Content = new XmlContent(this.ResultObject, this.OutputFormat.ToStringValue()),
+                            RequestMessage = _request,
+                        };
                         break;
                     }
 
                 case OutputFormat.TextCsv:
                     {
-                        string message = this.ResultObject as string;
-                        if (string.IsNullOrEmpty(message) && this.ResultObject is ReadOnlyCollection<string>)
+                        if (this.ResultObject is IEnumerable<object>)
                         {
-                            StringBuilder sb = new StringBuilder();
-                            foreach (string text in this.ResultObject as ReadOnlyCollection<string>)
+                            using (var memoryStream = new MemoryStream())
+                            using (var streamWriter = new StreamWriter(memoryStream))
+                            using (var csvWriter = new CsvWriter(streamWriter))
                             {
-                                sb.AppendLine(text);
+                                var records = this.ResultObject as IEnumerable<object>;
+                                csvWriter.WriteRecords(records);
+                                streamWriter.Flush();
+                                memoryStream.Position = 0;
+                                result = new HttpResponseMessage()
+                                {
+                                    Content = new StreamContent(memoryStream),
+                                    RequestMessage = _request
+                                };
+                                result.Content.Headers.ContentType = new MediaTypeHeaderValue("text/csv");
                             }
-
-                            message = sb.ToString();
                         }
-
-                        if (string.IsNullOrEmpty(message))
-                        {
+                        else{
                             throw new NoApplicableCodeException("Message is empty or not set or result object is not supported.");
                         }
 
-                        result = Message.CreateMessage(MessageVersion.None, null, new TextBodyWriter(message));
-                        result.Properties[WebBodyFormatMessageProperty.Name] = new WebBodyFormatMessageProperty(WebContentFormat.Raw);
-                        WebOperationContext.Current.OutgoingResponse.ContentType = "text/csv";
                         break;
                     }
 
@@ -101,18 +109,19 @@ namespace Terradue.ServiceModel.Ogc.WebService
                             throw new NoApplicableCodeException("Message is empty or not set or result object is not supported.");
                         }
 
-                        result = Message.CreateMessage(MessageVersion.None, null, new TextBodyWriter(message));
-                        result.Properties[WebBodyFormatMessageProperty.Name] = new WebBodyFormatMessageProperty(WebContentFormat.Raw);
-                        WebOperationContext.Current.OutgoingResponse.ContentType = "text/csv";
+                        result = new HttpResponseMessage()
+                        {
+                            Content = new StringContent(message),
+                            RequestMessage = _request
+                        };
+                        result.Content.Headers.ContentType = new MediaTypeHeaderValue("text/csv");
                         break;
                     }
                 default:
                     break;
             }
 
-            return result;
+                return Task.FromResult(result);;
         }
-
-       
     }
 }

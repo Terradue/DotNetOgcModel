@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Xml;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using System.Collections.Specialized;
 using System.Xml.Serialization;
-using Terradue.ServiceModel.Ogc.Om;
+using Terradue.ServiceModel.Ogc.Om20;
 using Terradue.ServiceModel.Ogc.Gml321;
 using System.IO;
 using System.Text;

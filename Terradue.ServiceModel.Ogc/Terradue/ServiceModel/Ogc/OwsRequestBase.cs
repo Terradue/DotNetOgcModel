@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using Terradue.ServiceModel.Ogc.Exceptions;
 
 namespace Terradue.ServiceModel.Ogc
