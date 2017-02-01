@@ -5,93 +5,10 @@ using Terradue.ServiceModel.Ogc.Ows11;
 using Terradue.ServiceModel.Ogc.Swe20;
 using Terradue.ServiceModel.Ogc.Swes20;
 
-namespace Terradue.ServiceModel.Ogxc.Sos20 {
+namespace Terradue.ServiceModel.Ogc.Sos20 {
     
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/sos/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("ObservationOffering", Namespace="http://www.opengis.net/sos/2.0", IsNullable=false)]
-    public partial class ObservationOfferingType : AbstractOfferingType {
-        
-        private ObservationOfferingTypeObservedArea observedAreaField;
-        
-        private ObservationOfferingTypePhenomenonTime phenomenonTimeField;
-        
-        private ObservationOfferingTypeResultTime resultTimeField;
-        
-        private string[] responseFormatField;
-        
-        private string[] observationTypeField;
-        
-        private string[] featureOfInterestTypeField;
-        
-        /// <remarks/>
-        public ObservationOfferingTypeObservedArea observedArea {
-            get {
-                return this.observedAreaField;
-            }
-            set {
-                this.observedAreaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ObservationOfferingTypePhenomenonTime phenomenonTime {
-            get {
-                return this.phenomenonTimeField;
-            }
-            set {
-                this.phenomenonTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ObservationOfferingTypeResultTime resultTime {
-            get {
-                return this.resultTimeField;
-            }
-            set {
-                this.resultTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("responseFormat", DataType="anyURI")]
-        public string[] responseFormat {
-            get {
-                return this.responseFormatField;
-            }
-            set {
-                this.responseFormatField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("observationType", DataType="anyURI")]
-        public string[] observationType {
-            get {
-                return this.observationTypeField;
-            }
-            set {
-                this.observationTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("featureOfInterestType", DataType="anyURI")]
-        public string[] featureOfInterestType {
-            get {
-                return this.featureOfInterestTypeField;
-            }
-            set {
-                this.featureOfInterestTypeField = value;
-            }
-        }
-    }
+    
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]
@@ -330,7 +247,7 @@ namespace Terradue.ServiceModel.Ogxc.Sos20 {
         [System.Xml.Serialization.XmlElementAttribute("DataArray", typeof(DataArrayType), Namespace="http://www.opengis.net/swe/2.0")]
         [System.Xml.Serialization.XmlElementAttribute("DataChoice", typeof(DataChoiceType), Namespace="http://www.opengis.net/swe/2.0")]
         [System.Xml.Serialization.XmlElementAttribute("DataRecord", typeof(DataRecordType), Namespace="http://www.opengis.net/swe/2.0")]
-        [System.Xml.Serialization.XmlElementAttribute("Vector", typeof(Ogc.Swe20.VectorType), Namespace="http://www.opengis.net/swe/2.0")]
+        [System.Xml.Serialization.XmlElementAttribute("Vector", typeof(Swe20.VectorType), Namespace="http://www.opengis.net/swe/2.0")]
         public AbstractDataComponentType Item {
             get {
                 return this.itemField;
@@ -870,7 +787,7 @@ namespace Terradue.ServiceModel.Ogxc.Sos20 {
         [System.Xml.Serialization.XmlElementAttribute("DataArray", typeof(DataArrayType), Namespace="http://www.opengis.net/swe/2.0")]
         [System.Xml.Serialization.XmlElementAttribute("DataChoice", typeof(DataChoiceType), Namespace="http://www.opengis.net/swe/2.0")]
         [System.Xml.Serialization.XmlElementAttribute("DataRecord", typeof(DataRecordType), Namespace="http://www.opengis.net/swe/2.0")]
-        [System.Xml.Serialization.XmlElementAttribute("Vector", typeof(Ogc.Swe20.VectorType), Namespace="http://www.opengis.net/swe/2.0")]
+        [System.Xml.Serialization.XmlElementAttribute("Vector", typeof(Swe20.VectorType), Namespace="http://www.opengis.net/swe/2.0")]
         public AbstractDataComponentType Item {
             get {
                 return this.itemField;
@@ -1705,14 +1622,14 @@ namespace Terradue.ServiceModel.Ogxc.Sos20 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/sos/2.0")]
     public partial class CapabilitiesPropertyType {
         
-        private CapabilitiesType capabilitiesField;
+        private Capabilities capabilitiesField;
         
         private string nilReasonField;
         
         private string remoteSchemaField;
         
         /// <remarks/>
-        public CapabilitiesType Capabilities {
+        public Capabilities Capabilities {
             get {
                 return this.capabilitiesField;
             }
@@ -1744,95 +1661,11 @@ namespace Terradue.ServiceModel.Ogxc.Sos20 {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/sos/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Capabilities", Namespace="http://www.opengis.net/sos/2.0", IsNullable=false)]
-    public partial class CapabilitiesType : CapabilitiesBaseType {
-        
-        private object[] extensionField;
-        
-        private CapabilitiesTypeFilterCapabilities filterCapabilitiesField;
-        
-        private CapabilitiesTypeContents contentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("extension")]
-        public object[] extension {
-            get {
-                return this.extensionField;
-            }
-            set {
-                this.extensionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CapabilitiesTypeFilterCapabilities filterCapabilities {
-            get {
-                return this.filterCapabilitiesField;
-            }
-            set {
-                this.filterCapabilitiesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CapabilitiesTypeContents contents {
-            get {
-                return this.contentsField;
-            }
-            set {
-                this.contentsField = value;
-            }
-        }
-    }
+   
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/sos/2.0")]
-    public partial class CapabilitiesTypeFilterCapabilities {
-        
-        private Filter_Capabilities filter_CapabilitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.opengis.net/fes/2.0")]
-        public Filter_Capabilities Filter_Capabilities {
-            get {
-                return this.filter_CapabilitiesField;
-            }
-            set {
-                this.filter_CapabilitiesField = value;
-            }
-        }
-    }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/sos/2.0")]
-    public partial class CapabilitiesTypeContents {
-        
-        private ContentsType contentsField;
-        
-        /// <remarks/>
-        public ContentsType Contents {
-            get {
-                return this.contentsField;
-            }
-            set {
-                this.contentsField = value;
-            }
-        }
-    }
+    
+    
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]

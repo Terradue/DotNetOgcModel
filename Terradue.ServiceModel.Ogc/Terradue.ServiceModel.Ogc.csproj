@@ -496,6 +496,19 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Swe.Common\GenericPairType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Swe.Common\MaximumType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Swe.Common\MinimumType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sos20\Capabilities.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sos20\FilterCapabilities.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sos20\CapabilitiesContents.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sos20\ObservationOfferingType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\SensorMl20.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\DescribedObjectType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Swes20\DescribeSensorResponseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Swes20\ExtensibleResponseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Sos20\RequestBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Swes20\DescribeSensorType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Swes20\ExtensibleRequestType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\SimpleProcessType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\AbstractProcessType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -511,6 +524,7 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Ssp\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Sos20\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Xlink\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\SensorMl20\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

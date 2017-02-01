@@ -5,7 +5,7 @@ using Terradue.ServiceModel.Ogc.Ows11;
 using Terradue.ServiceModel.Ogc.Swe20;
 using Terradue.ServiceModel.Ogc.Swes20;
 
-namespace Terradue.ServiceModel.Ogxc.Sos20 {
+namespace Terradue.ServiceModel.Ogc.Sos20 {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6225.41916")]

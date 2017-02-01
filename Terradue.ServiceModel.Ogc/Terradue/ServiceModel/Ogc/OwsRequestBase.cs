@@ -21,6 +21,7 @@ namespace Terradue.ServiceModel.Ogc
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("version")]
         public string Version { get; set; }
+        public object Name { get; set; }
 
         /// <summary>
         /// Default constructor

@@ -879,68 +879,9 @@ namespace Terradue.ServiceModel.Ogc.Swes20 {
         }
     }
     
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteSensorResponseType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DescribeSensorResponseType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsertSensorResponseType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateSensorDescriptionResponseType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/swes/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("ExtensibleResponse", Namespace="http://www.opengis.net/swes/2.0", IsNullable=false)]
-    public abstract partial class ExtensibleResponseType {
-        
-        private object[] extensionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("extension")]
-        public object[] extension {
-            get {
-                return this.extensionField;
-            }
-            set {
-                this.extensionField = value;
-            }
-        }
-    }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/swes/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("DescribeSensorResponse", Namespace="http://www.opengis.net/swes/2.0", IsNullable=false)]
-    public partial class DescribeSensorResponseType : ExtensibleResponseType {
-        
-        private string procedureDescriptionFormatField;
-        
-        private DescribeSensorResponseTypeDescription[] descriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
-        public string procedureDescriptionFormat {
-            get {
-                return this.procedureDescriptionFormatField;
-            }
-            set {
-                this.procedureDescriptionFormatField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("description")]
-        public DescribeSensorResponseTypeDescription[] description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-    }
+    
+    
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
@@ -1149,106 +1090,9 @@ namespace Terradue.ServiceModel.Ogc.Swes20 {
         }
     }
     
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteSensorType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DescribeSensorType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsertSensorType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateSensorDescriptionType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/swes/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("ExtensibleRequest", Namespace="http://www.opengis.net/swes/2.0", IsNullable=false)]
-    public abstract partial class ExtensibleRequestType {
-        
-        private object[] extensionField;
-        
-        private string versionField;
-        
-        private string serviceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("extension")]
-        public object[] extension {
-            get {
-                return this.extensionField;
-            }
-            set {
-                this.extensionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string version {
-            get {
-                return this.versionField;
-            }
-            set {
-                this.versionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string service {
-            get {
-                return this.serviceField;
-            }
-            set {
-                this.serviceField = value;
-            }
-        }
-    }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/swes/2.0")]
-    [System.Xml.Serialization.XmlRootAttribute("DescribeSensor", Namespace="http://www.opengis.net/swes/2.0", IsNullable=false)]
-    public partial class DescribeSensorType : ExtensibleRequestType {
-        
-        private string procedureField;
-        
-        private string procedureDescriptionFormatField;
-        
-        private DescribeSensorTypeValidTime validTimeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
-        public string procedure {
-            get {
-                return this.procedureField;
-            }
-            set {
-                this.procedureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
-        public string procedureDescriptionFormat {
-            get {
-                return this.procedureDescriptionFormatField;
-            }
-            set {
-                this.procedureDescriptionFormatField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DescribeSensorTypeValidTime validTime {
-            get {
-                return this.validTimeField;
-            }
-            set {
-                this.validTimeField = value;
-            }
-        }
-    }
+    
+    
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XsdGenerator", "1.0.6228.20346")]
