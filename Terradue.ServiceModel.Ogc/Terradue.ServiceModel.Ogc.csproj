@@ -37,12 +37,13 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Configuration" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\system\FileSOS\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="mscorlib" />
     <Reference Include="System.Core" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\system\FeatureServer\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -509,6 +510,61 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Swes20\ExtensibleRequestType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\SimpleProcessType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\SensorMl20\AbstractProcessType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\LanguagesType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DescribeProcess.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\RequestBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\WSDL.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessDescriptions.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessDescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputDescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedComplexDataInputType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedComplexDataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ComplexDataCombinationType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ComplexDataDescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\LiteralInputType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ValuesReferenceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\LiteralOutputType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedUOMsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedUOMsTypeDefault.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedCRSsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\SupportedCRSsTypeDefault.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputDataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ComplexDataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\LiteralDataType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputReferenceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputDescriptionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessBriefType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ResponseBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\Execute.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputReferenceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputReferenceTypeHeader.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputReferenceTypeBodyReference.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\InputReferenceTypeMethod.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ResponseFormType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputDefinitionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DocumentOutputDefinitionType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ResponseDocumentType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ExecuteResponse.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\StatusType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessFailedType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessSucceededType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessAcceptedType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessStartedType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ItemChoiceType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\GetCapabilities.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\WPSCapabilitiesType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\Languages.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\LanguagesDefault.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ProcessOfferings.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\UOMsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\CRSsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\ComplexDataCombinationsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DataInputsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputDefinitionsType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wps10\Capabilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -525,6 +581,7 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Sos20\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Xlink\" />
     <Folder Include="Terradue\ServiceModel\Ogc\SensorMl20\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Wps10\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
