@@ -21,6 +21,7 @@ namespace Terradue.ServiceModel.Ogc.Ows11
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("srsName", Type = typeof(CodeType))]
         [System.Xml.Serialization.XmlElementAttribute("supportedSensorDescription", Type = typeof(XmlQualifiedName))]
+        [System.Xml.Serialization.XmlElementAttribute("metaDataProperty", Namespace = "http://www.opengis.net/gml", Type = typeof(Gml311.MetaDataPropertyType))]
         public object MetaData { get; set; }
 
         /// <remarks/>

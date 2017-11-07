@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessDescriptions service="WPS" version="1.0.0" xml:lang="en-US" xmlns:gml="http://www.opengis.net/gml" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd">
+    <ProcessDescription statusSupported="true" storeSupported="true" wps:processVersion="1.0.0">
+        <ows:Identifier>com.terradue.wps_oozie.process.OozieAbstractAlgorithm</ows:Identifier>
+        <ows:Title>SRTM Digital Elevation Model</ows:Title>
+        <ows:Abstract>This application generates the STRM DEM in ROI_PAC or GAMMA ready format</ows:Abstract>
+        <ows:Metadata>
+            <gml:metaDataProperty>
+                <ows:BoundingBox crs="urn:ogc:def:crs:EPSG::4326">
+                    <ows:LowerCorner>11.40 41.50</ows:LowerCorner>
+                    <ows:UpperCorner>11.40 41.50</ows:UpperCorner>
+                </ows:BoundingBox>
+            </gml:metaDataProperty>
+        </ows:Metadata>
+        <DataInputs>
+            <Input maxOccurs="100" minOccurs="1">
+                <ows:Identifier>Level0_ref</ows:Identifier>
+                <ows:Title>SAR product catalogue entry(ies) in RDF format</ows:Title>
+                <ows:Abstract>Define the list of one or more SAR products to generate a DEM for each input product. The products are passed by references to catalogue entries in RDF format</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType ows:reference="xs:string">string</ows:DataType>
+                    <ows:AnyValue/>
+                    <DefaultValue>https://data.terradue.com/gs/catalogue/tepqw/gtfeature/search?format=json&amp;uid=ASA_IM__0PNPAM20120407_082248_000001263113_00251_52851_2317.N1</DefaultValue>
+                </LiteralData>
+            </Input>
+            <Input maxOccurs="100" minOccurs="1">
+                <ows:Identifier>format</ows:Identifier>
+                <ows:Title>Format of the generated DEM (roi_pac or gamma)</ows:Title>
+                <ows:Abstract>Format of the generated DEM, the value is roi_pac or gamma</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType ows:reference="xs:string">string</ows:DataType>
+                    <ows:AnyValue/>
+                    <DefaultValue>gamma</DefaultValue>
+                </LiteralData>
+            </Input>
+        </DataInputs>
+        <ProcessOutputs>
+            <Output>
+                <ows:Identifier>result_distribution</ows:Identifier>
+                <ows:Title>Result Files Distribution Package</ows:Title>
+                <ows:Abstract>This process returns a file with the list of result products.
+The default is Metalink document that is an extensible metadata file format that describes one or more computer files available for download. It specifies files appropriate for the user's language and operating system; facilitates file verification and recovery from data corruption.</ows:Abstract>
+                <ComplexOutput>
+                    <Default>
+                        <Format>
+                            <MimeType>application/xml</MimeType>
+                        </Format>
+                    </Default>
+                    <Supported>
+                        <Format>
+                            <MimeType>application/xml</MimeType>
+                        </Format>
+                    </Supported>
+                </ComplexOutput>
+            </Output>
+            <Output>
+                <ows:Identifier>result_osd</ows:Identifier>
+                <ows:Title>OpenSearch Description to the Results</ows:Title>
+                <ComplexOutput>
+                    <Default>
+                        <Format>
+                            <MimeType>application/xml</MimeType>
+                        </Format>
+                    </Default>
+                    <Supported>
+                        <Format>
+                            <MimeType>application/xml</MimeType>
+                        </Format>
+                    </Supported>
+                </ComplexOutput>
+            </Output>
+        </ProcessOutputs>
+    </ProcessDescription>
+</wps:ProcessDescriptions>

@@ -75,6 +75,19 @@ namespace Terradue.ServiceModel.Ogc.Test {
 			fs.Close();
 		}
 
+        [Test()]
+        public void EopMask()
+        {
+
+            FileStream fs = new FileStream("../Samples/S2A_OPER_MSK_DETFOO_SGS__20160425T144616_A004395_T31TGK_B03_MSIL1C.gml", FileMode.Open);
+
+            var eopmaskSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Eop20.MaskInformationType));
+
+            var eopmask = (Eop20.MaskInformationType)eopmaskSerializer.Deserialize(XmlReader.Create(fs));
+
+            fs.Close();
+        }
+
     }
 }
 

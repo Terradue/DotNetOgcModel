@@ -5,6 +5,8 @@ using System.Linq;
 using Terradue.ServiceModel.Ogc.Gml311;
 using System.IO;
 using System.Xml.Linq;
+using System.Xml.Serialization;
+using Terradue.ServiceModel.Ogc.Wps10;
 
 namespace Terradue.GeoJson.Tests { 
 
@@ -98,7 +100,27 @@ namespace Terradue.GeoJson.Tests {
 
         }
 
+        [Test()]
+        public void WPSwithGmlMD()
+        {
 
+            var fs = new FileStream("../Samples/WPSwithMD.xml", FileMode.Open);
+
+            var wpsSerializer = new XmlSerializer(typeof(ProcessDescriptions));
+
+            var processdesc = (ProcessDescriptions)wpsSerializer.Deserialize(fs);
+
+            fs.Close();
+
+            StringWriter sw = new StringWriter();
+
+            XmlWriter xw = XmlWriter.Create(sw);
+
+            wpsSerializer.Serialize(xw, processdesc);
+
+            string xml1 = sw.ToString();
+
+        }
     }
 }
 
