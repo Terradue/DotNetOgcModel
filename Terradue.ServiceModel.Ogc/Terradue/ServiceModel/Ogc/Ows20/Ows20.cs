@@ -8,14 +8,7 @@
 
 namespace Terradue.ServiceModel.Ogc.Ows20
 {
-    using System;
-    using System.Diagnostics;
-    using System.Xml.Serialization;
-    using System.Collections;
-    using System.Xml.Schema;
-    using System.ComponentModel;
     using Terradue.ServiceModel.Ogc.Xlink;
-
 
     //[System.Xml.Serialization.XmlIncludeAttribute(typeof(AdditionalParametersBaseType))]
     //[System.Xml.Serialization.XmlIncludeAttribute(typeof(AdditionalParametersType))]
@@ -602,6 +595,7 @@ namespace Terradue.ServiceModel.Ogc.Ows20
         private string valueField;
 
         [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
+        [System.ComponentModel.DefaultValueAttribute("en")]
         public string lang
         {
             get
@@ -2846,6 +2840,7 @@ namespace Terradue.ServiceModel.Ogc.Ows20
         }
 
         [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
+        [System.ComponentModel.DefaultValueAttribute("en")]
         public string lang
         {
             get

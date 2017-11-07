@@ -9,10 +9,13 @@ using Terradue.ServiceModel.Ogc.Om20;
 using Terradue.ServiceModel.Ogc.Gml321;
 using System.IO;
 using System.Text;
+using Terradue.ServiceModel.Ogc.Gmd;
 
-namespace Terradue.ServiceModel.Ogc {
-    
-    public static class OgcHelpers {
+namespace Terradue.ServiceModel.Ogc
+{
+
+    public static class OgcHelpers
+    {
 
 
         public const string EOP20 = "http://www.opengis.net/eop/2.0";
@@ -35,46 +38,70 @@ namespace Terradue.ServiceModel.Ogc {
         public const string DC = "http://purl.org/dc/elements/1.1/";
         public const string GML = "http://www.opengis.net/gml";
         public const string GML321 = "http://www.opengis.net/gml/3.2";
+        public const string GMD = "http://www.isotc211.org/2005/gmd";
+        public const string GCO = "http://www.isotc211.org/2005/gco";
 
-        public static XNamespace Eop {
-            get {
+        public static XNamespace Eop
+        {
+            get
+            {
                 return EOP21;
             }
         }
 
-        public static XNamespace Opt {
-            get {
+        public static XNamespace Opt
+        {
+            get
+            {
                 return OPT21;
             }
         }
 
-        public static XNamespace Sar {
-            get {
+        public static XNamespace Sar
+        {
+            get
+            {
                 return SAR21;
             }
         }
 
-        public static XNamespace Atm {
-            get {
+        public static XNamespace Atm
+        {
+            get
+            {
                 return ATM21;
             }
         }
 
-        public static XNamespace Alt {
-            get {
+        public static XNamespace Alt
+        {
+            get
+            {
                 return ALT21;
             }
         }
 
-        public static XNamespace Lmb {
-            get {
+        public static XNamespace Lmb
+        {
+            get
+            {
                 return LMB21;
             }
         }
 
-        public static XNamespace Ssp {
-            get {
+        public static XNamespace Ssp
+        {
+            get
+            {
                 return SSP21;
+            }
+        }
+
+        public static XNamespace Gmd
+        {
+            get
+            {
+                return GMD;
             }
         }
 
@@ -93,9 +120,13 @@ namespace Terradue.ServiceModel.Ogc {
         static XmlSerializer lmbSerializer;
         static XmlSerializer lmbSerializer20;
 
+        static XmlSerializer gmdSerializer;
 
-        public static XmlSerializer Eop21Serializer {
-            get {
+
+        public static XmlSerializer Eop21Serializer
+        {
+            get
+            {
 
                 if (eopSerializer == null) eopSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Eop21.EarthObservationType));
                 return eopSerializer;
@@ -103,8 +134,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Sar21Serializer {
-            get {
+        public static XmlSerializer Sar21Serializer
+        {
+            get
+            {
 
                 if (sarSerializer == null) sarSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType));
                 return sarSerializer;
@@ -112,8 +145,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Opt21Serializer {
-            get {
+        public static XmlSerializer Opt21Serializer
+        {
+            get
+            {
 
                 if (optSerializer == null) optSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Opt21.OptEarthObservationType));
                 return optSerializer;
@@ -121,8 +156,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Alt21Serializer {
-            get {
+        public static XmlSerializer Alt21Serializer
+        {
+            get
+            {
 
                 if (altSerializer == null) altSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Alt21.AltEarthObservationType));
                 return altSerializer;
@@ -130,8 +167,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Atm21Serializer {
-            get {
+        public static XmlSerializer Atm21Serializer
+        {
+            get
+            {
 
                 if (atmSerializer == null) atmSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Atm21.AtmEarthObservationType));
                 return atmSerializer;
@@ -139,8 +178,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Ssp21Serializer {
-            get {
+        public static XmlSerializer Ssp21Serializer
+        {
+            get
+            {
 
                 if (sspSerializer == null) sspSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp21.SspEarthObservationType));
                 return sspSerializer;
@@ -148,8 +189,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Lmb21Serializer {
-            get {
+        public static XmlSerializer Lmb21Serializer
+        {
+            get
+            {
 
                 if (lmbSerializer == null) lmbSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb21.LmbEarthObservationType));
                 return lmbSerializer;
@@ -157,8 +200,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Eop20Serializer {
-            get {
+        public static XmlSerializer Eop20Serializer
+        {
+            get
+            {
 
                 if (eopSerializer20 == null) eopSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Eop20.EarthObservationType));
                 return eopSerializer20;
@@ -166,8 +211,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Sar20Serializer {
-            get {
+        public static XmlSerializer Sar20Serializer
+        {
+            get
+            {
 
                 if (sarSerializer20 == null) sarSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Sar20.SarEarthObservationType));
                 return sarSerializer20;
@@ -175,8 +222,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Opt20Serializer {
-            get {
+        public static XmlSerializer Opt20Serializer
+        {
+            get
+            {
 
                 if (optSerializer20 == null) optSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationType));
                 return optSerializer20;
@@ -184,8 +233,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Alt20Serializer {
-            get {
+        public static XmlSerializer Alt20Serializer
+        {
+            get
+            {
 
                 if (altSerializer20 == null) altSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Alt20.AltEarthObservationType));
                 return altSerializer20;
@@ -193,8 +244,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Atm20Serializer {
-            get {
+        public static XmlSerializer Atm20Serializer
+        {
+            get
+            {
 
                 if (atmSerializer20 == null) atmSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationType));
                 return atmSerializer20;
@@ -202,8 +255,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Ssp20Serializer {
-            get {
+        public static XmlSerializer Ssp20Serializer
+        {
+            get
+            {
 
                 if (sspSerializer == null) sspSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp20.SspEarthObservationType));
                 return sspSerializer;
@@ -211,8 +266,10 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlSerializer Lmb20Serializer {
-            get {
+        public static XmlSerializer Lmb20Serializer
+        {
+            get
+            {
 
                 if (lmbSerializer == null) lmbSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbEarthObservationType));
                 return lmbSerializer;
@@ -220,12 +277,23 @@ namespace Terradue.ServiceModel.Ogc {
             }
         }
 
-        public static XmlElement SerializeToXmlElement(object obj) {
+        public static XmlSerializer GmdSerializer
+        {
+            get
+            {
+                if (gmdSerializer == null) gmdSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Gmd.MD_Metadata_Type));
+                return gmdSerializer;
+            }
+        }
+
+        public static XmlElement SerializeToXmlElement(object obj)
+        {
             XmlDocument xdoc = new XmlDocument();
 
             Type type = obj.GetType();
 
-            using (XmlWriter writer = xdoc.CreateNavigator().AppendChild()) {
+            using (XmlWriter writer = xdoc.CreateNavigator().AppendChild())
+            {
 
                 XmlSerializer ser = GetXmlSerializerFromType(type);
 
@@ -235,7 +303,8 @@ namespace Terradue.ServiceModel.Ogc {
             return xdoc.DocumentElement;
         }
 
-        public static XmlSerializer GetXmlSerializerFromType(Type type) {
+        public static XmlSerializer GetXmlSerializerFromType(Type type)
+        {
             if (type == typeof(Terradue.ServiceModel.Ogc.Eop21.EarthObservationType)) return OgcHelpers.Eop21Serializer;
 
             if (type == typeof(Terradue.ServiceModel.Ogc.Eop20.EarthObservationType)) return OgcHelpers.Eop20Serializer;
@@ -256,96 +325,119 @@ namespace Terradue.ServiceModel.Ogc {
 
             if (type == typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationType)) return OgcHelpers.Atm20Serializer;
 
+            if (type == typeof(Terradue.ServiceModel.Ogc.Gmd.MD_Metadata_Type)) return OgcHelpers.GmdSerializer;
+
             return new XmlSerializer(type);
         }
 
-        public static XmlSerializerNamespaces GetXmlSerializerNamespacesFromType(Type type) {
+        public static XmlSerializerNamespaces GetXmlSerializerNamespacesFromType(Type type)
+        {
 
 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
 
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Eop21.EarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Eop21.EarthObservationType))
+            {
                 ns.Add("eop", EOP21);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Eop20.EarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Eop20.EarthObservationType))
+            {
                 ns.Add("eop", EOP20);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType))
+            {
                 ns.Add("eop", EOP21);
                 ns.Add("sar", SAR21);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Sar20.SarEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Sar20.SarEarthObservationType))
+            {
                 ns.Add("eop", EOP20);
                 ns.Add("sar", SAR20);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Opt21.OptEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Opt21.OptEarthObservationType))
+            {
                 ns.Add("eop", EOP21);
                 ns.Add("opt", OPT21);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Opt20.OptEarthObservationType))
+            {
                 ns.Add("eop", EOP20);
                 ns.Add("opt", OPT20);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Alt21.AltEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Alt21.AltEarthObservationType))
+            {
                 ns.Add("eop", EOP21);
                 ns.Add("alt", ALT21);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Alt20.AltEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Alt20.AltEarthObservationType))
+            {
                 ns.Add("eop", EOP20);
                 ns.Add("alt", ALT20);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Atm21.AtmEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Atm21.AtmEarthObservationType))
+            {
                 ns.Add("eop", EOP21);
                 ns.Add("atm", ATM21);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
-            if (type == typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationType)) {
+            if (type == typeof(Terradue.ServiceModel.Ogc.Atm20.AtmEarthObservationType))
+            {
                 ns.Add("eop", EOP20);
                 ns.Add("atm", ATM20);
                 ns.Add("om", OM);
                 ns.Add("gml", GML321);
             }
 
+            if (type == typeof(Terradue.ServiceModel.Ogc.Gmd.MD_Metadata_Type))
+            {
+                ns.Add("gmd", GMD);
+                ns.Add("gco", GCO);
+                ns.Add("gml", GML);
+            }
+
             return ns;
         }
 
-        public static object DeserializeEarthObservation(XmlReader reader) {
+        public static object DeserializeEarthObservation(XmlReader reader)
+        {
 
             XmlSerializer ser = null;
             string nspace = reader.NamespaceURI;
 
-            while (string.IsNullOrEmpty(nspace) && reader.Read()) {
+            while (string.IsNullOrEmpty(nspace) && reader.Read())
+            {
                 nspace = reader.NamespaceURI;
             }
 
-            switch (nspace) {
+            switch (nspace)
+            {
 
                 case SSP20:
                     ser = Ssp20Serializer;
@@ -395,9 +487,12 @@ namespace Terradue.ServiceModel.Ogc {
 
             object eo = null;
 
-            try {
+            try
+            {
                 eo = ser.Deserialize(reader);
-            } catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 throw e;
             }
 
@@ -405,7 +500,8 @@ namespace Terradue.ServiceModel.Ogc {
         }
 
 
-        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop20.EarthObservationType eop){
+        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop20.EarthObservationType eop)
+        {
             XmlSerializer ser = GetXmlSerializerFromType(eop.GetType());
             XmlSerializerNamespaces ns = GetXmlSerializerNamespacesFromType(eop.GetType());
 
@@ -420,7 +516,8 @@ namespace Terradue.ServiceModel.Ogc {
             return XmlReader.Create(ms);
         }
 
-        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop21.EarthObservationType eop){
+        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop21.EarthObservationType eop)
+        {
             XmlSerializer ser = GetXmlSerializerFromType(eop.GetType());
             XmlSerializerNamespaces ns = GetXmlSerializerNamespacesFromType(eop.GetType());
 
@@ -433,6 +530,31 @@ namespace Terradue.ServiceModel.Ogc {
             ms.Seek(0, SeekOrigin.Begin);
 
             return XmlReader.Create(ms);
+        }
+
+        public static MD_Metadata_Type DeserializeGmdMetadata(XmlReader xmlReader)
+        {
+            string nspace = xmlReader.NamespaceURI;
+
+            while (string.IsNullOrEmpty(nspace) && xmlReader.Read())
+            {
+                nspace = xmlReader.NamespaceURI;
+            }
+
+            if (nspace == GMD)
+            {
+
+                try
+                {
+                    return (MD_Metadata_Type)GmdSerializer.Deserialize(xmlReader);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            throw new NotImplementedException("The namespace URI " + nspace + " is not GMD");
         }
 
     }

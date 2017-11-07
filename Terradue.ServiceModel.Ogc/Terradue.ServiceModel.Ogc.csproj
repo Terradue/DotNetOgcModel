@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,7 +41,7 @@
     <Reference Include="mscorlib" />
     <Reference Include="System.Core" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\system\FeatureServer\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -565,6 +565,11 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Wps10\DataInputsType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Wps10\OutputDefinitionsType.cs" />
     <Compile Include="Terradue\ServiceModel\Ogc\Wps10\Capabilities.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\GetCoverage.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\RequestBaseType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\DomainSubsetType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\SpatialSubsetType.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\OutputType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -582,6 +587,7 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Xlink\" />
     <Folder Include="Terradue\ServiceModel\Ogc\SensorMl20\" />
     <Folder Include="Terradue\ServiceModel\Ogc\Wps10\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Wcs10\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

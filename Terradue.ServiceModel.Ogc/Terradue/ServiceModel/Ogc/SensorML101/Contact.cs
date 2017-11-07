@@ -1,4 +1,4 @@
-using Terradue.ServiceModel.Ogc.Gml311;
+﻿using Terradue.ServiceModel.Ogc.Gml311;
 using Terradue.ServiceModel.Ogc.Xlink;
 
 namespace Terradue.ServiceModel.Ogc.SensorML101
@@ -32,7 +32,7 @@ namespace Terradue.ServiceModel.Ogc.SensorML101
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("type", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink")]
-        public string Type { get; set; }
+        public XlinkType Type { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("href", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/1999/xlink", DataType = "anyURI")]

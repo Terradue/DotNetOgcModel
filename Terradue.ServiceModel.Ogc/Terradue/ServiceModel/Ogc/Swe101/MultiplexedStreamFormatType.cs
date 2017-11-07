@@ -1,4 +1,4 @@
-namespace Terradue.ServiceModel.Ogc.Swe101
+﻿namespace Terradue.ServiceModel.Ogc.Swe101
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]

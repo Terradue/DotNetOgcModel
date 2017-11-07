@@ -3330,6 +3330,13 @@ namespace Terradue.ServiceModel.Ogc.Gml311
 
         private string textField;
 
+        public DirectPositionType() { }
+
+        public DirectPositionType(string text)
+        {
+            Text = text;
+        }
+
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string srsName
         {

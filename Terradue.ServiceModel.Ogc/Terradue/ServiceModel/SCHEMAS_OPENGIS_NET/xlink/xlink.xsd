@@ -77,7 +77,7 @@ constructs, e.g.
  </xs:simpleType>
 
  <xs:attribute name="actuate" type="xlink:actuateType"/>
-
+ 
  <xs:simpleType name="actuateType">
   <xs:restriction base="xs:token">
    <xs:enumeration value="onLoad"/>

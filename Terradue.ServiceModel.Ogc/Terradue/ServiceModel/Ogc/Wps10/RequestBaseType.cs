@@ -16,65 +16,53 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     using System.Text;
     using System.Xml;
     using System.Collections.Generic;
+    using Terradue.ServiceModel.Ogc.Exceptions;
+    using System.Globalization;
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/wps/1.0.0")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/wps/1.0.0", IsNullable = true)]
-    public partial class RequestBaseType
+    public partial class RequestBaseType : OwsRequestBase
     {
 
-        private string serviceField;
+        //  Sets service name
+        private readonly string _service = "WPS";
 
-        private string versionField;
+        //  Sets version number
+        private readonly string _version = "1.0.0";
 
-        private string languageField;
-
-
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public RequestBaseType()
+            : base()
         {
-            this.serviceField = "WPS";
-            this.versionField = "1.0.0";
+            this.Service = this._service;
+            this.Version = this._version;
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string service
+        /// <summary>
+        /// Creates an object based on parameters if provided
+        /// </summary>
+        /// <param name="queryParameters">Name value collection of parameters passed in query string</param>
+        public RequestBaseType(System.Collections.Specialized.NameValueCollection queryParameters)
+            : base(queryParameters)
         {
-            get
-            {
-                return this.serviceField;
-            }
-            set
-            {
-                this.serviceField = value;
-            }
+            this.Service = this._service;
+            this.Version = this._version;
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string version
+        /// <summary>
+        /// Validates current instance and makes sure that all required properties are set and has corect value
+        /// </summary>
+        public override void Validate()
         {
-            get
-            {
-                return this.versionField;
-            }
-            set
-            {
-                this.versionField = value;
-            }
-        }
+            base.Validate();
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string language
-        {
-            get
-            {
-                return this.languageField;
-            }
-            set
-            {
-                this.languageField = value;
-            }
+            if (this.Version != this._version)
+                throw new VersionNegotiationException(string.Format(CultureInfo.InvariantCulture, "Version '{0}' is not supported.", this.Version));
         }
 
     

@@ -17,6 +17,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     using System.Xml;
     using System.Collections.Generic;
     using Terradue.ServiceModel.Ogc.Ows11;
+    using System.Text.RegularExpressions;
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -28,7 +29,54 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 
         private List<CodeType> identifierField;
 
-        private static System.Xml.Serialization.XmlSerializer serializer;
+        /// <summary>
+        /// Regular expression to validate agains suported output format parameter
+        /// </summary>
+        private Regex _validOutputFormat = new Regex(@"text/xml");
+
+        /// <summary>
+        /// Creates a default instance of <see cref="DescribeSensor"/>.
+        /// </summary>
+        public DescribeProcess()
+        {
+            Init();
+        }
+
+        /// <summary>
+        /// Creates an instance of <see cref="DescribeSensor"/>.
+        /// </summary>
+        /// <param name="queryParameters">Object initial parameters.</param>
+        public DescribeProcess(System.Collections.Specialized.NameValueCollection queryParameters)
+            : base()
+        {
+            Init();
+            this.Identifier = new List<CodeType>();
+            foreach (var id in queryParameters["Identifier"].Split(','))
+            {
+                this.Identifier.Add(new CodeType() { Value = id });
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets prefix association with namespaces that are used object serializer.
+        /// </summary>
+        [XmlNamespaceDeclarations]
+        public XmlSerializerNamespaces Xmlns { get; set; }
+
+        /// <summary>
+        /// Perfoms object initialization tasks
+        /// </summary>
+        private void Init()
+        {
+            this.Xmlns = new XmlSerializerNamespaces();
+            this.Xmlns.Add(string.Empty, "http://www.opengis.net/sos/1.0");
+            this.Xmlns.Add("gml", "http://www.opengis.net/gml");
+            this.Xmlns.Add("xlink", "http://www.w3.org/1999/xlink");
+            this.Xmlns.Add("ows", "http://www.opengis.net/ows/1.1");
+            this.Xmlns.Add("ogc", "http://www.opengis.net/ogc");
+            this.Xmlns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+        }
+
 
         [System.Xml.Serialization.XmlElementAttribute("Identifier", Namespace = "http://www.opengis.net/ows/1.1")]
         public List<CodeType> Identifier
@@ -40,18 +88,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             set
             {
                 this.identifierField = value;
-            }
-        }
-
-        private static System.Xml.Serialization.XmlSerializer Serializer
-        {
-            get
-            {
-                if ((serializer == null))
-                {
-                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(DescribeProcess));
-                }
-                return serializer;
             }
         }
 

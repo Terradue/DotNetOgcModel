@@ -96,7 +96,7 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="sld:Service"/>
-				<xsd:element ref="sld:OnlineResource"/>
+				<!-- <xsd:element ref="sld:OnlineResource"/> -->
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -113,7 +113,7 @@
 			</xsd:restriction>
 		</xsd:simpleType>
 	</xsd:element>
-	<xsd:element name="OnlineResource">
+<!-- 	<xsd:element name="OnlineResource">
 		<xsd:annotation>
 			<xsd:documentation>
         An OnlineResource is typically used to refer to an HTTP URL.
@@ -122,7 +122,7 @@
 		<xsd:complexType>
 			<xsd:attributeGroup ref="xlink:simpleAttrs"/>
 		</xsd:complexType>
-	</xsd:element>
+	</xsd:element> -->
 	<xsd:element name="LayerFeatureConstraints">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -467,7 +467,7 @@
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="sld:OnlineResource"/>
+				<!-- <xsd:element ref="sld:OnlineResource"/> -->
 				<xsd:element ref="sld:Format"/>
 			</xsd:sequence>
 		</xsd:complexType>

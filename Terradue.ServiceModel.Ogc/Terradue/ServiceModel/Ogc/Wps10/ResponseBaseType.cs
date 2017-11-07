@@ -25,6 +25,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     public partial class ResponseBaseType
     {
 
+
         private string serviceField;
 
         private string versionField;
@@ -64,6 +65,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
         }
 
         [System.Xml.Serialization.XmlAttributeAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
+        [System.ComponentModel.DefaultValueAttribute("en")]
         public string lang
         {
             get

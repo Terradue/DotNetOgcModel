@@ -16,6 +16,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     using System.Text;
     using System.Xml;
     using System.Collections.Generic;
+    using System.Text.RegularExpressions;
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -26,6 +27,8 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     {
 
         private List<ProcessDescriptionType> processDescriptionField;
+
+
 
         [System.Xml.Serialization.XmlElementAttribute("ProcessDescription", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public List<ProcessDescriptionType> ProcessDescription

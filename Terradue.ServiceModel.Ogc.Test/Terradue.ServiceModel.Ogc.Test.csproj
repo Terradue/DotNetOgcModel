@@ -43,15 +43,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SerializationTest.cs" />
-    <Compile Include="EopSerializationTest.cs" />
-    <Compile Include="SarSerializationTest.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="Opt21SerializationTest.cs" />
-    <Compile Include="LmbSerializationTest.cs" />
-    <Compile Include="GmlTest32.cs" />
-    <Compile Include="GmlTest.cs" />
-    <Compile Include="AltSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\AltSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\LmbSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\Opt21SerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SarSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest32.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\EopSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SerializationTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -74,6 +74,12 @@
   <ItemGroup>
     <Folder Include="Samples\" />
     <Folder Include="out\" />
+    <Folder Include="Terradue\" />
+    <Folder Include="Terradue\ServiceModel\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Test\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Test\EopProfile\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\Test\Gml\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">

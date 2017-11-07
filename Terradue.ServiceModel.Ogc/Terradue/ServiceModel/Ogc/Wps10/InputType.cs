@@ -36,8 +36,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 
         private DataType dataField;
 
-        private static System.Xml.Serialization.XmlSerializer serializer;
-
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.opengis.net/ows/1.1")]
         public CodeType Identifier
         {
@@ -100,18 +98,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             set
             {
                 this.dataField = value;
-            }
-        }
-
-        private static System.Xml.Serialization.XmlSerializer Serializer
-        {
-            get
-            {
-                if ((serializer == null))
-                {
-                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(InputType));
-                }
-                return serializer;
             }
         }
 

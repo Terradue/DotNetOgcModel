@@ -6,87 +6,147 @@
 // ------------------------------------------------------------------------------
 namespace Terradue.ServiceModel.Ogc.Wps10
 {
-    using System;
-    using System.Diagnostics;
-    using System.Xml.Serialization;
-    using System.Collections;
-    using System.Xml.Schema;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Text;
-    using System.Xml;
-    using System.Collections.Generic;
-    using Terradue.ServiceModel.Ogc.Ows11;
+	using System;
+	using System.Diagnostics;
+	using System.Xml.Serialization;
+	using System.Collections;
+	using System.Xml.Schema;
+	using System.ComponentModel;
+	using System.IO;
+	using System.Text;
+	using System.Xml;
+	using System.Collections.Generic;
+	using Terradue.ServiceModel.Ogc.Ows11;
+	using System.Text.RegularExpressions;
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.opengis.net/wps/1.0.0")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/wps/1.0.0", IsNullable = false)]
-    public partial class Execute : RequestBaseType
-    {
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.opengis.net/wps/1.0.0")]
+	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/wps/1.0.0", IsNullable = false)]
+	public partial class Execute : RequestBaseType
+	{
 
-        private CodeType identifierField;
+		private CodeType identifierField;
 
-        private List<InputType> dataInputsField;
+		private List<InputType> dataInputsField;
 
-        private ResponseFormType responseFormField;
+		private ResponseFormType responseFormField;
 
-        private static System.Xml.Serialization.XmlSerializer serializer;
+		/// <summary>
+		/// Regular expression to validate agains suported output format parameter
+		/// </summary>
+		private Regex _validOutputFormat = new Regex(@"text/xml");
 
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.opengis.net/ows/1.1")]
-        public CodeType Identifier
-        {
-            get
-            {
-                return this.identifierField;
-            }
-            set
-            {
-                this.identifierField = value;
-            }
-        }
+		/// <summary>
+		/// Creates a default instance of <see cref="Execute"/>.
+		/// </summary>
+		public Execute()
+		{
+			Init();
+		}
 
-        [System.Xml.Serialization.XmlArrayAttribute()]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Input", IsNullable = false)]
-        public List<InputType> DataInputs
-        {
-            get
-            {
-                return this.dataInputsField;
-            }
-            set
-            {
-                this.dataInputsField = value;
-            }
-        }
+		/// <summary>
+		/// Creates an instance of <see cref="DescribeSensor"/>.
+		/// </summary>
+		/// <param name="queryParameters">Object initial parameters.</param>
+		public Execute(System.Collections.Specialized.NameValueCollection queryParameters)
+			: base()
+		{
+			Init();
+			this.Identifier = new CodeType() { Value = queryParameters["identifier"] };
+			if (!string.IsNullOrEmpty(queryParameters["DataInputs"]) && queryParameters["DataInputs"].StartsWith("[") && queryParameters["DataInputs"].EndsWith("]"))
+			    this.DataInputs = KVPDecode(queryParameters["DataInputs"].TrimStart('[').TrimEnd(']'));
+		}
 
-        [System.Xml.Serialization.XmlElementAttribute()]
-        public ResponseFormType ResponseForm
-        {
-            get
-            {
-                return this.responseFormField;
-            }
-            set
-            {
-                this.responseFormField = value;
-            }
-        }
+		List<InputType> KVPDecode(string v)
+		{
+			List<InputType> inputs = new List<InputType>();
 
-        private static System.Xml.Serialization.XmlSerializer Serializer
-        {
-            get
-            {
-                if ((serializer == null))
-                {
-                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(Execute));
-                }
-                return serializer;
-            }
-        }
+			foreach (var param in v.Split(';'))
+			{
+				var parama = param.Split('@');
+				if (parama.Length == 1)
+				{
+					inputs.Add(new InputType()
+					{
+						Identifier = new CodeType() { Value = parama[0].Split('=')[0] },
+						Data = new DataType()
+						{
+							Item = new LiteralDataType()
+							{
+								Value = parama[0].Split('=')[1]
+							}
+						}
+					});
+					continue;
+				}
+			}
 
-       
-    }
-    
+			return inputs;
+		}
+
+		/// <summary>
+		/// Gets or sets prefix association with namespaces that are used object serializer.
+		/// </summary>
+		[XmlNamespaceDeclarations]
+		public XmlSerializerNamespaces Xmlns { get; set; }
+
+		/// <summary>
+		/// Perfoms object initialization tasks
+		/// </summary>
+		private void Init()
+		{
+			this.Xmlns = new XmlSerializerNamespaces();
+			this.Xmlns.Add(string.Empty, "http://www.opengis.net/sos/1.0");
+			this.Xmlns.Add("gml", "http://www.opengis.net/gml");
+			this.Xmlns.Add("xlink", "http://www.w3.org/1999/xlink");
+			this.Xmlns.Add("ows", "http://www.opengis.net/ows/1.1");
+			this.Xmlns.Add("ogc", "http://www.opengis.net/ogc");
+			this.Xmlns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+		}
+
+		[System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.opengis.net/ows/1.1")]
+		public CodeType Identifier
+		{
+			get
+			{
+				return this.identifierField;
+			}
+			set
+			{
+				this.identifierField = value;
+			}
+		}
+
+		[System.Xml.Serialization.XmlArrayAttribute()]
+		[System.Xml.Serialization.XmlArrayItemAttribute("Input", IsNullable = false)]
+		public List<InputType> DataInputs
+		{
+			get
+			{
+				return this.dataInputsField;
+			}
+			set
+			{
+				this.dataInputsField = value;
+			}
+		}
+
+		[System.Xml.Serialization.XmlElementAttribute()]
+		public ResponseFormType ResponseForm
+		{
+			get
+			{
+				return this.responseFormField;
+			}
+			set
+			{
+				this.responseFormField = value;
+			}
+		}
+
+
+	}
+
 }

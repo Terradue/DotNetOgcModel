@@ -34,8 +34,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 
         private string defaultValueField;
 
-        private static System.Xml.Serialization.XmlSerializer serializer;
-
         [System.Xml.Serialization.XmlArrayAttribute(Namespace = "http://www.opengis.net/ows/1.1")]
         [System.Xml.Serialization.XmlArrayItemAttribute("Range", typeof(RangeType), IsNullable = false)]
         [System.Xml.Serialization.XmlArrayItemAttribute("Value", typeof(Ows11.ValueType), IsNullable = false)]
@@ -87,18 +85,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             set
             {
                 this.defaultValueField = value;
-            }
-        }
-
-        private static System.Xml.Serialization.XmlSerializer Serializer
-        {
-            get
-            {
-                if ((serializer == null))
-                {
-                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(LiteralInputType));
-                }
-                return serializer;
             }
         }
 

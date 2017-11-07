@@ -44,7 +44,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             Assert.AreEqual("DS_PHR1A_20010822110247_TLS_PX_E123N45_0101_01234", eop.EopMetaDataProperty.EarthObservationMetaData.identifier);
 
-            Assert.AreEqual("xyzdef", (((PhenomenonType)eop.result.Eop20EarthObservationResult.parameter.ParameterInformation.phenomenon.Item).Items[0]).Value);
+            Assert.AreEqual("xyzdef", (((Swe10.PhenomenonType)eop.result.Eop20EarthObservationResult.parameter.ParameterInformation.phenomenon.Item).Items[0]).Value);
 
             Assert.AreEqual(-14.0, eop.procedure.Eop20EarthObservationEquipment.acquisitionParameters.Acquisition.acrossTrackIncidenceAngle.Value);
 

@@ -32,7 +32,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType sarEO = new Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType();
             sarEO.featureOfInterest = new Terradue.ServiceModel.Ogc.Gml321.FeaturePropertyType();
             sarEO.featureOfInterest.Eop21Footprint = new Terradue.ServiceModel.Ogc.Eop21.FootprintType();
-            sarEO.procedure = new Terradue.ServiceModel.Ogc.Om.OM_ProcessPropertyType();
+            sarEO.procedure = new Terradue.ServiceModel.Ogc.Om20.OM_ProcessPropertyType();
             sarEO.procedure.Eop21EarthObservationEquipment = new Terradue.ServiceModel.Ogc.Eop21.EarthObservationEquipmentType();
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters = new Terradue.ServiceModel.Ogc.Eop21.AcquisitionPropertyType();
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition = new Terradue.ServiceModel.Ogc.Sar21.SarAcquisitionType();

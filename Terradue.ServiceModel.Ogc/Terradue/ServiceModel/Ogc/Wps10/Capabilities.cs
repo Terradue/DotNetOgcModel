@@ -11,8 +11,8 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.opengis.net/wps/1.0", IncludeInSchema = true)]
-    [System.Xml.Serialization.XmlRootAttribute("Capabilities", Namespace = "http://www.opengis.net/wps/1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.opengis.net/wps/1.0.0", IncludeInSchema = true)]
+    [System.Xml.Serialization.XmlRootAttribute("Capabilities", Namespace = "http://www.opengis.net/wps/1.0.0", IsNullable = false)]
     public class Capabilities : CapabilitiesBaseType
     {
         /// <summary>
@@ -23,7 +23,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             this.Version = "1.0.0";
 
             this.Xmlns = new XmlSerializerNamespaces();
-            this.Xmlns.Add(string.Empty, "http://www.opengis.net/sos/1.0");
+            this.Xmlns.Add(string.Empty, "http://www.opengis.net/wps/1.0.0");
             this.Xmlns.Add("gml", "http://www.opengis.net/gml");
             this.Xmlns.Add("xlink", "http://www.w3.org/1999/xlink");
             this.Xmlns.Add("om", "http://www.opengis.net/om/1.0");

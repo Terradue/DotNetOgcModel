@@ -8,7 +8,7 @@ namespace Terradue.ServiceModel.Ogc.Xlink
     interface ISimpleLink
     {
         /// <remarks/>
-        string Type { get; set; }
+        XlinkType Type { get; set; }
 
         /// <remarks/>
         string Href { get; set; }

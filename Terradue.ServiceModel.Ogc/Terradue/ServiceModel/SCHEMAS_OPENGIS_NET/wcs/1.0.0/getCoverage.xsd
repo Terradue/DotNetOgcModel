@@ -41,6 +41,7 @@
 	<xs:include schemaLocation="./wcsAll.xsd"/>
 	<xs:include schemaLocation="./describeCoverage.xsd"/>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="../../wcs/1.0.0/gml4wcs.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/xlink.xsd"/>
 	<!-- ==============================================================
        elements and types
 	============================================================== -->

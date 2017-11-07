@@ -28,8 +28,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 
         private object itemField;
 
-        private static System.Xml.Serialization.XmlSerializer serializer;
-
         [System.Xml.Serialization.XmlElementAttribute("BoundingBoxData", typeof(BoundingBoxType))]
         [System.Xml.Serialization.XmlElementAttribute("ComplexData", typeof(ComplexDataType))]
         [System.Xml.Serialization.XmlElementAttribute("LiteralData", typeof(LiteralDataType))]
@@ -42,18 +40,6 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             set
             {
                 this.itemField = value;
-            }
-        }
-
-        private static System.Xml.Serialization.XmlSerializer Serializer
-        {
-            get
-            {
-                if ((serializer == null))
-                {
-                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(DataType));
-                }
-                return serializer;
             }
         }
 

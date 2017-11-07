@@ -12,7 +12,7 @@ namespace Terradue.ServiceModel.Ogc.Ows11
         /// <summary>
         /// Text describing specific exception represented by the <see cref="ExceptionCode"/>.
         /// </summary>
-        [System.Xml.Serialization.XmlElementAttribute("exceptionText")]
+        [System.Xml.Serialization.XmlElementAttribute("ExceptionText")]
         public string ExceptionText { get; set; }
 
         /// <summary>
