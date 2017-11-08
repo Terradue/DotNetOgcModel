@@ -17,11 +17,11 @@
 
 /*!
 
-\namespace Terradue.GeoJson
+\namespace Terradue.ServiceModel.Ogc
 @{
     Terradue .NET Ogc Schemas Library. Software to handle all OGC schemas serialization mainly in XML
 
-    \xrefitem sw_version "Versions" "Software Package Version" 1.1.6
+    \xrefitem sw_version "Versions" "Software Package Version" 2.0
 
     \xrefitem sw_link "Links" "Software Package List" [DotNetGeoJson](https://github.com/Terradue/DotNetOgcOmGml)
 
@@ -48,6 +48,6 @@ using NuGet4Mono.Extensions;
 [assembly: AssemblyIconUrl("")]
 [assembly: AssemblyProjectUrl("https://github.com/Terradue/DotNetOgcOmGml")]
 [assembly: AssemblyLicenseUrl("https://github.com/Terradue/DotNetOgcOmGml/blob/master/LICENSE")]
-[assembly: AssemblyVersion("1.1.6.*")]
-[assembly: AssemblyInformationalVersion("1.1.6")]
+[assembly: AssemblyVersion("2.0.*")]
+[assembly: AssemblyInformationalVersion("2.0")]
 
