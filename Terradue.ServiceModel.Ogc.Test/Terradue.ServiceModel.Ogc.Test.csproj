@@ -70,7 +70,6 @@
     <None Include="Samples\MultiSurface311.gml" />
     <None Include="Samples\S2withType.xml" />
     <None Include="Samples\EopwithType.xml" />
-    <None Include="Samples\S2A_OPER_MSK_DETFOO_SGS__20160425T144616_A004395_T31TGK_B03_MSIL1C.gml" />
     <None Include="Samples\WPSwithMD.xml" />
   </ItemGroup>
   <ItemGroup>
