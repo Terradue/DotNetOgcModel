@@ -1,4 +1,4 @@
-[![Build Status](https://build.terradue.com/buildStatus/icon?job=DotNetOgcModel/develop)](https://build.terradue.com/job/DotNetOgcModel/job/develop/)
+[![Build Status](https://build.terradue.com/job/Terradue/job/DotNetOgcModel/job/develop/badge/icon)](https://build.terradue.com/job/Terradue/job/DotNetOgcModel/job/develop/)
 
 # DotNetOgcModel - A complete .Net library for manipulating XML documents according to the OGC specifications
 
