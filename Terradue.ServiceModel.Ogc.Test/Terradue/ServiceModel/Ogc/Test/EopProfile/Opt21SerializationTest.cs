@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using Microsoft.XmlDiffPatch;
 using Terradue.ServiceModel.Ogc.Swe;
 using Terradue.ServiceModel.Ogc.Opt21;
+using System.Linq;
 
 namespace Terradue.ServiceModel.Ogc.Test {
 
@@ -51,7 +52,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual(-14.0, eop.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.acrossTrackIncidenceAngle.Value);
             Assert.AreEqual(30, eop.result.Opt21EarthObservationResult.cloudCoverPercentage.Value);
 
-            XmlReader xr = eop.CreaterReader();
+            XmlReader xr = eop.CreateReader();
 
             string xml1 = XElement.Load(xr).ToString();
 
@@ -59,7 +60,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             XmlWriter xw = XmlWriter.Create(sw);
 
-            xr = eop.CreaterReader();
+            xr = eop.CreateReader();
 
             fs = new FileStream("../Samples/opt21_example.xml", FileMode.Open);
 

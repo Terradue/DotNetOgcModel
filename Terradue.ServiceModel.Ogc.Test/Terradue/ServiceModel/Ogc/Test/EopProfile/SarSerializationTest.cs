@@ -42,7 +42,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             Assert.AreEqual("$urlRootEN-021126221755-53642-SV.ASA_WS__0P.zip", eop.result.Eop21EarthObservationResult.product[0].ProductInformation.fileName.ServiceReference.href);
 
-            XmlReader xr = eop.CreaterReader();
+            XmlReader xr = eop.CreateReader();
 
             string xml1 = XElement.Load(xr).ToString();
 
@@ -50,7 +50,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             XmlWriter xw = XmlWriter.Create(sw);
 
-            xr = eop.CreaterReader();
+            xr = eop.CreateReader();
 
             fs = new FileStream("../Samples/sar21_example.xml", FileMode.Open);
 

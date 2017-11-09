@@ -6,6 +6,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Microsoft.XmlDiffPatch;
 using Terradue.ServiceModel.Ogc.Swe;
+using System.Linq;
 
 namespace Terradue.ServiceModel.Ogc.Test {
     
@@ -48,7 +49,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             Assert.AreEqual(-14.0, eop.procedure.Eop20EarthObservationEquipment.acquisitionParameters.Acquisition.acrossTrackIncidenceAngle.Value);
 
-            XmlReader xr = eop.CreaterReader();
+            XmlReader xr = eop.CreateReader();
 
             StringWriter sw = new StringWriter();
 
