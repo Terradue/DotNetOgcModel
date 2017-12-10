@@ -98,7 +98,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 		private void Init()
 		{
 			this.Xmlns = new XmlSerializerNamespaces();
-			this.Xmlns.Add(string.Empty, "http://www.opengis.net/sos/1.0");
+			this.Xmlns.Add(string.Empty, "http://www.opengis.net/wps/1.0.0");
 			this.Xmlns.Add("gml", "http://www.opengis.net/gml");
 			this.Xmlns.Add("xlink", "http://www.w3.org/1999/xlink");
 			this.Xmlns.Add("ows", "http://www.opengis.net/ows/1.1");
