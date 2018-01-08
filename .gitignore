@@ -38,3 +38,6 @@ Thumbs.db
 
 #dotCover
 *.dotCover
+/Terradue.ServiceModel.Ogc.nuspec
+/build
+/Terradue.ServiceModel.Ogc.Test/out/swathwhitespaces.xml

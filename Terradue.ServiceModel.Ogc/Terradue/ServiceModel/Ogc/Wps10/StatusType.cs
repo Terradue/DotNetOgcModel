@@ -25,7 +25,7 @@ namespace Terradue.ServiceModel.Ogc.Wps10
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.opengis.net/wps/1.0.0")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.opengis.net/wps/1.0.0", IsNullable = true)]
-    public partial class StatusType
+    public partial class StatusType : IEquatable<StatusType>
     {
 
         private object itemField;
@@ -79,7 +79,29 @@ namespace Terradue.ServiceModel.Ogc.Wps10
             }
         }
 
- 
+        public bool Equals(StatusType other)
+        {
+            if (other == null)
+                return false;
+
+            if (other.Item.GetType() != this.Item.GetType())
+                return false;
+
+            if (Item is ProcessStartedType){
+                var ps = (ProcessStartedType)Item;
+                var psOther = (ProcessStartedType)other.Item;
+
+                if (ps.percentCompleted != psOther.percentCompleted)
+                    return false;
+
+                if (ps.Value != psOther.Value)
+                    return false;
+                
+            }
+
+            return true;
+
+        }
     }
     
 }

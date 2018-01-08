@@ -33,13 +33,13 @@ namespace Terradue.ServiceModel.Ogc.Wps10
 
         private string textField;
 
-        private object referenceField;
+        private OutputReferenceType referenceField;
 
         private System.Xml.XmlNode[] anyField;
 
 
         [System.Xml.Serialization.XmlElementAttribute("Reference", typeof(OutputReferenceType))]
-        public object Reference
+        public OutputReferenceType Reference
         {
             get
             {

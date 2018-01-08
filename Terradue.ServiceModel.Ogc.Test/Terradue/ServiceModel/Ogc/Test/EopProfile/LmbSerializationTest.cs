@@ -29,7 +29,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
             Assert.AreEqual("2015-07-18T04:47:43.54Z", eop.resultTime.TimeInstant.timePosition.Value);
             Assert.AreEqual("ALTIMETRIC", eop.procedure.Eop21EarthObservationEquipment.sensor.LmbSensor.sensorType);
 
-            XmlReader xr = eop.CreaterReader();
+            XmlReader xr = eop.CreateReader();
 
             string xml1 = XElement.Load(xr).ToString();
 
@@ -37,7 +37,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             XmlWriter xw = XmlWriter.Create(sw);
 
-            xr = eop.CreaterReader();
+            xr = eop.CreateReader();
 
            
 

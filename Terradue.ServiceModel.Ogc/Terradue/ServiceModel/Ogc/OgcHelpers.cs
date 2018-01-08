@@ -122,6 +122,10 @@ namespace Terradue.ServiceModel.Ogc
 
         static XmlSerializer gmdSerializer;
 
+        static XmlReaderSettings xmlReaderSettings = new XmlReaderSettings()
+        {
+            IgnoreWhitespace = false
+        };
 
         public static XmlSerializer Eop21Serializer
         {
@@ -260,7 +264,7 @@ namespace Terradue.ServiceModel.Ogc
             get
             {
 
-                if (sspSerializer == null) sspSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp20.SspEarthObservationType));
+                if (sspSerializer20 == null) sspSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Ssp20.SspEarthObservationType));
                 return sspSerializer;
 
             }
@@ -271,7 +275,7 @@ namespace Terradue.ServiceModel.Ogc
             get
             {
 
-                if (lmbSerializer == null) lmbSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbEarthObservationType));
+                if (lmbSerializer20 == null) lmbSerializer20 = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Lmb20.LmbEarthObservationType));
                 return lmbSerializer;
 
             }
@@ -500,7 +504,7 @@ namespace Terradue.ServiceModel.Ogc
         }
 
 
-        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop20.EarthObservationType eop)
+        public static XmlReader CreateReader(this Terradue.ServiceModel.Ogc.Eop20.EarthObservationType eop)
         {
             XmlSerializer ser = GetXmlSerializerFromType(eop.GetType());
             XmlSerializerNamespaces ns = GetXmlSerializerNamespacesFromType(eop.GetType());
@@ -513,10 +517,10 @@ namespace Terradue.ServiceModel.Ogc
 
             ms.Seek(0, SeekOrigin.Begin);
 
-            return XmlReader.Create(ms);
+            return XmlReader.Create(ms, xmlReaderSettings);
         }
 
-        public static XmlReader CreaterReader(this Terradue.ServiceModel.Ogc.Eop21.EarthObservationType eop)
+        public static XmlReader CreateReader(this Terradue.ServiceModel.Ogc.Eop21.EarthObservationType eop)
         {
             XmlSerializer ser = GetXmlSerializerFromType(eop.GetType());
             XmlSerializerNamespaces ns = GetXmlSerializerNamespacesFromType(eop.GetType());
@@ -529,7 +533,7 @@ namespace Terradue.ServiceModel.Ogc
 
             ms.Seek(0, SeekOrigin.Begin);
 
-            return XmlReader.Create(ms);
+            return XmlReader.Create(ms, xmlReaderSettings);
         }
 
         public static MD_Metadata_Type DeserializeGmdMetadata(XmlReader xmlReader)

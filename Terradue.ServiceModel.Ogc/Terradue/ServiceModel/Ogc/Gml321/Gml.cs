@@ -22182,7 +22182,7 @@ namespace Terradue.ServiceModel.Ogc.Gml321
             }
         }
 
-        [System.Xml.Serialization.XmlTextAttribute(DataType = "Name")]
+        [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
             get
