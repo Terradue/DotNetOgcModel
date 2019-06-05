@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -28,57 +28,56 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    <Reference Include="System.Xml"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Xml.Serialization"/>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Util.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\AltSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\LmbSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\Opt21SerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SarSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest32.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\EopSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SerializationTest.cs"/>
+    <Compile Include="Util.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\AltSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\LmbSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\Opt21SerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SarSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest32.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\EopSerializationTest.cs" />
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SerializationTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config"/>
-    <None Include="Samples\GmlTimePeriod.xml"/>
-    <None Include="Samples\eop20_example.xml"/>
-    <None Include="Samples\sar21_example.xml"/>
-    <None Include="Samples\opt21_example.xml"/>
-    <None Include="Samples\S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom"/>
-    <None Include="Samples\LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml"/>
-    <None Include="Samples\multipoint32.gml"/>
-    <None Include="Samples\MultiCurveWithLinearString32.gml"/>
-    <None Include="Samples\Multisurface32.gml"/>
-    <None Include="Samples\MultiCurveWithLinearString.gml"/>
-    <None Include="Samples\MultiPolygon.xml"/>
-    <None Include="Samples\MultiSurface311.gml"/>
-    <None Include="Samples\S2withType.xml"/>
-    <None Include="Samples\EopwithType.xml"/>
-    <None Include="Samples\WPSwithMD.xml"/>
+    <None Include="Samples\GmlTimePeriod.xml" />
+    <None Include="Samples\eop20_example.xml" />
+    <None Include="Samples\sar21_example.xml" />
+    <None Include="Samples\opt21_example.xml" />
+    <None Include="Samples\S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom" />
+    <None Include="Samples\LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml" />
+    <None Include="Samples\multipoint32.gml" />
+    <None Include="Samples\MultiCurveWithLinearString32.gml" />
+    <None Include="Samples\Multisurface32.gml" />
+    <None Include="Samples\MultiCurveWithLinearString.gml" />
+    <None Include="Samples\MultiPolygon.xml" />
+    <None Include="Samples\MultiSurface311.gml" />
+    <None Include="Samples\S2withType.xml" />
+    <None Include="Samples\EopwithType.xml" />
+    <None Include="Samples\WPSwithMD.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Samples\"/>
-    <Folder Include="out\"/>
-    <Folder Include="Terradue\"/>
-    <Folder Include="Terradue\ServiceModel\"/>
-    <Folder Include="Terradue\ServiceModel\Ogc\"/>
+    <Folder Include="Samples\" />
+    <Folder Include="out\" />
+    <Folder Include="Terradue\" />
+    <Folder Include="Terradue\ServiceModel\" />
+    <Folder Include="Terradue\ServiceModel\Ogc\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">
       <Project>{4A78C588-01FE-439F-8961-AE083A5EE6CA}</Project>
       <Name>Terradue.ServiceModel.Ogc</Name>
     </ProjectReference>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\ExceptionTests\ExceptionReportGeneration.cs"/>
+    <Compile Include="Terradue\ServiceModel\Ogc\Test\ExceptionTests\ExceptionReportGeneration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="2.6.4"/>
-    <PackageReference Include="XMLDiffPatch" Version="1.0.8.28"/>
+    <PackageReference Include="NUnit" Version="2.6.4" />
+    <PackageReference Include="XMLDiffPatch" Version="1.0.8.28" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
