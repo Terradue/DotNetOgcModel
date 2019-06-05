@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Runtime.Serialization;
 using Terradue.ServiceModel.Ogc.Ows11;
 
@@ -61,8 +62,42 @@ namespace Terradue.ServiceModel.Ogc.Exceptions
                     ExceptionText = (this.InnerException == null) ? this.Message : this.ToString(),
                     Locator = this.Locator,
                 });
+                FillStackTrace(this.InnerException, ref exceptionReports);
 
                 return exceptionReports;
+            }
+        }
+        private void FillStackTrace(Exception exception, ref ExceptionReport exceptionReports)
+        {
+            if (exception is null) return;
+            if (exception is AggregateException)
+            {
+                exceptionReports.Exceptions.Last().ExceptionText += " (All details in next exceptions)";
+                foreach (var innerException in ((AggregateException)this.InnerException).InnerExceptions)
+                {
+                    FillStackTrace(innerException, ref exceptionReports);
+                }
+            }
+            else if (exception is OgcException)
+            {
+                var ogcException = exception as OgcException;
+                exceptionReports.Exceptions.Add(new Terradue.ServiceModel.Ogc.Ows11.ExceptionType()
+                {
+                    ExceptionCode = ogcException.ExceptionCode,
+                    ExceptionText = (ogcException.InnerException == null) ? ogcException.Message : ogcException.ToString(),
+                    Locator = ogcException.Locator,
+                });
+                FillStackTrace(exception.InnerException, ref exceptionReports);
+            }
+            else
+            {
+                exceptionReports.Exceptions.Add(new Terradue.ServiceModel.Ogc.Ows11.ExceptionType()
+                {
+                    ExceptionCode = ExceptionCode.NoApplicableCode,
+                    ExceptionText = exception.Message,
+                    Locator = exception.StackTrace,
+                });
+                FillStackTrace(exception.InnerException, ref exceptionReports);
             }
         }
     }

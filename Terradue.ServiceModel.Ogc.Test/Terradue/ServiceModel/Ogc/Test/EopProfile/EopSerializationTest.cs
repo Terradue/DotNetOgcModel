@@ -1,15 +1,10 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using System.Xml.Linq;
-using Microsoft.XmlDiffPatch;
-using Terradue.ServiceModel.Ogc.Swe;
-using System.Linq;
 
-namespace Terradue.ServiceModel.Ogc.Test {
-    
+namespace Terradue.ServiceModel.Ogc.Test
+{
+
     [TestFixture()]
     public class EopSerializationTest {
 

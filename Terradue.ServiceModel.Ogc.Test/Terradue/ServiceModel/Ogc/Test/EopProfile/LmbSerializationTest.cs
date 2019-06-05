@@ -1,15 +1,11 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using Terradue.ServiceModel.Ogc.Eop21;
 using System.Xml.Linq;
-using Microsoft.XmlDiffPatch;
-using Terradue.ServiceModel.Ogc.Swe;
 using Terradue.ServiceModel.Ogc.Lmb21;
 
-namespace Terradue.ServiceModel.Ogc.Test {
+namespace Terradue.ServiceModel.Ogc.Test
+{
 
     [TestFixture()]
     public class LmbSerializationTest {
