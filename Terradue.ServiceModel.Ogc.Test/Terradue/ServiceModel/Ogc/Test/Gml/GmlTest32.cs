@@ -64,7 +64,7 @@ namespace Terradue.GeoJson.Tests {
         [Test()]
         public void FromGMLMultiPoint() {
 
-            var fs = new FileStream("../Samples/multipoint32.gml", FileMode.Open);
+            var fs = new FileStream("Samples/multipoint32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
