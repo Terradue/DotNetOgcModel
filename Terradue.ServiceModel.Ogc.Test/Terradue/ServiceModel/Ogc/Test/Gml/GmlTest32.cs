@@ -5,16 +5,18 @@ using System.Linq;
 using Terradue.ServiceModel.Ogc.Gml321;
 using System.IO;
 using System.Xml.Linq;
+using System.Reflection;
 
-namespace Terradue.GeoJson.Tests { 
+namespace Terradue.ServiceModel.Ogc.Test
+{
 
     [TestFixture()]
-    public class Gml32Test {
-
-
+    public class Gml32Test
+    {
 
         [Test()]
-        public void Gml32MultiCurveWithLinearStringTestCase() {
+        public void Gml32MultiCurveWithLinearStringTestCase()
+        {
 
             var fs = new FileStream("../Samples/MultiCurveWithLinearString32.gml", FileMode.Open);
 
@@ -39,9 +41,10 @@ namespace Terradue.GeoJson.Tests {
         }
 
         [Test()]
-        public void Gml32MultiSurfaceTestCase() {
+        public void Gml32MultiSurfaceTestCase()
+        {
 
-            var fs = new FileStream("../Samples/Multisurface32.gml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/Multisurface32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
@@ -62,7 +65,9 @@ namespace Terradue.GeoJson.Tests {
         }
 
         [Test()]
-        public void FromGMLMultiPoint() {
+        public void FromGMLMultiPoint()
+        {
+
 
             var fs = new FileStream("Samples/multipoint32.gml", FileMode.Open);
 
