@@ -29,7 +29,7 @@ pipeline {
     }
     stage('Test'){
       steps {
-        sh 'nunit-console4 *.Test/bin/*.Test.dll'
+        sh 'mono packages/nunit.consolerunner/3.10.0/tools/nunit3-console.exe *.Test/bin/*.Test.dll'
       }
     }
     stage('Publish') {
