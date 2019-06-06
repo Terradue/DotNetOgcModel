@@ -42,3 +42,6 @@ Thumbs.db
 /build
 /Terradue.ServiceModel.Ogc.Test/out/swathwhitespaces.xml
 /.vs
+TestResult.xml
+Terradue.ServiceModel.Ogc.Test/out/aggregateExceptionsReport.xml
+Terradue.ServiceModel.Ogc.Test/out/simpleExceptionReport.xml

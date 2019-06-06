@@ -14,7 +14,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         [Test()]
         public void LmbExampleTestCase() {
 
-            FileInfo s1 = new FileInfo("../Samples/LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml");
+            FileInfo s1 = new FileInfo(Util.TestBaseDir + "/Samples/LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml");
 
             LmbEarthObservationType eop = (LmbEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
 

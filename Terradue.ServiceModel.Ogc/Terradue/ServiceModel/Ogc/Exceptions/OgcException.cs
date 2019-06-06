@@ -59,7 +59,7 @@ namespace Terradue.ServiceModel.Ogc.Exceptions
                 exceptionReports.Exceptions.Add(new Terradue.ServiceModel.Ogc.Ows11.ExceptionType()
                 {
                     ExceptionCode = this.ExceptionCode,
-                    ExceptionText = (this.InnerException == null) ? this.Message : this.ToString(),
+                    ExceptionText = (!string.IsNullOrEmpty(this.Message)) ? this.Message : this.ToString(),
                     Locator = this.Locator,
                 });
                 FillStackTrace(this.InnerException, ref exceptionReports);
@@ -84,7 +84,7 @@ namespace Terradue.ServiceModel.Ogc.Exceptions
                 exceptionReports.Exceptions.Add(new Terradue.ServiceModel.Ogc.Ows11.ExceptionType()
                 {
                     ExceptionCode = ogcException.ExceptionCode,
-                    ExceptionText = (ogcException.InnerException == null) ? ogcException.Message : ogcException.ToString(),
+                    ExceptionText = (!string.IsNullOrEmpty(ogcException.Message)) ? ogcException.Message : ogcException.ToString(),
                     Locator = ogcException.Locator,
                 });
                 FillStackTrace(exception.InnerException, ref exceptionReports);

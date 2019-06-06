@@ -12,7 +12,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         [Test()]
         public void EopExampleTestCase() {
 
-            FileStream fs = new FileStream("../Samples/eop20_example.xml", FileMode.Open);
+            FileStream fs = new FileStream(Util.TestBaseDir + "/Samples/eop20_example.xml", FileMode.Open);
 
             var eop = (Eop20.EarthObservationType)OgcHelpers.Eop20Serializer.Deserialize(XmlReader.Create(fs));
 
@@ -50,7 +50,7 @@ namespace Terradue.ServiceModel.Ogc.Test
 
             XmlWriter xw = XmlWriter.Create(sw);
 
-            fs = new FileStream("../Samples/eop20_example.xml", FileMode.Open);
+            fs = new FileStream(Util.TestBaseDir + "/Samples/eop20_example.xml", FileMode.Open);
 
             //Assert.True(Util.IsXmlEqual(XmlReader.Create(fs),xr, xw, true, true, true, true, true, true, true, true), "Xml differences {0}", sw);
 
@@ -62,7 +62,7 @@ namespace Terradue.ServiceModel.Ogc.Test
 		public void EopWithTypeTestCase()
 		{
 
-			FileStream fs = new FileStream("../Samples/EopwithType.xml", FileMode.Open);
+			FileStream fs = new FileStream(Util.TestBaseDir + "/Samples/EopwithType.xml", FileMode.Open);
 
 			var eop = (Eop21.EarthObservationType)OgcHelpers.Eop21Serializer.Deserialize(XmlReader.Create(fs));
 

@@ -18,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
         [Test()]
         public void AltExampleTestCase() {
 
-            FileInfo s1 = new FileInfo("../Samples/alt21ngeo.atom");
+            FileInfo s1 = new FileInfo(Util.TestBaseDir + "/Samples/alt21ngeo.atom");
 
             AltEarthObservationType eop = (AltEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
 

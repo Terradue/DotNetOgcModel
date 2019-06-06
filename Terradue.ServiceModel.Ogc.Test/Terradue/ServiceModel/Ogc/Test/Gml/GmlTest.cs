@@ -8,7 +8,7 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using Terradue.ServiceModel.Ogc.Wps10;
 
-namespace Terradue.GeoJson.Tests { 
+namespace Terradue.ServiceModel.Ogc.Test { 
 
     [TestFixture()]
     public class GmlTest {
@@ -16,7 +16,7 @@ namespace Terradue.GeoJson.Tests {
         [Test()]
         public void GmlMultiPolygonTestCase() {
 
-            var fs = new FileStream("../Samples/MultiPolygon.xml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/MultiPolygon.xml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
@@ -47,7 +47,7 @@ namespace Terradue.GeoJson.Tests {
         [Test()]
         public void GmlMultiCurveWithLinearStringTestCase() {
 
-            var fs = new FileStream("../Samples/MultiCurveWithLinearString.gml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/MultiCurveWithLinearString.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
@@ -80,7 +80,7 @@ namespace Terradue.GeoJson.Tests {
         [Test()]
         public void GmlMultiSurfaceTestCase() {
 
-            var fs = new FileStream("../Samples/MultiSurface311.gml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/MultiSurface311.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
@@ -104,7 +104,7 @@ namespace Terradue.GeoJson.Tests {
         public void WPSwithGmlMD()
         {
 
-            var fs = new FileStream("../Samples/WPSwithMD.xml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/WPSwithMD.xml", FileMode.Open);
 
             var wpsSerializer = new XmlSerializer(typeof(ProcessDescriptions));
 

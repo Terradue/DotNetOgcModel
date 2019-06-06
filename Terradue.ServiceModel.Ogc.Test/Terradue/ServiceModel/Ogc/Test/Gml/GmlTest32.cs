@@ -18,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         public void Gml32MultiCurveWithLinearStringTestCase()
         {
 
-            var fs = new FileStream("../Samples/MultiCurveWithLinearString32.gml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/MultiCurveWithLinearString32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 
@@ -69,7 +69,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         {
 
 
-            var fs = new FileStream("Samples/multipoint32.gml", FileMode.Open);
+            var fs = new FileStream(Util.TestBaseDir + "/Samples/multipoint32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(fs);
 

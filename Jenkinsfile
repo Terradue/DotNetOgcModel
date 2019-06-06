@@ -10,30 +10,27 @@ pipeline {
       steps {
         sh 'rm -rf packges */bin build'
         sh 'mkdir -p build'
-        sh 'nuget restore'
+        sh 'nuget restore -PackagesDirectory packages'
         sh 'ls -la'
       }
     }
     stage('Build') {
       steps {
         echo "The library will be build in ${params.DOTNET_CONFIG}"
-        sh "xbuild /p:Configuration=${params.DOTNET_CONFIG}"
+        sh "msbuild /property:GenerateFullPaths=true /t:build /p:Configuration=${params.DOTNET_CONFIG}"
       }
     }
     stage('Package') {
       steps {
-        parallel(
-          "Package": {
-            sh "nuget4mono -g ${env.BRANCH_NAME} -p Terradue.ServiceModel.Ogc/packages.config Terradue.ServiceModel.Ogc/bin/Terradue.ServiceModel.Ogc.dll"
-            sh 'cat *.nuspec'
-            sh 'nuget pack -OutputDirectory build'
-            sh "echo ${params.NUGET_PUBLISH}"
-            
-          },
-          "Test": {
-            sh 'nunit-console4 *.Test/bin/*.Test.dll -xml build/TestResult.xml'
-          }
-        )
+        sh "nuget4mono -g ${env.BRANCH_NAME} -p Terradue.ServiceModel.Ogc/packages.config Terradue.ServiceModel.Ogc/bin/Terradue.ServiceModel.Ogc.dll"
+        sh 'cat *.nuspec'
+        sh 'nuget pack -OutputDirectory build'
+        sh "echo ${params.NUGET_PUBLISH}"
+      }
+    }
+    stage('Test'){
+      steps {
+        sh 'nunit-console4 *.Test/bin/*.Test.dll'
       }
     }
     stage('Publish') {
@@ -50,7 +47,7 @@ pipeline {
   }
   post { 
     always { 
-       nunit(testResultsPattern: 'build/TestResult.xml')
+       nunit(testResultsPattern: 'TestResult.xml')
     }
   }
 }
