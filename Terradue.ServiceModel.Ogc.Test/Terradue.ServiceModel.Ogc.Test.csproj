@@ -9,6 +9,7 @@
     <TargetFramework>net4.5</TargetFramework>
     <RuntimeIdentifier>win</RuntimeIdentifier>
     <IsPackable>false</IsPackable>
+    <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,7 +20,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -69,5 +69,6 @@
     <PackageReference Include="NUnit" Version="3.12.0"/>
     <PackageReference Include="XMLDiffPatch" Version="1.0.8.28"/>
     <PackageReference Include="NUnit.Runners" Version="3.10.0"/>
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.10.0"/>
   </ItemGroup>
 </Project>
