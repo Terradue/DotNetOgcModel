@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<ExceptionReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/ows/1.1">
-  <Exception exceptionCode="NoApplicableCode">
-    <ExceptionText>This is a Test Exception</ExceptionText>
-  </Exception>
-  <Exception exceptionCode="NoApplicableCode">
-    <ExceptionText>The Memory Reached Maximum</ExceptionText>
-  </Exception>
-</ExceptionReport>
