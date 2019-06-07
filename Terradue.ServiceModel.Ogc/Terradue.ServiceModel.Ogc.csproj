@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,7 +8,14 @@
     <RootNamespace>Terradue.ServiceModel.Ogc</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFramework>net4.5</TargetFramework>
     <RuntimeIdentifier>win</RuntimeIdentifier>
+    <PackageDescription>Terradue.ServiceModel.Ogc is a library targeting .NET 4.0 to handle all OGC schemas serialization mainly in XML</PackageDescription>
+    <Version>2.1.2</Version>
+    <Authors>Emmanuel Mathot</Authors>
+    <Company>Terradue</Company>
+    <RepositoryUrl>https://github.com/Terradue/DotNetOgcOmGml</RepositoryUrl>
+    <PackageOutputPath>build</PackageOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,8 +46,7 @@
     <Reference Include="mscorlib"/>
     <Reference Include="System.Core"/>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs"/>
+  <!-- <ItemGroup>
     <Compile Include="Terradue\ServiceModel\Ogc\Gco\Gco.cs"/>
     <Compile Include="Terradue\ServiceModel\Ogc\Gmd\Gmd.cs"/>
     <Compile Include="Terradue\ServiceModel\Ogc\Gml311\Gml311.cs"/>
@@ -564,7 +570,7 @@
     <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\DomainSubsetType.cs"/>
     <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\SpatialSubsetType.cs"/>
     <Compile Include="Terradue\ServiceModel\Ogc\Wcs10\OutputType.cs"/>
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <Folder Include="Terradue\"/>
     <Folder Include="Terradue\ServiceModel\"/>
@@ -583,7 +589,9 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Wcs10\"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet4Mono.Extensions" Version="0.8.0"/>
+    <PackageReference Include="Terradue.ServiceModel.Syndication" Version="1.0.7"/>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
+  <!-- <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/> -->
+  <!-- <Import Project="$(MSBuildBinPath)\Sdks\NuGet.Build.Tasks.Pack\buildCrossTargeting\NuGet.Build.Tasks.Pack.targets"/>
+  <Import Project="$(MSBuildBinPath)\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.targets"/> -->
 </Project>
