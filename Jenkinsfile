@@ -28,7 +28,7 @@ pipeline {
     stage('Test'){
       steps {
         sh 'sudo yum install nunit -y'
-        sh 'nunitlite-runner *.Test/bin/*.Test.dll'
+        sh 'nunitlite-runner *.Test/bin/*/*/*.Test.dll'
       }
     }
     stage('Publish') {

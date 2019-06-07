@@ -17,7 +17,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         public static void OneTimeSetUp()
         {
             var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            TestBaseDir = Path.Combine(baseDir, "../");
+            TestBaseDir = Path.Combine(baseDir, "../../..");
         }
 
         static public bool IsXmlEqual(XmlReader x1, XmlReader x2, XmlWriter xw,
