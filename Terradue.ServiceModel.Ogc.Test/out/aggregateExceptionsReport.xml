@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ExceptionReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/ows/1.1">
+  <Exception exceptionCode="NoApplicableCode">
+    <ExceptionText>An error occured during the execution (All details in next exceptions)</ExceptionText>
+  </Exception>
+  <Exception exceptionCode="NoApplicableCode" locator="  at Terradue.ServiceModel.Ogc.Test.ExceptonReportGenerationTest.&lt;AggregateExceptionReport&gt;b__1_0 () [0x00000] in &lt;57d8ba5bfb2e4c64a24569f36a9bdf1d&gt;:0 &#xA;  at System.Threading.Tasks.Task.InnerInvoke () [0x0000f] in &lt;6649516e5b3542319fb262b421af0adb&gt;:0 &#xA;  at System.Threading.Tasks.Task.Execute () [0x00000] in &lt;6649516e5b3542319fb262b421af0adb&gt;:0 ">
+    <ExceptionText>This is a second level exception</ExceptionText>
+  </Exception>
+  <Exception exceptionCode="NoApplicableCode" locator="  at Terradue.ServiceModel.Ogc.Test.ExceptonReportGenerationTest.&lt;AggregateExceptionReport&gt;b__1_1 () [0x00000] in &lt;57d8ba5bfb2e4c64a24569f36a9bdf1d&gt;:0 &#xA;  at System.Threading.Tasks.Task.InnerInvoke () [0x0000f] in &lt;6649516e5b3542319fb262b421af0adb&gt;:0 &#xA;  at System.Threading.Tasks.Task.Execute () [0x00000] in &lt;6649516e5b3542319fb262b421af0adb&gt;:0 ">
+    <ExceptionText>This is a second level exception</ExceptionText>
+  </Exception>
+</ExceptionReport>
