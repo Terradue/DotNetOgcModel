@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Init') {
       steps {
-        sh 'rm -rf packges */bin build'
+        sh 'rm -rf packges */bin */obj build'
         sh 'mkdir -p build'
         sh 'ls -la'
       }
@@ -21,10 +21,8 @@ pipeline {
     }
     stage('Package') {
       steps {
-        sh "nuget4mono -g ${env.BRANCH_NAME} -p Terradue.ServiceModel.Ogc/packages.config Terradue.ServiceModel.Ogc/bin/Terradue.ServiceModel.Ogc.dll"
-        sh 'cat *.nuspec'
-        sh 'nuget pack -OutputDirectory build'
-        sh "echo ${params.NUGET_PUBLISH}"
+        sh "msbuild /t:pack /p:Configuration=${params.DOTNET_CONFIG}"
+        sh 'cat */obj/*/*.nuspec'
       }
     }
     stage('Test'){
