@@ -18,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
         [Test()]
         public void SarExampleTestCase() {
 
-            FileStream fs = new FileStream("../Samples/sar21_example.xml", FileMode.Open);
+            FileStream fs = new FileStream(Util.TestBaseDir + "/Samples/sar21_example.xml", FileMode.Open);
 
             var eop = (EarthObservationType)OgcHelpers.Sar21Serializer.Deserialize(XmlReader.Create(fs));
 
@@ -52,7 +52,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
 
             xr = eop.CreateReader();
 
-            fs = new FileStream("../Samples/sar21_example.xml", FileMode.Open);
+            fs = new FileStream(Util.TestBaseDir + "/Samples/sar21_example.xml", FileMode.Open);
 
             //Assert.True(Util.IsXmlEqual(XmlReader.Create(fs),xr, xw, true, true, true, true, true, true, true, true), "Xml differences {0}", sw);
 
@@ -63,7 +63,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
         [TestCase]
         public void DeserializeSar(){
 
-            FileInfo s1 = new FileInfo("../Samples/S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom");
+            FileInfo s1 = new FileInfo(Util.TestBaseDir + "/Samples/S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom");
 
             SarEarthObservationType sarEo = (SarEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
 

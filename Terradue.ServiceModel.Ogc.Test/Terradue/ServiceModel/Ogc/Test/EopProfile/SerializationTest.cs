@@ -17,7 +17,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         {
 
             XmlSerializer gmlTimePeriodSerializer = new XmlSerializer(typeof(Terradue.ServiceModel.Ogc.Gml321.TimePeriodType));
-            FileStream fs = new FileStream("../Samples/GmlTimePeriod.xml", FileMode.Open);
+            FileStream fs = new FileStream(Util.TestBaseDir + "/Samples/GmlTimePeriod.xml", FileMode.Open);
             Terradue.ServiceModel.Ogc.Gml321.TimePeriodType tp = (Terradue.ServiceModel.Ogc.Gml321.TimePeriodType)gmlTimePeriodSerializer.Deserialize(fs);
 
             Assert.That(tp.Item is Terradue.ServiceModel.Ogc.Gml321.TimeInstantPropertyType);
@@ -31,7 +31,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         {
 
             XmlSerializer sarSerializer = OgcHelpers.Sar21Serializer;
-            FileStream fs = new FileStream("../out/sarwithfootprint.xml", FileMode.Create, FileAccess.Write);
+            FileStream fs = new FileStream(Util.TestBaseDir + "/out/sarwithfootprint.xml", FileMode.Create, FileAccess.Write);
 
             Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType sarEO = new Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType();
             sarEO.featureOfInterest = new Terradue.ServiceModel.Ogc.Gml321.FeaturePropertyType();
@@ -44,7 +44,7 @@ namespace Terradue.ServiceModel.Ogc.Test
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.Acquisition.orbitDirectionSpecified = true;
             sarEO.procedure.Eop21EarthObservationEquipment.acquisitionParameters.SarAcquisition.polarisationChannels = "HH";
 
-            var msfs = new FileStream("../Samples/Multisurface32.gml", FileMode.Open);
+            var msfs = new FileStream(Util.TestBaseDir + "/Samples/Multisurface32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(msfs);
 
@@ -65,7 +65,7 @@ namespace Terradue.ServiceModel.Ogc.Test
         {
 
             XmlSerializer sarSerializer = OgcHelpers.Sar21Serializer;
-            FileStream fs = new FileStream("../out/swathwhitespaces.xml", FileMode.Create, FileAccess.Write);
+            FileStream fs = new FileStream(Util.TestBaseDir + "/out/swathwhitespaces.xml", FileMode.Create, FileAccess.Write);
 
             Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType sarEO = new Terradue.ServiceModel.Ogc.Sar21.SarEarthObservationType();
             sarEO.featureOfInterest = new Terradue.ServiceModel.Ogc.Gml321.FeaturePropertyType();
@@ -83,7 +83,7 @@ namespace Terradue.ServiceModel.Ogc.Test
             sarEO.procedure.Eop21EarthObservationEquipment.sensor.Sensor.swathIdentifier.codeSpace = "urn:eop:SEN1:swathIdentifier";
             sarEO.procedure.Eop21EarthObservationEquipment.sensor.Sensor.swathIdentifier.Text = "IW1 IW2 IW3";
 
-            var msfs = new FileStream("../Samples/Multisurface32.gml", FileMode.Open);
+            var msfs = new FileStream(Util.TestBaseDir + "/Samples/Multisurface32.gml", FileMode.Open);
 
             XmlReader reader = XmlReader.Create(msfs);
 

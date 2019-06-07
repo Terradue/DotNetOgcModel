@@ -5,7 +5,6 @@ using System.IO;
 using System.Xml;
 using Terradue.ServiceModel.Ogc.Eop21;
 using System.Xml.Linq;
-using Microsoft.XmlDiffPatch;
 using Terradue.ServiceModel.Ogc.Swe;
 using Terradue.ServiceModel.Ogc.Alt21;
 using System.Linq;
@@ -19,7 +18,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
         [Test()]
         public void AltExampleTestCase() {
 
-            FileInfo s1 = new FileInfo("../Samples/alt21ngeo.atom");
+            FileInfo s1 = new FileInfo(Util.TestBaseDir + "/Samples/alt21ngeo.atom");
 
             AltEarthObservationType eop = (AltEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
 

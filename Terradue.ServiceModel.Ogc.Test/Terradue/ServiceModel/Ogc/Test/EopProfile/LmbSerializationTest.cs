@@ -1,15 +1,11 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using Terradue.ServiceModel.Ogc.Eop21;
 using System.Xml.Linq;
-using Microsoft.XmlDiffPatch;
-using Terradue.ServiceModel.Ogc.Swe;
 using Terradue.ServiceModel.Ogc.Lmb21;
 
-namespace Terradue.ServiceModel.Ogc.Test {
+namespace Terradue.ServiceModel.Ogc.Test
+{
 
     [TestFixture()]
     public class LmbSerializationTest {
@@ -18,7 +14,7 @@ namespace Terradue.ServiceModel.Ogc.Test {
         [Test()]
         public void LmbExampleTestCase() {
 
-            FileInfo s1 = new FileInfo("../Samples/LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml");
+            FileInfo s1 = new FileInfo(Util.TestBaseDir + "/Samples/LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml");
 
             LmbEarthObservationType eop = (LmbEarthObservationType)OgcHelpers.DeserializeEarthObservation(XmlReader.Create(s1.OpenRead()));
 

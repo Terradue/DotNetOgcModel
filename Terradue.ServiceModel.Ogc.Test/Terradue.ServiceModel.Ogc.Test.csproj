@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -7,14 +6,17 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc.Test</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFramework>net4.5</TargetFramework>
+    <RuntimeIdentifier>win</RuntimeIdentifier>
+    <IsPackable>false</IsPackable>
+    <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;NETFRAMEWORK;NET45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -28,64 +30,45 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml.Serialization" />
-    <Reference Include="XmlDiffPatch">
-      <HintPath>..\packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.dll</HintPath>
-    </Reference>
-    <Reference Include="XmlDiffPatch.View">
-      <HintPath>..\packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.View.dll</HintPath>
-    </Reference>
+    <Reference Include="System"/>
+    <Reference Include="System.Xml"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Xml.Serialization"/>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Util.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\AltSerializationTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\LmbSerializationTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\Opt21SerializationTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SarSerializationTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest32.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\EopSerializationTest.cs" />
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SerializationTest.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Samples\GmlTimePeriod.xml" />
-    <None Include="Samples\eop20_example.xml" />
-    <None Include="Samples\sar21_example.xml" />
-    <None Include="Samples\opt21_example.xml" />
-    <None Include="Samples\S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom" />
-    <None Include="Samples\LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml" />
-    <None Include="Samples\multipoint32.gml" />
-    <None Include="Samples\MultiCurveWithLinearString32.gml" />
-    <None Include="Samples\Multisurface32.gml" />
-    <None Include="Samples\MultiCurveWithLinearString.gml" />
-    <None Include="Samples\MultiPolygon.xml" />
-    <None Include="Samples\MultiSurface311.gml" />
-    <None Include="Samples\S2withType.xml" />
-    <None Include="Samples\EopwithType.xml" />
-    <None Include="Samples\WPSwithMD.xml" />
+    <None Include="Samples\GmlTimePeriod.xml"/>
+    <None Include="Samples\eop20_example.xml"/>
+    <None Include="Samples\sar21_example.xml"/>
+    <None Include="Samples\opt21_example.xml"/>
+    <None Include="Samples\S1-20120407T205500910-20120407T211433040_A_T-XG0B.atom"/>
+    <None Include="Samples\LBY_S1A_OPER_REP_METARC_PDMC_20150718T045726_I9847_point.xml"/>
+    <None Include="Samples\multipoint32.gml"/>
+    <None Include="Samples\MultiCurveWithLinearString32.gml"/>
+    <None Include="Samples\Multisurface32.gml"/>
+    <None Include="Samples\MultiCurveWithLinearString.gml"/>
+    <None Include="Samples\MultiPolygon.xml"/>
+    <None Include="Samples\MultiSurface311.gml"/>
+    <None Include="Samples\S2withType.xml"/>
+    <None Include="Samples\EopwithType.xml"/>
+    <None Include="Samples\WPSwithMD.xml"/>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Samples\" />
-    <Folder Include="out\" />
-    <Folder Include="Terradue\" />
-    <Folder Include="Terradue\ServiceModel\" />
-    <Folder Include="Terradue\ServiceModel\Ogc\" />
-    <Folder Include="Terradue\ServiceModel\Ogc\Test\" />
-    <Folder Include="Terradue\ServiceModel\Ogc\Test\EopProfile\" />
-    <Folder Include="Terradue\ServiceModel\Ogc\Test\Gml\" />
+    <Folder Include="Samples\"/>
+    <Folder Include="out\"/>
+    <Folder Include="Terradue\"/>
+    <Folder Include="Terradue\ServiceModel\"/>
+    <Folder Include="Terradue\ServiceModel\Ogc\"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">
       <Project>{4A78C588-01FE-439F-8961-AE083A5EE6CA}</Project>
       <Name>Terradue.ServiceModel.Ogc</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0"/>
+    <PackageReference Include="XMLDiffPatch" Version="1.0.8.28"/>
+    <PackageReference Include="NUnit.Runners" Version="3.10.0"/>
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.10.0"/>
   </ItemGroup>
 </Project>
