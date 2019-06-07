@@ -16,7 +16,7 @@
     <Company>Terradue</Company>
     <RepositoryUrl>https://github.com/Terradue/DotNetOgcOmGml</RepositoryUrl>
     <PackageTags>OGC;Terradue;Gml</PackageTags>
-    <PackageOutputPath>build</PackageOutputPath>
+    <PackageOutputPath>$(SolutionDir)\build</PackageOutputPath>
     <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
