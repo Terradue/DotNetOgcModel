@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -6,18 +6,20 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc.Test</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFramework>net4.5</TargetFramework>
     <RuntimeIdentifier>win</RuntimeIdentifier>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;NETFRAMEWORK;NET45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -32,17 +34,6 @@
     <Reference Include="System.Xml"/>
     <Reference Include="System.Xml.Linq"/>
     <Reference Include="System.Xml.Serialization"/>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Util.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\AltSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\LmbSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\Opt21SerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SarSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\Gml\GmlTest32.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\EopSerializationTest.cs"/>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\EopProfile\SerializationTest.cs"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="Samples\GmlTimePeriod.xml"/>
@@ -73,12 +64,10 @@
       <Project>{4A78C588-01FE-439F-8961-AE083A5EE6CA}</Project>
       <Name>Terradue.ServiceModel.Ogc</Name>
     </ProjectReference>
-    <Compile Include="Terradue\ServiceModel\Ogc\Test\ExceptionTests\ExceptionReportGeneration.cs"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0"/>
     <PackageReference Include="XMLDiffPatch" Version="1.0.8.28"/>
     <PackageReference Include="NUnit.Runners" Version="3.10.0"/>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
 </Project>
