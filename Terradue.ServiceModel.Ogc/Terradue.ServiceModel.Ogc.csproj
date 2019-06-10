@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc</AssemblyName>
-    <TargetFramework>net4.5</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <RuntimeIdentifiers>win;linux-x64</RuntimeIdentifiers>
     <Title>DotNetOgcModel</Title>
     <Description>Terradue.ServiceModel.Ogc is a library targeting .NET 4.0 to handle all OGC schemas serialization mainly in XML</Description>
@@ -18,35 +16,15 @@
     <PackageTags>OGC;Terradue;Gml</PackageTags>
     <PackageOutputPath>$(SolutionDir)\build</PackageOutputPath>
     <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+net45;</AssetTargetFallback>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin</OutputPath>
-    <DefineConstants>DEBUG;NETFRAMEWORK;NET45</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <PlatformTarget>anycpu</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web" />
-    <Reference Include="mscorlib" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
@@ -67,8 +45,8 @@
     <Folder Include="Terradue\ServiceModel\Ogc\Wcs10\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(SolutionDir)\LICENSE" Pack="true" PackagePath=""/>
-</ItemGroup>
+    <Content Include="$(SolutionDir)\LICENSE" Pack="true" PackagePath=""/>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Terradue.ServiceModel.Syndication" Version="1.0.7" />
   </ItemGroup>
