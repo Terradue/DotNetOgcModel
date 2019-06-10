@@ -1,35 +1,16 @@
 <Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{47C85B42-7522-4E46-BC7F-30BE1912F94E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.ServiceModel.Ogc.Test</RootNamespace>
     <AssemblyName>Terradue.ServiceModel.Ogc.Test</AssemblyName>
-    <TargetFramework>net4.5</TargetFramework>
-    <RuntimeIdentifier>win</RuntimeIdentifier>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <RuntimeIdentifiers>win;linux-x64</RuntimeIdentifiers>
     <IsPackable>false</IsPackable>
     <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+net45;</AssetTargetFallback>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin</OutputPath>
-    <DefineConstants>DEBUG;NETFRAMEWORK;NET45</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System"/>
     <Reference Include="System.Xml"/>
     <Reference Include="System.Xml.Linq"/>
@@ -60,15 +41,14 @@
     <Folder Include="Terradue\ServiceModel\Ogc\"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj">
-      <Project>{4A78C588-01FE-439F-8961-AE083A5EE6CA}</Project>
-      <Name>Terradue.ServiceModel.Ogc</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Terradue.ServiceModel.Ogc\Terradue.ServiceModel.Ogc.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0"/>
     <PackageReference Include="XMLDiffPatch" Version="1.0.8.28"/>
     <PackageReference Include="NUnit.Runners" Version="3.10.0"/>
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.10.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
   </ItemGroup>
 </Project>
