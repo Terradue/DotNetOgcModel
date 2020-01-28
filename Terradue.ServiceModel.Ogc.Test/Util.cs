@@ -2,7 +2,6 @@
 using System.IO;
 using System.Reflection;
 using System.Xml;
-using Microsoft.XmlDiffPatch;
 using NUnit.Framework;
 
 namespace Terradue.ServiceModel.Ogc.Test
