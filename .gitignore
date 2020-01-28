@@ -46,3 +46,5 @@ Thumbs.db
 TestResult.xml
 Terradue.ServiceModel.Ogc.Test/out/aggregateExceptionsReport.xml
 Terradue.ServiceModel.Ogc.Test/out/simpleExceptionReport.xml
+
+.directory
